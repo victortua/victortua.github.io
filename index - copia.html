@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Victor Tuà" />
+<meta name="viewport" content="width=device−width,initial−scale=1.0" />
+<title>Victor Tuà</title>
+
+
+<!--<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />-->
+
+<style type="text/css">
+
+/*Eric Meyer's Reset CSS v2.0*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}/*HTML5 display-role reset for older browsers*/article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul,li{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+/*end of reset*/
+
+html,body {
+	width:100%;
+	height:100%;
+	color: #000;
+	font-size: 100%;
+	}
+body {overflow: auto;}
+
+* {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.controls{
+	padding: 2%;
+	}
+
+label{
+font-weight: 300;
+margin: 0 .4em 0 0;
+}
+
+button{
+display: inline-block;
+padding: .4em .8em;
+cursor: pointer;
+border: none;
+}
+
+button:active,
+button:focus {
+	outline: none;
+}
+
+button + label{
+margin-left: 10em;
+}
+
+.container{
+	padding: 2% 2% 0;
+	text-align: justify;
+	-webkit-backface-visibility: hidden;
+	}
+.container:after{
+	content: '';
+	display: inline-block;
+	width: 100%;
+	}
+
+.container .mix,
+.container .gap{
+display: inline-block;
+width: 49%;
+}
+
+.container .mix{
+display: inline-block;
+width: 49%;
+text-align: left;
+margin-bottom: 2%;
+display: none;
+
+}
+
+/*.container .mix:before{
+content: attr(title);
+color: white;
+font-size: 16px;
+display: inline-block;
+vertical-align: top;
+padding: 4% 6%;
+font-weight: 700;
+}*/
+
+/*.container .mix:before{
+content: attr(class);
+display: inline-block;
+padding-top: 60%;
+}*/
+
+
+.container .mix img {
+width: 100%;
+}
+
+@media all and (min-width: 420px){
+.container .mix,
+.container .gap{
+width: 32%;
+}
+}
+
+@media all and (min-width: 640px){
+.container .mix,
+.container .gap{
+width: 23.5%;
+}
+}
+
+</style>
+
+
+<link rel="stylesheet" href="css/nyroModal.css" type="text/css" media="screen" />
+
+</head>
+
+<body>
+
+<h1>victor tua portfolio</h1>
+
+<div class="controls">
+<label>filtrar proyectos:</label>
+
+<button class="filter" data-filter="all">todo</button>
+<button class="filter" data-filter=".catweb">web</button>
+<button class="filter" data-filter=".catillust">ilustración</button>
+<button class="filter" data-filter=".catproduct">industrial</button>
+<button class="filter" data-filter=".catphoto">fotografía</button>
+<button class="filter" data-filter=".catothers">otros</button>
+</div>
+
+<div id="Container" class="container">
+	<a class="mix catproduct nyroModal" href="./img/taulallum.jpg">
+		<img src="./img/taulallum.jpg" alt="taula de llum" title="hmñmñmi">
+	</a>
+
+	<div class="mix catweb">
+		<img src="./img/taulallum.jpg" alt="taula de llum">
+	</div>
+
+	<div class="mix catillust">
+		<img src="./img/taulallum.jpg" alt="taula de llum">
+	</div>
+
+	<div class="mix catproduct">
+		<img src="./img/taulallum.jpg" alt="taula de llum">
+	</div>
+
+	<div class="mix catothers">
+		<img src="./img/taulallum.jpg" alt="taula de llum">
+	</div>
+
+	<div class="mix catweb">
+		<img src="./img/taulallum.jpg" alt="taula de llum">
+	</div>
+
+	<div class="mix catillust">
+		<img src="./img/taulallum.jpg" alt="taula de llum">
+	</div>
+
+	<div class="mix catillust">
+		<img src="./img/taulallum.jpg" alt="taula de llum">
+	</div>
+
+	<div class="mix catphoto">
+		<img src="./img/taulallum.jpg" alt="taula de llum">
+	</div>
+
+
+	<div class="gap"></div>
+	<div class="gap"></div>
+</div>
+
+<!-- javascript -->
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+<!-- <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js?v=2.1.2"></script> -->
+
+<script src="./js/jquery-1.9.0.min.js"></script>
+<script src="./js/jquery.mixitup.min.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		$('#Container').mixItUp({
+			animation: {
+			duration: 800,
+			effects: 'fade translateY(100%) stagger(32ms) scale(0.85)',
+			easing: 'cubic-bezier(0.39, 0.575, 0.565, 1)'
+			}
+		});
+	});
+</script>
+
+
+
+<script type="text/javascript" src="./js/jquery.nyroModal.custom.js"></script>
+
+<script type="text/javascript">
+$(function() {
+  $('.nyroModal').nyroModal();
+});
+</script>
+
+
+<style type="text/css">
+* {background-color:hsl(0, 100%, 50%) !important;}* * {background-color:hsl(10, 100%, 50%) !important;}* * * {background-color:hsl(20, 100%, 50%) !important;}* * * * {background-color:hsl(30, 100%, 50%) !important;}* * * * * {background-color:hsl(40, 100%, 50%) !important;}* * * * * * {background-color:hsl(50, 100%, 50%) !important;}* * * * * * * {background-color:hsl(60, 100%, 50%) !important;}* * * * * * * * {background-color:hsl(70, 100%, 50%) !important;}* * * * * * * * * {background-color:hsl(80, 100%, 50%) !important;}* * * * * * * * * * {background-color:hsl(90, 100%, 50%) !important;}* * * * * * * * * * * {background-color:hsl(100, 100%, 50%) !important;}* * * * * * * * * * * * {background-color:hsl(110, 100%, 50%) !important;}* * * * * * * * * * * * * {background-color:hsl(120, 100%, 50%) !important;}* * * * * * * * * * * * * * {background-color:hsl(130, 100%, 50%) !important;}* * * * * * * * * * * * * * * {background-color:hsl(140, 100%, 50%) !important;}* * * * * * * * * * * * * * * * {background-color:hsl(150, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * {background-color:hsl(160, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * {background-color:hsl(170, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * {background-color:hsl(180, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * {background-color:hsl(190, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * {background-color:hsl(200, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(210, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(220, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(230, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(240, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(250, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(260, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(270, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(280, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(290, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(300, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(310, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(320, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(330, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(340, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(350, 100%, 50%) !important;}</style>
+
+
+</body>
+
+</html>
