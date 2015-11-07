@@ -1,219 +1,325 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="Author" content="Victor Tuà" />
-<meta name="viewport" content="width=device−width,initial−scale=1.0" />
-<title>Victor Tuà</title>
 
+<title>parallax</title>
 
-<!--<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />-->
-
-<style type="text/css">
+<style>
 
 /*Eric Meyer's Reset CSS v2.0*/
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}/*HTML5 display-role reset for older browsers*/article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul,li{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
 /*end of reset*/
 
-html,body {
-	width:100%;
-	height:100%;
-	color: #000;
-	font-size: 100%;
-	}
-body {overflow: auto;}
-
-* {
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
-}
-
-.controls{
-	padding: 2%;
-	}
-
-label{
-font-weight: 300;
-margin: 0 .4em 0 0;
-}
-
-button{
-display: inline-block;
-padding: .4em .8em;
-cursor: pointer;
-border: none;
-}
-
-button:active,
-button:focus {
-	outline: none;
-}
-
-button + label{
-margin-left: 10em;
-}
-
-.container{
-	padding: 2% 2% 0;
-	text-align: justify;
-	-webkit-backface-visibility: hidden;
-	}
-.container:after{
-	content: '';
-	display: inline-block;
+body{
+	background: #000;
+	overflow: hidden;
 	width: 100%;
+	height: 100%;
+	/*-webkit-perspective: 1000;*/
 	}
 
-.container .mix,
-.container .gap{
-display: inline-block;
-width: 49%;
-}
+#closer {
+	z-index: 999;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	margin-top: -.5em;
+	margin-left: -.5em;
+	width: 1em;
+	height: 1em;
+	
+	background: rgba(0,255,0,.5);
+	cursor:pointer;
+	}
+.close {
+	top: 0%;
+	opacity: 1;
+	transition: all ease-in-out 1s;
+	}
+.closed {
+	top:100%;
+	opacity: 0;
+	}
 
-.container .mix{
-display: inline-block;
-width: 49%;
-text-align: left;
-margin-bottom: 2%;
-display: none;
+#landpage {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 
-}
+	background: darkorange;
+	}
 
-/*.container .mix:before{
-content: attr(title);
-color: white;
-font-size: 16px;
-display: inline-block;
-vertical-align: top;
-padding: 4% 6%;
-font-weight: 700;
-}*/
+#axis1, #axis2 {
+	position: absolute;
+	top: 50%;
+	left:50%;
+	margin-left: -300px;
+	margin-top: -200px;
+	width: 600px;
+	height: 400px; 
 
-/*.container .mix:before{
-content: attr(class);
-display: inline-block;
-padding-top: 60%;
-}*/
+	transform-style: preserve-3d;
+	transform: rotate3d(-0.8, -0.2, 0, 17deg); 
+	/*perspective: 1500px;*/
+
+	transition: all cubic-bezier(.35,.28,0,.99) .5s;
+	}
+
+/*#axis1 {background: rgba(255,0,0,.5);}
+#axis2 {background: rgba(0,255,0,.5);}*/
+
+/*-------------------------------------------------------------------
+
+primer eje
+
+-------------------------------------------------------------------*/
 
 
-.container .mix img {
-width: 100%;
-}
+#axis1 #layer1 div {
+	position: absolute;
+	top: 0;
+	width: 100px; 
+	height: 400px;
 
-@media all and (min-width: 420px){
-.container .mix,
-.container .gap{
-width: 32%;
-}
-}
+	background: url(./img/test.png);
+	}
 
-@media all and (min-width: 640px){
-.container .mix,
-.container .gap{
-width: 23.5%;
-}
-}
+#axis1 #layer1 :nth-child(1) {
+	left:0;
+	transform: translateZ(100px);
+	background-position: 0;
+	}
+#axis1 #layer1 :nth-child(2) {
+	left:100px;
+	transform: translateZ(20px);
+	background-position: -100px;
+	}
+#axis1 #layer1 :nth-child(3) {
+	left:200px;
+	transform: translateZ(70px);
+	background-position: -200px;
+	}
+#axis1 #layer1 :nth-child(4) {
+	left:300px;
+	transform: translateZ(30px);
+	background-position: -300px;
+	}
+#axis1 #layer1 :nth-child(5) {
+	left:400px;
+	transform: translateZ(50px);
+	background-position: -400px;
+	}
+#axis1 #layer1 :nth-child(6) {
+	left:500px;
+	transform: translateZ(90px);
+	background-position: -500px;
+	}
+
+
+#axis1 #layer2 div {
+	position: absolute;
+	top: 0;
+	width: 200px; 
+	height: 400px;
+
+	background: url(./img/test2.png);
+	}
+#axis1 #layer2 :nth-child(1) {
+	left:0;
+	
+	transform: translateZ(-100px);
+	background-position: 0;
+	}
+#axis1 #layer2 :nth-child(2) {
+	left:200;
+	
+	transform: translateZ(-150px);
+	background-position: 0;
+	}
+#axis1 #layer2 :nth-child(3) {
+	left:400;
+	
+	transform: translateZ(-90px);
+	background-position: 0;
+	}
+
+
+/*-------------------------------------------------------------------
+
+segundo eje
+
+-------------------------------------------------------------------*/
+
+
+#axis2 div {
+	position: absolute;
+	width: 300px; 
+	height: 300px;
+
+	background: rgba(20,20,20,.5);
+	}
+#axis2 :nth-child(1) {
+	top:-100px;
+	left:-150px;
+	
+	transform: translateZ(500px);
+	}
+#axis2 :nth-child(2) {
+	top:-100px;
+	left:150px;
+	
+	transform: translateZ(-250px);
+	}
+#axis2 :nth-child(3) {
+	top:-100px;
+	left:450px;
+	
+	transform: translateZ(300px);
+	}
+
+#axis2 :nth-child(4) {
+	top:200px;
+	left:-150px;
+	
+	transform: translateZ(-500px);
+	}
+#axis2 :nth-child(5) {
+	top:200px;
+	left:150px;
+	
+	transform: translateZ(250px);
+	}
+#axis2 :nth-child(6) {
+	top:200px;
+	left:450px;
+	
+	transform: translateZ(-350px);
+	}
+
 
 </style>
-
-
-<link rel="stylesheet" href="css/nyroModal.css" type="text/css" media="screen" />
 
 </head>
 
 <body>
 
-<h1>victor tua portfolio</h1>
+<div id="landpage" class="close">
+	<input type="button" value="entrar" id="closer">
 
-<div class="controls">
-<label>filtrar proyectos:</label>
+	<!-- <a id="closeland" href="#" alt="entrar a la página" title="entrar a la página"></a> -->
+		<div id="axis1">
+			<div id="layer1">
+				<div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+			</div>
+			<div id="layer2">
+				<div></div> <div></div> <div></div>
+			</div>
 
-<button class="filter" data-filter="all">todo</button>
-<button class="filter" data-filter=".catweb">web</button>
-<button class="filter" data-filter=".catillust">ilustración</button>
-<button class="filter" data-filter=".catproduct">industrial</button>
-<button class="filter" data-filter=".catphoto">fotografía</button>
-<button class="filter" data-filter=".catothers">otros</button>
+		</div>
+
+		<div id="axis2">
+			<div></div> <div></div> <div></div> <div></div> <div></div> <div></div> 
+		</div>	
 </div>
 
-<div id="Container" class="container">
-	<a class="mix catproduct nyroModal" href="./img/taulallum.jpg">
-		<img src="./img/taulallum.jpg" alt="taula de llum" title="hmñmñmi">
-	</a>
-
-	<div class="mix catweb">
-		<img src="./img/taulallum.jpg" alt="taula de llum">
-	</div>
-
-	<div class="mix catillust">
-		<img src="./img/taulallum.jpg" alt="taula de llum">
-	</div>
-
-	<div class="mix catproduct">
-		<img src="./img/taulallum.jpg" alt="taula de llum">
-	</div>
-
-	<div class="mix catothers">
-		<img src="./img/taulallum.jpg" alt="taula de llum">
-	</div>
-
-	<div class="mix catweb">
-		<img src="./img/taulallum.jpg" alt="taula de llum">
-	</div>
-
-	<div class="mix catillust">
-		<img src="./img/taulallum.jpg" alt="taula de llum">
-	</div>
-
-	<div class="mix catillust">
-		<img src="./img/taulallum.jpg" alt="taula de llum">
-	</div>
-
-	<div class="mix catphoto">
-		<img src="./img/taulallum.jpg" alt="taula de llum">
-	</div>
-
-
-	<div class="gap"></div>
-	<div class="gap"></div>
-</div>
-
-<!-- javascript -->
-
-<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
-<!-- <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js?v=2.1.2"></script> -->
-
-<script src="./js/jquery-1.9.0.min.js"></script>
-<script src="./js/jquery.mixitup.min.js"></script>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
 
 <script type="text/javascript">
-	$(function(){
-		$('#Container').mixItUp({
-			animation: {
-			duration: 800,
-			effects: 'fade translateY(100%) stagger(32ms) scale(0.85)',
-			easing: 'cubic-bezier(0.39, 0.575, 0.565, 1)'
-			}
-		});
-	});
-</script>
 
-
-
-<script type="text/javascript" src="./js/jquery.nyroModal.custom.js"></script>
-
-<script type="text/javascript">
 $(function() {
-  $('.nyroModal').nyroModal();
+	$("#closer").click(function() {
+		$(".close").toggleClass("closed");
+	});
 });
+
 </script>
 
 
-<style type="text/css">
-* {background-color:hsl(0, 100%, 50%) !important;}* * {background-color:hsl(10, 100%, 50%) !important;}* * * {background-color:hsl(20, 100%, 50%) !important;}* * * * {background-color:hsl(30, 100%, 50%) !important;}* * * * * {background-color:hsl(40, 100%, 50%) !important;}* * * * * * {background-color:hsl(50, 100%, 50%) !important;}* * * * * * * {background-color:hsl(60, 100%, 50%) !important;}* * * * * * * * {background-color:hsl(70, 100%, 50%) !important;}* * * * * * * * * {background-color:hsl(80, 100%, 50%) !important;}* * * * * * * * * * {background-color:hsl(90, 100%, 50%) !important;}* * * * * * * * * * * {background-color:hsl(100, 100%, 50%) !important;}* * * * * * * * * * * * {background-color:hsl(110, 100%, 50%) !important;}* * * * * * * * * * * * * {background-color:hsl(120, 100%, 50%) !important;}* * * * * * * * * * * * * * {background-color:hsl(130, 100%, 50%) !important;}* * * * * * * * * * * * * * * {background-color:hsl(140, 100%, 50%) !important;}* * * * * * * * * * * * * * * * {background-color:hsl(150, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * {background-color:hsl(160, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * {background-color:hsl(170, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * {background-color:hsl(180, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * {background-color:hsl(190, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * {background-color:hsl(200, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(210, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(220, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(230, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(240, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(250, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(260, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(270, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(280, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(290, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(300, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(310, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(320, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(330, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(340, 100%, 50%) !important;}* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(350, 100%, 50%) !important;}</style>
+
+<script>
+
+$(document).ready(function() {
+	$(document).mousemove(function(event) {
+		// $('#instructions').hide();
+
+		cx = Math.ceil($(window).width() / 2.0);
+		cy = Math.ceil($(window).height() / 2.0);
+		dx = event.pageX - cx;
+		dy = event.pageY - cy;
+
+		console.log(cx,cy,dx,dy);
+
+		tiltx = - (dy / cy); // quitar " - " para invertir la rotación
+		tilty = (dx / cx); // añadir " - " para invertir la rotación
+		radius = Math.sqrt(Math.pow(tiltx,2) + Math.pow(tilty,2));
+		degree1 = (radius * 50);
+		degree2 = (radius * 30);
+
+		// 
+		// 
+		// x0 = Math.ceil(cx - (dx * 0.2));
+		// y0 = Math.ceil(cy - (dy * 0.2));
+		// x1 = event.pageX;
+		// y1 = event.pageY;
+		// r0 = 300;
+		// r1 = 10;
+		// 
+		// sx = -dx * 0.03;
+		// sy = -dy * 0.03;
+		// b  =  (Math.abs(sx) + Math.abs(sy)) * 0.2;
+
+		$('#axis1').css('transform','rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree1 + 'deg)');
+		$('#axis2').css('transform','rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree2 + 'deg)');
+		// $('#axis2').css('transform','rotate3d(' + tilty + ', ' + tiltx + ', 0, ' + degree2 + 'deg)');
+
+	});
+});
+
+</script>
+
 
 
 </body>
 
+<style type="text/css">
+/*rainbow*
+* {background-color:hsl(0, 100%, 50%) !important;}
+* * {background-color:hsl(10, 100%, 50%) !important;}
+* * * {background-color:hsl(20, 100%, 50%) !important;}
+* * * * {background-color:hsl(30, 100%, 50%) !important;}
+* * * * * {background-color:hsl(40, 100%, 50%) !important;}
+* * * * * * {background-color:hsl(50, 100%, 50%) !important;}
+* * * * * * * {background-color:hsl(60, 100%, 50%) !important;}
+* * * * * * * * {background-color:hsl(70, 100%, 50%) !important;}
+* * * * * * * * * {background-color:hsl(80, 100%, 50%) !important;}
+* * * * * * * * * * {background-color:hsl(90, 100%, 50%) !important;}
+* * * * * * * * * * * {background-color:hsl(100, 100%, 50%) !important;}
+* * * * * * * * * * * * {background-color:hsl(110, 100%, 50%) !important;}
+* * * * * * * * * * * * * {background-color:hsl(120, 100%, 50%) !important;}
+* * * * * * * * * * * * * * {background-color:hsl(130, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * {background-color:hsl(140, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * {background-color:hsl(150, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * {background-color:hsl(160, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * {background-color:hsl(170, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * {background-color:hsl(180, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * * {background-color:hsl(190, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * * * {background-color:hsl(200, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(210, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(220, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(230, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(240, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(250, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(260, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(270, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(280, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(290, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(300, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(310, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(320, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(330, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(340, 100%, 50%) !important;}
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(350, 100%, 50%) !important;}
+/*end rainbow*/</style>
 </html>
