@@ -2,7 +2,7 @@
 
 <head>
 
-<title>parallax</title>
+<title>victortuapuntocom</title>
 
 <style>
 
@@ -10,16 +10,24 @@
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}/*HTML5 display-role reset for older browsers*/article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul,li{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
 /*end of reset*/
 
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+
 body{
 	background: #000;
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
+	font-size: 1em;
 	/*-webkit-perspective: 1000;*/
+	color: #fff;
 	}
 
 #closer {
-	z-index: 999;
+	z-index: 200;
 	position: absolute;
 	top:50%;
 	left: 50%;
@@ -42,6 +50,7 @@ body{
 	}
 
 #landpage {
+	z-index: 100;
 	position: absolute;
 	left: 0;
 	width: 100%;
@@ -199,6 +208,59 @@ segundo eje
 	}
 
 
+
+
+/*-------------------------------------------------------------------
+
+idiomas
+
+-------------------------------------------------------------------*/
+
+
+#language {
+	z-index: 1;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+#language a {
+	position: relative;
+	display: block;
+	height: 33.33%;
+
+	padding: 3em 0;
+	text-align: center;
+	background: linear-gradient(to bottom, rgba(55,74,107,1) 0%, rgba(10,10,10,1) 100%);
+}
+
+
+
+/*-------------------------------------------------------------------
+
+media queries
+
+-------------------------------------------------------------------*/
+
+
+
+@media all and (max-width: 420px) {
+	#landpage {display: none;}
+	}
+
+@media all and (min-width: 420px) {
+
+	}
+
+@media all and (min-width: 640px) {
+
+	}
+
+
+
+
 </style>
 
 </head>
@@ -222,6 +284,12 @@ segundo eje
 		<div id="axis2">
 			<div></div> <div></div> <div></div> <div></div> <div></div> <div></div> 
 		</div>	
+</div>
+
+<div id="language">
+	<a href="./eng.html" title="english" alt="english">english</a>
+	<a href="./esp.html" title="español" alt="español">español</a>
+	<a href="./cat.html" title="català" alt="català">català</a>
 </div>
 
 <script type="text/javascript" src="./js/jquery.min.js"></script>
@@ -283,43 +351,6 @@ $(document).ready(function() {
 
 </body>
 
-<style type="text/css">
-/*rainbow*
-* {background-color:hsl(0, 100%, 50%) !important;}
-* * {background-color:hsl(10, 100%, 50%) !important;}
-* * * {background-color:hsl(20, 100%, 50%) !important;}
-* * * * {background-color:hsl(30, 100%, 50%) !important;}
-* * * * * {background-color:hsl(40, 100%, 50%) !important;}
-* * * * * * {background-color:hsl(50, 100%, 50%) !important;}
-* * * * * * * {background-color:hsl(60, 100%, 50%) !important;}
-* * * * * * * * {background-color:hsl(70, 100%, 50%) !important;}
-* * * * * * * * * {background-color:hsl(80, 100%, 50%) !important;}
-* * * * * * * * * * {background-color:hsl(90, 100%, 50%) !important;}
-* * * * * * * * * * * {background-color:hsl(100, 100%, 50%) !important;}
-* * * * * * * * * * * * {background-color:hsl(110, 100%, 50%) !important;}
-* * * * * * * * * * * * * {background-color:hsl(120, 100%, 50%) !important;}
-* * * * * * * * * * * * * * {background-color:hsl(130, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * {background-color:hsl(140, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * {background-color:hsl(150, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * {background-color:hsl(160, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * {background-color:hsl(170, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * {background-color:hsl(180, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * * {background-color:hsl(190, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * * * {background-color:hsl(200, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(210, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(220, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(230, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(240, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(250, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(260, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(270, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(280, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(290, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(300, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(310, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(320, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(330, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(340, 100%, 50%) !important;}
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * {background-color:hsl(350, 100%, 50%) !important;}
-/*end rainbow*/</style>
+<-link rel="stylesheet" type="text/css" href="./css/rainbow2.css">
+
 </html>
