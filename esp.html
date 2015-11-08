@@ -7,12 +7,29 @@
 
 <title>Victor Tuà Artisan</title>
 
-<link rel="stylesheet" href="./cs/jquery.mCustomScrollbar.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css" type="text/css" media="screen" />
 
 <style type="text/css">
+
+
+
 /*Eric Meyer's Reset CSS v2.0*/
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}/*HTML5 display-role reset for older browsers*/article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul,li{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
 /*end of reset*/
+
+
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+/*bloque principal*/
+
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
 
 html,body {
 	width:100%;
@@ -25,16 +42,18 @@ body {
 	background: orange;
 	}
 body * {
-	font-size: 6px !important;
 	box-sizing: border-box;
 }
 
 
+/*-----------------------------------------------------
+header
+-----------------------------------------------------*/
+
+
 .header {
-	z-index: 999;
-	position: fixed;
+	z-index: 100;
 	width: 100%;
-	height: 8em;
 
 	background: rgba(0,0,0,.4);
 	}
@@ -61,19 +80,16 @@ h1 {
 	outline: none;
 	}
 
-
-
 /*-----------------------------------------------------
 contenedor
 -----------------------------------------------------*/
 
 .container {
-	top: 15em;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 
-	padding: 10em 2% 0 2%;
+	padding: 0 2%;
 	text-align: justify;
 	background: #000;
 	/*-webkit-backface-visibility: hidden;*/
@@ -121,21 +137,83 @@ contenedor
 
 
 
+/*-----------------------------------------------------
+proyectos
+-----------------------------------------------------*/
+
+.project {
+	z-index: 999;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+
+	top:100%;
+
+	background: darkgreen;
+	opacity: .6;
+	transition: all ease-in-out .5s;
+	}
+
+/*.projecte {
+	top:0%;
+	}*/
+
+.project:target {
+	opacity: 1;
+	top:0%;
+	}
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
 /*-------------------------------------------------------------------*/
 
 /*media queries desde 480px*/
 @media all and (min-width: 480px) {
 
 /*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
 
+
+.header {
+	position: fixed;
+	top: 0;
+	height: 8em;
+	}
 h1 {
-	position: absolute;
+	position: fixed;
 	top: 3em;
 	left: 4em;
 	}
@@ -159,9 +237,10 @@ h1 {
 
 
 
-
-
-
+.container {
+	margin-top: 10em;
+	
+	}
 
 .container a,
 .container .gap {
@@ -176,28 +255,54 @@ h1 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
 /*-------------------------------------------------------------------*/
 
 /*media queries desde 640px*/
 @media all and (min-width: 640px) {
 
 /*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
 
 .container a,
 .container .gap {
 	width: 23.5%;
 	}
 	
-
-
-
-
-
-
-
 /*-------------------------------------------------------------------*/
 /*final media queries*/ }
 /*-------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
 
 </style>
 
@@ -224,41 +329,40 @@ h1 {
 
 <div id="Container" class="container">
 
-	<a class="catproduct" href="#">
-		<div class="">taula de llum</div>
-		<img src="./img/taulallum.jpg" alt="taula de llum" title="hmñmñmi">
+	<a class="catproduct taula" href="#taula-de-llum" title="test 1">
+		<img src="./img/projectest01.jpg" alt="imagen proyecto">
 	</a>
 
-	<a class="catweb" href="#">
-		<img src="./img/taulallum.jpg" alt="taula de llum">
+	<a class="catweb" href="#taula-de-llum2">
+		<img src="./img/projectest02.jpg" alt="imagen proyecto" title="test 2">
 	</a>
 
 	<a class="catillust" href="#">
-		<img src="./img/taulallum.jpg" alt="taula de llum">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
 	</a>
 
 	<a class="catproduct" href="#">
-		<img src="./img/taulallum.jpg" alt="taula de llum">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
 	</a>
 
 	<a class="catothers" href="#">
-		<img src="./img/taulallum.jpg" alt="taula de llum">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
 	</a>
 
 	<a class="catweb" href="#">
-		<img src="./img/taulallum.jpg" alt="taula de llum">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
 	</a>
 
 	<a class="catillust" href="#">
-		<img src="./img/taulallum.jpg" alt="taula de llum">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
 	</a>
 
 	<a class="catillust" href="#">
-		<img src="./img/taulallum.jpg" alt="taula de llum">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
 	</a>
 
 	<a class="catphoto" href="#">
-		<img src="./img/taulallum.jpg" alt="taula de llum">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
 	</a>
 
 
@@ -267,6 +371,20 @@ h1 {
 </div>
 
 
+<div id="taula-de-llum" class="project">
+	<a href="#">cerrar</a>
+	<h2>test 1</h2>
+	<img src="./img/projectest01.jpg">
+	<p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.</p>
+</div>
+
+<div id="taula-de-llum2" class="project">
+	<a href="#">cerrar</a>
+	<h2>test 2</h2>
+	<img src="./img/projectest02.jpg">
+	<p>ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble ble.</p>
+</div>
+
 <!-- javascript -->
 
 <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -274,6 +392,17 @@ h1 {
 
 <script src="./js/jquery-1.9.0.min.js"></script>
 <script src="./js/jquery.mixitup.min.js"></script>
+
+<!-- <script type="text/javascript">
+
+$(function() {
+	$("#closer").click(function() {
+		$(".project").toggleClass("projecte");
+	});
+});
+
+</script> -->
+
 
 <script type="text/javascript">
 	$(function(){
@@ -302,7 +431,8 @@ h1 {
     })(jQuery);
 </script>
 
-<ink rel="stylesheet" type="text/css" href="./css/rainbow2.css">
+<a href="./index.html" style="position: fixed; top: 0; right: 0; background: #800; z-index: 900;">X</a>
+<link rel="stylesheet" type="text/css" href="./css/rainbow2no.css">
 
 </body>
 
