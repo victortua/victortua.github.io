@@ -1,0 +1,457 @@
+
+
+
+/*Eric Meyer's Reset CSS v2.0*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}/*HTML5 display-role reset for older browsers*/article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul,li{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+/*end of reset*/
+
+
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+/*bloque principal*/
+
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+
+html, body {
+	width:100%;
+	height:100%;
+	font-size: 100%;
+	}
+
+body   {overflow: auto;}
+body * {box-sizing: border-box;}
+
+a {text-decoration: none;}
+
+
+/* colores */
+
+body {background-color: #000;}
+.header {background: rgba(0,0,0,.4);}
+html, body, a {color: #fff;}
+
+/*-----------------------------------------------------
+header
+-----------------------------------------------------*/
+
+
+.header {
+	z-index: 100;
+	width: 100%;
+	}
+
+.controls button {
+	display: block;
+	color: inherit;
+	background: none;
+	border: 2px solid #fff;
+	cursor: pointer;
+	}
+.controls button:active,
+.controls button:focus {
+	outline: none;
+	}
+
+/*-----------------------------------------------------
+contenedor
+-----------------------------------------------------*/
+
+.container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	padding: 0 2%;
+	text-align: justify;
+	/*background: orange;*/
+	/*-webkit-backface-visibility: hidden;*/
+	}
+.container:after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+	}
+
+.container a,
+.container .gap {
+	display: inline-block;
+	width: 100%;
+	}
+
+.container a {
+	display: inline-block;
+	text-align: left;
+	margin-bottom: 2%;
+	display: none;
+	}
+
+/*.container a:before {
+	content: attr(title);
+	color: white;
+	font-size: 16px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 4% 6%;
+	font-weight: 700;
+	}*/
+
+/*.container a:before {
+	content: attr(class);
+	display: inline-block;
+	padding-top: 60%;
+	}*/
+
+
+.container a img {
+	width: 100%;
+	}
+
+
+
+
+/*-----------------------------------------------------
+proyectos
+-----------------------------------------------------*/
+
+#projects {
+	z-index: 999;
+	position: fixed;
+	width: 100%;
+	height: 0;
+	top: 0;
+	left: 0;
+}
+#projects > div, #info {
+	z-index: 999;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+
+	background: #000;
+	transition: all ease-in-out .5s;
+
+	top:100%;
+	opacity: .6;
+	}
+
+#projects > div:target, #info:target {
+	top:0%;
+	opacity: 1;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------- enlaces -----------------*/
+
+
+#info a, #projects div a {
+	display: inline-block;
+	padding: .3em 2em;
+	position: relative;
+	}
+
+#info a:before, #projects div a:before,
+#info a:after, #projects div a:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	}
+
+
+/* fondo blanco */
+
+
+#info a:before, #projects div a:before {
+	z-index: -1;
+	background: #fff;
+
+	transform: scaleY(0);
+	transform-origin: 50% 0;
+
+	transition-property: transform;
+	transition-duration: 2s;
+	transition-timing-function: cubic-bezier(.14,.11,.08,1);
+	}
+
+#info a, #projects div a {
+	transition-duration: 2s;
+	transition-timing-function: cubic-bezier(.14,.11,.08,1);
+	}
+
+#info a:hover, #projects div a:hover {
+	color: #000;
+	transition-duration: .6s;
+	transition-timing-function: cubic-bezier(.15,1.25,.28,.91);
+
+	}
+#info a:hover:before, #projects div a:hover:before {
+	transform: scaleY(1);
+	transition-duration: .6s;
+	transition-timing-function: cubic-bezier(.41,1.92,.18,.33);
+	}
+
+
+/* borde expandible */
+
+
+#info a:after, #projects div a:after {
+	z-index: -2;
+	border-color: #fff;
+	border-style: solid;
+	border-width: .1em;
+
+	animation-duration: .7s;
+	}
+#info a:active:after, #info a:focus:after, #projects div a:active:after, a:focus:after {
+	-webkit-animation-name: hvr-ripple-out;
+	animation-name: hvr-ripple-out;
+	}
+	@keyframes hvr-ripple-out {
+	100% {
+	top: -1em;
+	right: -1em;
+	bottom: -1em;
+	left: -1em;
+	opacity: 0;
+	border-width: 1em;
+	}
+	}
+
+
+
+
+
+
+
+/*----------------- videos -----------------*/
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+/*media queries desde 480px*/
+@media all and (min-width: 480px) {
+
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+
+.header {
+	position: fixed;
+	top: 0;
+	height: 8em;
+	}
+h1 {
+	position: fixed;
+	top: 3em;
+	left: 4em;
+	}
+
+.controls {
+	position: fixed;
+	top: 3em;
+	right: 4em;
+	}
+.controls label {
+	margin: 0 .4em 0 0;
+	}
+.controls button {
+	display: inline-block;
+	padding: .4em .8em;
+	}
+.controls button + .controls label {
+	margin-left: 10em;
+	}
+
+
+
+
+.container {
+	margin-top: 10em;
+	
+	}
+
+.container a,
+.container .gap {
+	width: 32%;
+	}
+
+/*-------------------------------------------------------------------*/
+/*final media queries*/ }
+/*-------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+/*media queries desde 640px*/
+@media all and (min-width: 640px) {
+
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+
+.container a,
+.container .gap {
+	width: 23.5%;
+	}
+	
+/*-------------------------------------------------------------------*/
+/*final media queries*/ }
+/*-------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
