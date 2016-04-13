@@ -1,15 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="Author" content="Victor Tuà" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta charset="UTF-8">
+<meta name="Author" content="Victor Tuà">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>Victor Tuà</title>
+<title>Victor Tuà Portfolio</title>
 
-<link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css" type="text/css" media="screen" />
-<link rel="stylesheet" type="text/css" href="./css/style.css" type="text/css" media="screen" />
-<link rel="stylesheet" type="text/css" href="./fonts/styleshee.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
+<link rel="stylesheet" type="text/css" media="screen" href="./css/owl.carousel.css">
 
 </head>
 
@@ -39,77 +38,182 @@
 
 <!--cabecera-->
 
-<div class="header">
+<div id="header">
+	
+	<a href="#info"><h1>Victor Tuà Portfolio</h1></a>
 
-	<h1>Victor Tuà</h1>
-	<a href="#info">info</a>
+	<div id="filters">
+		<button class="filter" data-filter=".imag">no filtrar
+		</button><label>filtrar proyectos:
+		</label><button class="filter" data-filter=".web">web
+		</button><button class="filter" data-filter=".illust">ilustración
+		</button><button class="filter" data-filter=".product">industrial
+		</button><button class="filter" data-filter=".photo">fotografía
+		</button><button class="filter" data-filter=".others">otros
+		</button>
+	</div>
 
-	<div class="controls">
-		<label>filtrar proyectos:</label>
-
-		<button class="filter" data-filter="all">todo</button>
-		<button class="filter" data-filter=".catweb">web</button>
-		<button class="filter" data-filter=".catillust">ilustración</button>
-		<button class="filter" data-filter=".catproduct">industrial</button>
-		<button class="filter" data-filter=".catphoto">fotografía</button>
-		<button class="filter" data-filter=".catothers">otros</button>
+	<div id="titles">
+		<div class="web">categoría: web</div>
+		<div class="illust">categoría: ilustración</div>
+		<div class="product">categoría: industrial</div>
+		<div class="photo">categoría: fotografía</div>
+		<div class="others">categoría: otros</div>
 	</div>
 
 </div>
 
 
 
+
+
 <!--rejilla-->
 
-<div id="Container" class="container">
 
-	<a class="catproduct" href="#test01" title="test 1">
-		<img src="./img/projectest01.jpg" alt="imagen proyecto">
-	</a>
 
-	<a class="catweb" href="#test02" title="test 2">
-		<img src="./img/projectest02.jpg" alt="imagen proyecto">
-	</a>
+<div id="grid">
 
-	<a class="catillust" href="#">
+		<a class="imag">
+			<img src="./img/projectestproxim.jpg" alt="imagen proyecto">
+			<div class="anchor">
+				<div class="gridinfo">
+					<span>Próximamente</span>
+				</div>
+			</div>
+	</a><a class="imag">
+			<img src="./img/projectestproxim.jpg" alt="imagen proyecto">
+			<div class="anchor">
+				<div class="gridinfo">
+					<span>Próximamente</span>
+				</div>
+			</div>
+	</a><a class="imag product" href="#test01">
+			<img src="./img/projectest01.jpg" alt="imagen proyecto">
+			<div class="anchor">
+				<div class="gridinfo">
+					<span>Test nº2l´ñjln ´lnj j l </span>
+					<span>ñdskvbj</span>
+				</div>
+			</div>
+	</a><a class="imag web" href="#test02">
+			<img src="./img/projectest02.jpg" alt="imagen proyecto">
+			<div class="anchor">
+				<div class="gridinfo">
+					<span>Test nº1</span>
+					<span>ñdskvbj</span>
+				</div>
+			</div>
+	</a><a class="imag illust" href="#">
+			<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+			<div class="anchor">
+				<div class="gridinfo">
+					<span>Test nº1</span>
+					<span>ñdskvbj</span>
+				</div>
+			</div>
+	</a><a class="imag product" href="#">
+			<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+			<div class="anchor">
+				<div class="gridinfo">
+					<span>Test nº1</span>
+					<span>ñdskvbj</span>
+				</div>
+			</div>
+	</a><a class="imag others" href="#">
+			<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+			<div class="anchor">
+				<div class="gridinfo">
+					<span>Test nº1</span>
+					<span>ñdskvbj</span>
+				</div>
+			</div>
+	</a><a class="imag web" href="#">
+			<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+			<div class="anchor">
+				<div class="gridinfo">
+					<span>Test nº1</span>
+					<span>ñdskvbj</span>
+				</div>
+			</div>
+	</a><a class="imag illust" href="#">
+			<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+			<div class="anchor">
+				<div class="gridinfo">
+					<span>Test nº1</span>
+					<span>ñdskvbj</span>
+				</div>
+			</div>
+	</a><a class="imag illust" href="#">
+			<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+			<div class="anchor">
+				<div class="gridinfo">
+					<span>Test nº1</span>
+					<span>ñdskvbj</span>
+				</div>
+			</div>
+	</a><a class="imag photo" href="#">
+			<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+			<div class="anchor">
+				<div class="gridinfo">
+					<span>Test nº1</span>
+					<span>ñdskvbj</span>
+				</div>
+			</div>
+	</a><a class="imag photo" href="#">
+			<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+			<div class="anchor">
+				<div class="gridinfo">
+					<span>Test nº1</span>
+					<span>ñdskvbj</span>
+				</div>
+			</div>
+	</a><a class="imag photo" href="#">
+			<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+			<div class="anchor">
+				<div class="gridinfo">
+					<span>Test nº1</span>
+					<span>ñdskvbj</span>
+				</div>
+			</div>
+	</a><a class="imag photo" href="#">
+			<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+	</a><a class="imag photo" href="#">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+	</a><a class="imag photo" href="#">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+	</a><a class="imag photo" href="#">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+	</a><a class="imag photo" href="#">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+	</a><a class="imag photo" href="#">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+	</a><a class="imag photo" href="#">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+	</a><a class="imag photo" href="#">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+	</a><a class="imag photo" href="#">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+	</a><a class="imag photo" href="#">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+	</a><a class="imag photo" href="#">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+	</a><a class="imag photo" href="#">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+	</a><a class="imag photo" href="#">
+		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
+	</a><a class="imag photo" href="#">
 		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
 	</a>
 
-	<a class="catproduct" href="#">
-		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
-	</a>
-
-	<a class="catothers" href="#">
-		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
-	</a>
-
-	<a class="catweb" href="#">
-		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
-	</a>
-
-	<a class="catillust" href="#">
-		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
-	</a>
-
-	<a class="catillust" href="#">
-		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
-	</a>
-
-	<a class="catphoto" href="#">
-		<img src="./img/projectestgrey.jpg" alt="imagen proyecto">
-	</a>
-
-
-	<div class="gap"></div>
-	<div class="gap"></div>
+	<!-- <div class="gap"></div><div class="gap"></div> -->
 </div>
 
 
 <!--información personal-->
 
 <div id="info">
-	<a href="#">X</a>
-	<h2>quién soy yo</h2>
+	<a class="closer" href="#"></a>
+	<h2>Quién soy yo ?</h2>
 	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
 	<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.</p>
 	<ul>
@@ -121,15 +225,12 @@
 		<li><a href="./cat.html#info">Anar a la versió en Català</a></li>
 		<li><a href="./index.html">Volver a la página de presentación</a></li>
 	</ul>
-<video autoplay>
-		<source src="video/profile.mp4" type="video/mp4">
-		Your browser does not support the video tag.
-</video>
 
-	<!--  -->
+	<video loop controls><source src="video/test2.mp4" type="video/mp4"></video>
+
 	<!-- <div class="video-container">
          <iframe src="https://www.youtube.com/embed/dLRjiiAawGg" frameborder="0" width="560" height="315"></iframe>
-</div> -->
+	</div> -->
 
 </div>
 
@@ -139,43 +240,63 @@
 <div id="projects">
 
 	<div id="test01">
-		<a href="#">X</a>
-		<h2>test 1</h2>
 
+		<a class="closer" href="#"></a>
+		<h2>Test nº1</h2>
+		
+		<div class="owl-carousel">
+			<div class="item"><img class="lazyOwl" data-src="./img/owl1.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl2.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl3.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl4.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl5.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl6.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl7.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl8.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl1.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl2.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl3.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl4.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl5.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl6.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl7.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl8.jpg" alt="Lazy Owl Image"></div>
+		</div>
 
+		<div class="description">
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+			<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.</p>
+		</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-		<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.</p>
 	</div>
 
 	<div id="test02">
-		<a href="#">X</a>
-		<h2>test 2</h2>
-		<img src="./img/projectest02.jpg">
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-		<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.</p>
+		<a class="closer" href="#"></a>
+		<h2>Test nº2</h2>
+		<div class="owl-carousel">
+			<div class="item"><img class="lazyOwl" data-src="./img/owl1.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><video loop controls style="width:100%;"><source src="video/luca.mp4" type="video/mp4"></video></div>
+			<!-- <div class="item"><div class="video-container"><iframe src="https://www.youtube.com/embed/dLRjiiAawGg" frameborder="0" width="560" height="315"></iframe></div></div> -->
+			<div class="item"><img class="lazyOwl" data-src="./img/owl2.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl3.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl4.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl5.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl6.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl7.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl8.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl1.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl2.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl3.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl4.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl5.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl6.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl7.jpg" alt="Lazy Owl Image"></div>
+			<div class="item"><img class="lazyOwl" data-src="./img/owl8.jpg" alt="Lazy Owl Image"></div>
+		</div>
+		<div class="description">
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+			<p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.</p>
+		</div>
 	</div>
 
 </div>
@@ -205,32 +326,74 @@
 
 <script type="text/javascript">
 	$(function(){
-		$('#Container').mixItUp({
+		$('#grid').mixItUp({
 			animation: {
-			duration: 800,
-			effects: 'fade translateY(50%) stagger(150ms)',
-			easing: 'cubic-bezier(0.39, 0.575, 0.565, 1)'
-			}
+				duration: 600,
+				effects: 'fade translateY(50%) stagger(100ms)',
+				easing: 'cubic-bezier(0.39, 0.575, 0.565, 1)'
+				},
+			load: {
+				filter: '.imag'
+				}
+		});
+
+		$('#titles').mixItUp({
+			selectors: {
+                target: "div"
+            	},
+			animation: {
+				duration: 600,
+				effects: 'fade translateY(50%)',
+				easing: 'cubic-bezier(0.39, 0.575, 0.565, 1)'
+				},
+			layout: {
+				display: 'block'
+				},
+			load: {
+				filter: '.imag'
+				}
 		});
 	});
 </script>
 
-<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
-<!--<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
 
 <script>
-    (function($){
-        $(window).load(function(){
-            $("body").mCustomScrollbar({
-				theme: "minimal",
-				scrollInertia: 400,
+	$(document).ready(function(){
+		$("#grid").scroll(function() {
+			if ($("#grid").scrollTop() > 50) {
+				$("#header").addClass("shrink");
+				}
+			else {
+				$("#header").removeClass("shrink");
+				}
+		});
+	});
+</script>
 
-			});
-        });
-    })(jQuery);
-</script>-->
 
-<link rel="stylesheet" type="text/css" href="./css/rainbow2no.css">
+
+
+
+<script src="./js/owl.carousel.js"></script>
+
+<script>
+
+$(document).ready(function() {
+	$(".owl-carousel").owlCarousel({
+	singleItem : true,
+	lazyLoad : true,
+	navigation : true,
+	navigationText : ["&#8678;","&#8680;"],
+	});
+});
+
+</script>
+
+
+
+<!-- <link rel="stylesheet" type="text/css" href="./css/rainbow2.css"> -->
 
 </body>
 

@@ -1,0 +1,179 @@
+<div id="landpage" class="">
+	<div id="closer"></div>
+
+	<!-- <div id="frame"></div> -->
+
+	<div id="cursor">
+		<div>
+			<div></div>
+		</div>
+	</div>
+
+
+
+	<div id="sun"><img src="./img/sun.gif"></div>
+
+
+	<div id="greyscale" class="color">
+		<div id="axis">
+				
+ 				<div id="diamond">
+ 					<div><img src="./img/stars1.svg"/></div>
+ 				</div>
+
+				<div id="gears">
+					<div><img src="./img/gear1.svg"/></div>
+					<div><img src="./img/gear2.svg"/></div>
+					<div><img src="./img/gear3.svg"/></div>
+					<div><img src="./img/gear4.svg"/></div>
+					<div><img src="./img/gear5.svg"/></div>
+					<div><img src="./img/gear6.svg"/></div>
+					<div><img src="./img/gear7.svg"/></div>
+					<!-- <img src="./img/allgears.svg"/> -->
+				</div>
+
+				<!--mercurio-->
+				<!--eje-->
+				<div id="planetone">
+					<!--orbita-->
+					<div>
+						<!--planeta-->
+						<div>
+							<!--eje-->
+							<div>
+								<!--lados de polígono-->
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--saturno-->
+				<!--eje-->
+				<div id="planettwo">
+					<!--orbita-->
+					<div>
+						<!--planeta-->
+						<div>
+							<!--eje-->
+							<div>
+								<!--primer grupo-->
+								<div>
+									<img src="./img/pentagono.svg">
+									<img src="./img/pentagono.svg">
+									<img src="./img/pentagono.svg">
+									<img src="./img/pentagono.svg">
+									<img src="./img/pentagono.svg">
+									<img src="./img/pentagono.svg">
+								</div>
+								<!--segundo grupo-->
+								 <div>
+									<img src="./img/pentagono.svg">
+									<img src="./img/pentagono.svg">
+									<img src="./img/pentagono.svg">
+									<img src="./img/pentagono.svg">
+									<img src="./img/pentagono.svg">
+									<img src="./img/pentagono.svg">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--tierra-->
+				<!--eje-->
+				<div id="planetthree">
+					<!--orbita-->
+					<div>
+						<!--planeta-->
+						<div>
+							<div>
+								<div>
+									<div>
+										<img src="./img/triangulo.svg">
+										<div><img src="./img/triangulo.svg"></div>
+									</div>
+									<div>
+										<img src="./img/triangulo.svg">
+										<div><img src="./img/triangulo.svg"></div>
+									</div>
+									<div>
+										<img src="./img/triangulo.svg">
+										<div><img src="./img/triangulo.svg"></div>
+									</div>
+									<div>
+										<img src="./img/triangulo.svg">
+										<div><img src="./img/triangulo.svg"></div>
+									</div>
+									<div>
+										<img src="./img/triangulo.svg">
+										<div><img src="./img/triangulo.svg"></div>
+									</div>
+								</div>
+								<div>
+									<div>
+										<img src="./img/triangulo.svg">
+										<div><img src="./img/triangulo.svg"></div>
+									</div>
+									<div>
+										<img src="./img/triangulo.svg">
+										<div><img src="./img/triangulo.svg"></div>
+									</div>
+									<div>
+										<img src="./img/triangulo.svg">
+										<div><img src="./img/triangulo.svg"></div>
+									</div>
+									<div>
+										<img src="./img/triangulo.svg">
+										<div><img src="./img/triangulo.svg"></div>
+									</div>
+									<div>
+										<img src="./img/triangulo.svg">
+										<div><img src="./img/triangulo.svg"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--luna orbita-->
+						<div>
+							<!--luna-->
+							<div></div>
+						</div>
+					</div>
+				</div>
+			
+				<!--plutón-->
+				<!--eje-->
+				<div id="planetfour">
+					<!--orbita-->
+					<div>
+						<!--planeta-->
+						<div>
+							<div>
+								<img src="./img/triangulo.svg">
+								<img src="./img/triangulo.svg">
+								<img src="./img/triangulo.svg">
+								<img src="./img/triangulo.svg">
+								<img src="./img/triangulo.svg">
+								<img src="./img/triangulo.svg">
+								<img src="./img/triangulo.svg">
+								<img src="./img/triangulo.svg">
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div id="squarethree"></div>
+		</div>
+
+		<div class="stars"><img src="./img/stars2.svg"/></div>
+
+	</div>
+	
+</div>

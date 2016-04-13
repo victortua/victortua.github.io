@@ -1,129 +1,467 @@
+/*
 
 
 
-/*Eric Meyer's Reset CSS v2.0*/
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}/*HTML5 display-role reset for older browsers*/article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul,li{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
-/*end of reset*/
+Índice
+------
 
 
-/*----------------- fuente Poly -----------------*/
+1. General
+	1.1. Fuente Poly
+	1.2. fuente Roboto 2014
+	1.3. fuente Roboto 2014 Condensed
+	1.4. Eric Meyer's Reset CSS v2.0
+	1.5. Propiedades generales
+
+2. bloque principal (móbil)
+	2.1. header
+	2.2. Rejilla
+	2.3. proyectos
+
+3. Media queries desde 480px (tableta)
+	3.1. Header
+	3.2. Rejilla
+	3.3. Proyectos
+
+4. Media queries desde 640px (escritorio)
+	4.1. Header
+	4.2. Rejilla
+	4.3. Proyectos
 
 
-/*@font-face {
-    font-family: 'polyitalic';
-    src: url('../fonts/poly-italic-webfont.eot');
-    src: url('../fonts/poly-italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/poly-italic-webfont.woff2') format('woff2'),
-         url('../fonts/poly-italic-webfont.woff') format('woff'),
-         url('../fonts/poly-italic-webfont.ttf') format('truetype'),
-         url('../fonts/poly-italic-webfont.svg#polyitalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
 
-}
+*/
+
+
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/* 1. General */
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+
+/*----------------------------
+1.1. fuente Poly
+-----------------------------*/
+
 
 @font-face {
-    font-family: 'polyregular';
-    src: url('../fonts/poly-regular-webfont.eot');
-    src: url('../fonts/poly-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/poly-regular-webfont.woff2') format('woff2'),
-         url('../fonts/poly-regular-webfont.woff') format('woff'),
-         url('../fonts/poly-regular-webfont.ttf') format('truetype'),
-         url('../fonts/poly-regular-webfont.svg#polyregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'polyitalic';
+	src: url('../fonts/poly-italic.eot');
+	src: url('../fonts/poly-italic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/poly-italic.woff2') format('woff2'),
+	url('../fonts/poly-italic.woff') format('woff'),
+	url('../fonts/poly-italic.ttf') format('truetype'),
+	url('../fonts/poly-italic.svg#polyitalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'polyregular';
+	src: url('../fonts/poly-regular.eot');
+	src: url('../fonts/poly-regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/poly-regular.woff2') format('woff2'),
+	url('../fonts/poly-regular.woff') format('woff'),
+	url('../fonts/poly-regular.ttf') format('truetype'),
+	url('../fonts/poly-regular.svg#polyregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
 
-}*/
+
+/*----------------------------
+1.2. fuente Roboto 2014
+-----------------------------*/
 
 
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
+@font-face {
+	font-family: 'robotoblack';
+	src: url('../fonts/roboto-black.eot');
+	src: url('../fonts/roboto-black.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-black.woff2') format('woff2'),
+	url('../fonts/roboto-black.woff') format('woff'),
+	url('../fonts/roboto-black.ttf') format('truetype'),
+	url('../fonts/roboto-black.svg#robotoblack') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'robotoblack_italic';
+	src: url('../fonts/roboto-blackitalic.eot');
+	src: url('../fonts/roboto-blackitalic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-blackitalic.woff2') format('woff2'),
+	url('../fonts/roboto-blackitalic.woff') format('woff'),
+	url('../fonts/roboto-blackitalic.ttf') format('truetype'),
+	url('../fonts/roboto-blackitalic.svg#robotoblack_italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'robotobold';
+	src: url('../fonts/roboto-bold.eot');
+	src: url('../fonts/roboto-bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-bold.woff2') format('woff2'),
+	url('../fonts/roboto-bold.woff') format('woff'),
+	url('../fonts/roboto-bold.ttf') format('truetype'),
+	url('../fonts/roboto-bold.svg#robotobold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'robotobold_italic';
+	src: url('../fonts/roboto-bolditalic.eot');
+	src: url('../fonts/roboto-bolditalic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-bolditalic.woff2') format('woff2'),
+	url('../fonts/roboto-bolditalic.woff') format('woff'),
+	url('../fonts/roboto-bolditalic.ttf') format('truetype'),
+	url('../fonts/roboto-bolditalic.svg#robotobold_italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'robotoitalic';
+	src: url('../fonts/roboto-italic.eot');
+	src: url('../fonts/roboto-italic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-italic.woff2') format('woff2'),
+	url('../fonts/roboto-italic.woff') format('woff'),
+	url('../fonts/roboto-italic.ttf') format('truetype'),
+	url('../fonts/roboto-italic.svg#robotoitalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'robotolight';
+	src: url('../fonts/roboto-light.eot');
+	src: url('../fonts/roboto-light.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-light.woff2') format('woff2'),
+	url('../fonts/roboto-light.woff') format('woff'),
+	url('../fonts/roboto-light.ttf') format('truetype'),
+	url('../fonts/roboto-light.svg#robotolight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'robotolight_italic';
+	src: url('../fonts/roboto-lightitalic.eot');
+	src: url('../fonts/roboto-lightitalic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-lightitalic.woff2') format('woff2'),
+	url('../fonts/roboto-lightitalic.woff') format('woff'),
+	url('../fonts/roboto-lightitalic.ttf') format('truetype'),
+	url('../fonts/roboto-lightitalic.svg#robotolight_italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'robotomedium';
+	src: url('../fonts/roboto-medium.eot');
+	src: url('../fonts/roboto-medium.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-medium.woff2') format('woff2'),
+	url('../fonts/roboto-medium.woff') format('woff'),
+	url('../fonts/roboto-medium.ttf') format('truetype'),
+	url('../fonts/roboto-medium.svg#robotomedium') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'robotomedium_italic';
+	src: url('../fonts/roboto-mediumitalic.eot');
+	src: url('../fonts/roboto-mediumitalic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-mediumitalic.woff2') format('woff2'),
+	url('../fonts/roboto-mediumitalic.woff') format('woff'),
+	url('../fonts/roboto-mediumitalic.ttf') format('truetype'),
+	url('../fonts/roboto-mediumitalic.svg#robotomedium_italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'robotoregular';
+	src: url('../fonts/roboto-regular.eot');
+	src: url('../fonts/roboto-regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-regular.woff2') format('woff2'),
+	url('../fonts/roboto-regular.woff') format('woff'),
+	url('../fonts/roboto-regular.ttf') format('truetype'),
+	url('../fonts/roboto-regular.svg#robotoregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'robotothin';
+	src: url('../fonts/roboto-thin.eot');
+	src: url('../fonts/roboto-thin.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-thin.woff2') format('woff2'),
+	url('../fonts/roboto-thin.woff') format('woff'),
+	url('../fonts/roboto-thin.ttf') format('truetype'),
+	url('../fonts/roboto-thin.svg#robotothin') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'robotothin_italic';
+	src: url('../fonts/roboto-thinitalic.eot');
+	src: url('../fonts/roboto-thinitalic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/roboto-thinitalic.woff2') format('woff2'),
+	url('../fonts/roboto-thinitalic.woff') format('woff'),
+	url('../fonts/roboto-thinitalic.ttf') format('truetype'),
+	url('../fonts/roboto-thinitalic.svg#robotothin_italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
 
-/*bloque principal*/
 
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
+/*----------------------------
+1.3. fuente Roboto 2014 Condensed
+-----------------------------*/
 
+
+@font-face {
+	font-family: 'roboto_condensedbold';
+	src: url('../fonts/robotocondensed-bold.eot');
+	src: url('../fonts/robotocondensed-bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/robotocondensed-bold.woff2') format('woff2'),
+	url('../fonts/robotocondensed-bold.woff') format('woff'),
+	url('../fonts/robotocondensed-bold.ttf') format('truetype'),
+	url('../fonts/robotocondensed-bold.svg#roboto_condensedbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'roboto_condensedbold_italic';
+	src: url('../fonts/robotocondensed-bolditalic.eot');
+	src: url('../fonts/robotocondensed-bolditalic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/robotocondensed-bolditalic.woff2') format('woff2'),
+	url('../fonts/robotocondensed-bolditalic.woff') format('woff'),
+	url('../fonts/robotocondensed-bolditalic.ttf') format('truetype'),
+	url('../fonts/robotocondensed-bolditalic.svg#roboto_condensedbold_italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'roboto_condenseditalic';
+	src: url('../fonts/robotocondensed-italic.eot');
+	src: url('../fonts/robotocondensed-italic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/robotocondensed-italic.woff2') format('woff2'),
+	url('../fonts/robotocondensed-italic.woff') format('woff'),
+	url('../fonts/robotocondensed-italic.ttf') format('truetype'),
+	url('../fonts/robotocondensed-italic.svg#roboto_condenseditalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'roboto_condensedlight';
+	src: url('../fonts/robotocondensed-light.eot');
+	src: url('../fonts/robotocondensed-light.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/robotocondensed-light.woff2') format('woff2'),
+	url('../fonts/robotocondensed-light.woff') format('woff'),
+	url('../fonts/robotocondensed-light.ttf') format('truetype'),
+	url('../fonts/robotocondensed-light.svg#roboto_condensedlight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'roboto_condensedlight_italic';
+	src: url('../fonts/robotocondensed-lightitalic.eot');
+	src: url('../fonts/robotocondensed-lightitalic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/robotocondensed-lightitalic.woff2') format('woff2'),
+	url('../fonts/robotocondensed-lightitalic.woff') format('woff'),
+	url('../fonts/robotocondensed-lightitalic.ttf') format('truetype'),
+	url('../fonts/robotocondensed-lightitalic.svg#roboto_condensedlight_italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'roboto_condensedregular';
+	src: url('../fonts/robotocondensed-regular.eot');
+	src: url('../fonts/robotocondensed-regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/robotocondensed-regular.woff2') format('woff2'),
+	url('../fonts/robotocondensed-regular.woff') format('woff'),
+	url('../fonts/robotocondensed-regular.ttf') format('truetype'),
+	url('../fonts/robotocondensed-regular.svg#roboto_condensedregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+
+/*----------------------------
+1.4. Eric Meyer's Reset CSS v2.0
+-----------------------------*/
+
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:baseline;
+	}
+/*HTML5 display-role reset for older browsers*/
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+body{line-height:1;}
+ol,ul,li{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+
+
+/*----------------------------
+1.5. Propiedades generales
+-----------------------------*/
 
 html, body {
 	width:100%;
 	height:100%;
-	font-family: 'polyitalic';
-	font-size: 100%;
+	overflow: hidden;
 	}
 
-body   {overflow: auto;}
 body * {box-sizing: border-box;}
-
 a {text-decoration: none;}
 
+/* fuentes */
+
+h1, h2 {font-family: 'polyitalic';}
+body, button {font-family: 'robotothin';}
 
 /* colores */
 
+html, body, a {color: #eee;}
 body {background-color: #000;}
-.header {background: rgba(0,0,0,.4);}
-html, body, a {color: #fff;}
+#header {background-color: #000; background-color: rgba(0,0,0,.4); background: linear-gradient(to bottom, rgba(0,0,0,.7) 50%, rgba(0,0,0,0) 100%);}
+#projects > div, #info {background-color: #000; background-color: rgba(0,0,0,.95);}
 
-/*-----------------------------------------------------
-header
------------------------------------------------------*/
+::-moz-selection {background: #ccc; color:#000;}
+::selection {background: #ccc; color:#000;}
+
+/* estilo del scrollbar para webkit*/
+
+::-webkit-scrollbar {width: 1em; height: 80px;}
+
+::-webkit-scrollbar-corner { background-color: #000;}}
+::-webkit-scrollbar-track {background-color: #000;}
+::-webkit-scrollbar-thumb {background-color: #222;}
+::-webkit-scrollbar-thumb:hover {background-color: #aaa;}
 
 
-.header {
-	z-index: 100;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/* 2. bloque principal (móbil) */
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+
+/*----------------------------
+2.2. header
+-----------------------------*/
+
+
+#header {
+	z-index: 10;
+	position: fixed;
+	top: 0;
 	width: 100%;
+
+
 	}
 
-.controls button {
+#header > * {
+	transition: all ease-out 1s;
+	}
+
+/* filtros */
+
+#filters button {
 	display: block;
 	color: inherit;
 	background: none;
 	border: 2px solid #fff;
 	cursor: pointer;
 	}
-.controls button:active,
-.controls button:focus {
+#filters button:active,
+ #filters button:focus {
 	outline: none;
 	}
 
-/*-----------------------------------------------------
-contenedor
------------------------------------------------------*/
+/* titulos */
 
-.container {
+#titles {
+	z-index: 9999;
+	position: fixed;
+	
+	top: 6em;
+	left: 1em;
+	max-height: 6em;
+	text-align: left;
+	/*background-color: red;*/
+	}
+#titles div {
+	font-size: 3em;
+	display: none; /*no tocar. interaccion con javascript*/
+	}
+
+
+/*----------------------------
+2.3. Rejilla
+-----------------------------*/
+
+
+#grid {
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
-	overflow: hidden;
-
-	padding: 0 2%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	
 	text-align: justify;
-	/*background: orange;*/
 	/*-webkit-backface-visibility: hidden;*/
 	}
-.container:after {
+/*#grid:after {
 	content: '';
 	display: inline-block;
 	width: 100%;
-	}
+	}*/
 
-.container a,
-.container .gap {
-	display: inline-block;
+#grid a/*,
+#grid .gap*/ {
 	width: 100%;
-	}
-
-.container a {
-	display: inline-block;
 	text-align: left;
-	margin-bottom: 2%;
-	display: none;
+	/*margin-bottom: 2%;*/
+	display: none; /*no tocar. interaccion con javascript*/
+	background-color: orange;
 	}
 
-/*.container a:before {
+/*#grid a:before {
 	content: attr(title);
 	color: white;
 	font-size: 16px;
@@ -133,52 +471,131 @@ contenedor
 	font-weight: 700;
 	}*/
 
-/*.container a:before {
+/*#grid a:before {
 	content: attr(class);
 	display: inline-block;
 	padding-top: 60%;
 	}*/
 
-
-.container a img {
+#grid a img {
+	display: block;
 	width: 100%;
 	}
 
 
+/*----------------------------
+2.4. proyectos
+-----------------------------*/
 
-
-/*-----------------------------------------------------
-proyectos
------------------------------------------------------*/
 
 #projects {
-	z-index: 999;
+	z-index: 20;
 	position: fixed;
 	width: 100%;
 	height: 0;
 	top: 0;
 	left: 0;
-}
-#projects > div, #info {
-	z-index: 999;
+	}
+#projects > div,
+          #info {
+	z-index: 20;
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	left: 0;
 
-	background: #000;
-	transition: all ease-in-out .5s;
 
-	top:100%;
-	opacity: .6;
+	top:150%;
+	opacity: 0;
+
+	transition: all cubic-bezier(.45,.09,.5,.49) 1.5s;
 	}
 
-#projects > div:target, #info:target {
+#projects > div:target,
+          #info:target {
 	top:0%;
 	opacity: 1;
+
+	transition: all cubic-bezier(0,1,.26,1) 1.5s;
 	}
 
 
+/* boton cerrar */
+
+#projects .closer,
+	#info .closer {
+	z-index: 10;
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	width: 2em;
+	height: 2em;
+
+	border-radius: 50%;
+	border: 2px solid #fff;
+
+	transition: transform cubic-bezier(.48,0,.3,.85) 1s;
+
+	/*font-size: 3em;*/
+	/*background-color: rgba(255,0,0,.5);*/
+	}
+#projects .closer:before,
+	#info .closer:before,
+#projects .closer:after,
+	#info .closer:after {
+	content: '';
+	position: absolute;
+	
+	top: 50%;
+	left: 50%;
+	width: 1.2em;
+	height: 2px;
+	margin-top: -1px;
+	margin-left: -.6em;
+	background-color: #fff;
+	}
+#projects .closer:before,
+	#info .closer:before {
+	transform: rotate(45deg);
+	}
+#projects .closer:after,
+	#info .closer:after {
+	transform: rotate(-45deg);
+	}
+
+#projects .closer:hover,
+	#info .closer:hover {
+	transform: rotate(360deg);
+	}
+
+
+/* video */
+
+#info video {
+	z-index: -10;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	}
+
+/* videos youtube */
+
+/*.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px; height: 0; overflow: hidden;
+	}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	}*/
 
 
 
@@ -210,6 +627,44 @@ proyectos
 
 
 
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/* 3. Media queries desde 480px (tableta) */
+@media all and (min-width: 480px) {
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+
+/*----------------------------
+3.1. Header
+-----------------------------*/
+
+
+/*----------------------------
+3.2. Rejilla
+-----------------------------*/
+
+
+#grid a/*,
+#grid .gap*/ {
+	width: 33%;
+	}
+
+
+/*----------------------------
+3.3. Proyectos
+-----------------------------*/
+
+
+/*-------------------------------------------*/
+/*final media queries*/ }
+/*-------------------------------------------*/
 
 
 
@@ -237,12 +692,28 @@ proyectos
 
 
 
-/*----------------- enlaces -----------------*/
+
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/* 4. Media queries desde 640px (escritorio) */
+@media all and (min-width: 640px) {
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+
+/*-------- enlaces --------*/
 
 
 #info a, #projects div a {
 	display: inline-block;
-	padding: .3em 2em;
 	position: relative;
 	}
 
@@ -260,7 +731,8 @@ proyectos
 /* fondo blanco */
 
 
-#info a:before, #projects div a:before {
+       /* #info a:before,
+#projects div a:before {
 	z-index: -1;
 	background: #fff;
 
@@ -272,28 +744,31 @@ proyectos
 	transition-timing-function: cubic-bezier(.14,.11,.08,1);
 	}
 
-#info a, #projects div a {
+        #info a,
+#projects div a {
 	transition-duration: 2s;
 	transition-timing-function: cubic-bezier(.14,.11,.08,1);
 	}
 
-#info a:hover, #projects div a:hover {
+        #info a:hover,
+#projects div a:hover {
 	color: #000;
 	transition-duration: .6s;
 	transition-timing-function: cubic-bezier(.15,1.25,.28,.91);
 
 	}
-#info a:hover:before, #projects div a:hover:before {
+        #info a:hover:before,
+#projects div a:hover:before {
 	transform: scaleY(1);
 	transition-duration: .6s;
 	transition-timing-function: cubic-bezier(.41,1.92,.18,.33);
-	}
+	}*/
 
 
 /* borde expandible */
 
 
-#info a:after, #projects div a:after {
+/*#info a:after, #projects div a:after {
 	z-index: -2;
 	border-color: #fff;
 	border-style: solid;
@@ -314,164 +789,192 @@ proyectos
 	opacity: 0;
 	border-width: 1em;
 	}
+	}*/
+
+
+/*----------------------------
+4.1. Header
+-----------------------------*/
+
+
+#header {
+	height: 10em;
+	pointer-events: none;
 	}
 
+#header * {
+	pointer-events: auto;
+	}
 
-
-
-
-
-
-/*----------------- videos -----------------*/
-
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
-}
- 
-.video-container iframe,
-.video-container object,
-.video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-
-/*media queries desde 480px*/
-@media all and (min-width: 480px) {
-
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-
-
-.header {
+#header h1 {
 	position: fixed;
-	top: 0;
-	height: 8em;
-	}
-h1 {
-	position: fixed;
-	top: 3em;
-	left: 4em;
+	top: .25em;
+	left: .25em;
+	font-size: 4em;
 	}
 
-.controls {
+/* filtros */
+
+#header #filters {
 	position: fixed;
-	top: 3em;
-	right: 4em;
+	top: 2em;
+	right: 2em;
 	}
-.controls label {
-	margin: 0 .4em 0 0;
+
+#header #filters label {
+	margin-left: 1em;
 	}
-.controls button {
+#header #filters button {
 	display: inline-block;
+	margin-left: .4em;
 	padding: .4em .8em;
+	vertical-align: middle;
+	opacity: 1;
+
+	transition: all ease-in-out .3s;
 	}
-.controls button + .controls label {
+#header #filters .active {
+	padding: .4em 0;
+	font-size: 0em;
+	border-width: 0;
+	opacity: 0;
+
+	transition: all ease-in-out 1s;
+	}
+#header #filters button + #header #filters label {
 	margin-left: 10em;
 	}
 
 
+/* header minimizado */
+
+#header.shrink {
+	
+	}
+#header.shrink h1 {
+	top: .15em;
+	left: .15em;
+	font-size: 3em;
+	}
+#header.shrink #titles {
+	font-size: .6em;
+	}
+#header.shrink #filters {
+	top: 1em;
+	right: 1em;
+	}
+
+/*----------------------------
+4.2. Rejilla
+-----------------------------*/
 
 
-.container {
-	margin-top: 10em;
+#grid {
+	padding: 10em 0 6em 0;
+	}
+
+#grid a/*,
+#grid .gap*/ {
+	margin: .1% .2%;
+	width: 24.5%;
+	overflow: hidden;
+
+	/*opacity: 1;*/
+	/*transition-property: opacity, -webkit-filter, filter;*/
+	transition-property: -webkit-filter, filter;
+	transition-duration: 1s;
+	transition-timing-function: ease-in-out;
+	}
+
+#grid a:hover{
+	/*transition: all ease-in-out .2s;*/
+	overflow: hidden;
+	transition: none;
+	}
+#grid:hover a:not(:hover) /*#grid:hover a:not(:hover)*/ {
+	/*opacity: 1;*/
+	-webkit-filter: grayscale(70%);
+	filter: grayscale(70%);
 	
 	}
 
-.container a,
-.container .gap {
-	width: 32%;
+/* info de la rejilla */
+
+#grid a img {
 	}
 
-/*-------------------------------------------------------------------*/
-/*final media queries*/ }
-/*-------------------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-
-/*media queries desde 640px*/
-@media all and (min-width: 640px) {
-
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-
-
-.container a,
-.container .gap {
-	width: 23.5%;
+#grid a .anchor {
+	position: relative;
+	height: 0;
 	}
+
+#grid a .gridinfo {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+
+	height: 7em;
+	margin-top: -10em;
+	padding-left: 1em;
 	
-/*-------------------------------------------------------------------*/
+	/*background-color: rgba(255,0,255,.5);*/
+	}
+
+#grid a .gridinfo span {
+	position: absolute;
+	}
+#grid a .gridinfo span {
+	top: 6em;
+	transition: all ease-in-out 2s;
+	/*opacity: 0;*/
+	/*background-color: red;*/
+	}
+
+#grid a .gridinfo span:nth-child(1) {
+	font-size: 2.5em;
+	}
+#grid a .gridinfo span:nth-child(2) {
+	font-size: 1.5em;
+	}
+
+/* info den hover */
+
+#grid a:hover .gridinfo span {
+	/*opacity: 1;*/
+	transition: all cubic-bezier(.11,.83,.73,.96) .5s;
+	}
+
+#grid a:hover .gridinfo span:nth-child(1) {
+	top: 1em;
+	}
+#grid a:hover .gridinfo span:nth-child(2) {
+	top: .3em;
+	transition-duration: 1s;
+	transition-delay: .1s;
+	}
+
+
+/*----------------------------
+4.3. Proyectos
+-----------------------------*/
+
+
+#projects h2 {
+	position: absolute;
+	left: 50%;
+	font-size: 5em;
+	}
+
+#projects .description {
+	position: absolute;
+	top: 5em;
+	left: 50%;
+	}
+
+
+/*-------------------------------------------*/
 /*final media queries*/ }
-/*-------------------------------------------------------------------*/
+/*-------------------------------------------*/
 
 
 
