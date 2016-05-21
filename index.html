@@ -5,9 +5,9 @@
 <meta name="Author" content="Victor Tuà">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>victortuapuntocom</title>
+<title>Victor Tuà portfolio</title>
 
-<style>
+<style media="screen">
 
 /*----------------------------
 1.1. fuente Poly
@@ -61,9 +61,7 @@
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}/*HTML5 display-role reset for older browsers*/article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul,li{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
 /*end of reset*/
 
-* {
-	box-sizing: border-box;
-	}
+* { box-sizing: border-box;	}
 
 body{
 	background: #000;
@@ -83,7 +81,7 @@ body, a {font-family: 'robotothin';}
 
 /* coordenadas cursor*/
 
-#coordenates {
+/*#coordenates {
 	z-index: 9999;
 	position: fixed;
 	pointer-events: none;
@@ -103,16 +101,25 @@ body, a {font-family: 'robotothin';}
 	display: block;
 	
 	text-shadow: 1px 1px 1px #000;
-	}
+	}*/
 
 /* fin coordenadas */
 
 
 
 
-#landpage {
-	cursor: none;
-	}
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/* 2. bloque principal (móbil) */
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
 
 #landpage {
 	z-index: 100;
@@ -124,103 +131,209 @@ body, a {font-family: 'robotothin';}
 	overflow: hidden;
 
 	background: #000;
-	opacity: 1;
-
-	transition: all ease-in-out 1s;
+	
 	}
 
-#landpage.closed {
-	top:120%;
-	opacity: 0;
+
+#cursor {
+	display: none;/*eliminado en la versión móbil*/
 	}
 
+
+/*activación para dispositivos táctiles*/
+
+#touch {
+	z-index: 210;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	/*background-color: rgba(255,150,150,.6);*/
+	}
+
+/*botón para cerrar landpage*/
 #closer {
 	z-index: 200;
 	position: absolute;
-	top:50%;
-	left: 50%;
-	margin-top: -.35em;
-	margin-left: -.35em;
-	width: .7em;
-	height: .7em;
-	
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	/*background: rgba(0,255,0,.5);*/
-	opacity: 0;/*valor modificado con js*/
-	background:none;
-	border: 1px solid #fff;
-	border-radius: 50%;
-
-	transition-property: background, border;
-	transition-timing-function: ease-in-out;
-	transition-duration: .5s;
 	}
 
+
+/*marco exterior*/
 #frame	{
 	z-index: 199;
-	position: fixed;
-	width: calc(100% - 3em);
-	height: calc(100% - 3em);
-	margin: 1.5em;
-	border: 2px solid #fff;
+	position: absolute;
+	width: calc(100% - 2em);
+	height: calc(100% - 2em);
+	margin: 1em;
 	opacity: 0;/*valor modificado con js*/
 	transition: all ease-in-out .2s;
+	/*background-color: rgba(255,0,0,.5);*/
 	}
 
-#cursor {
-	z-index: 190;
+
+
+#frame > * {
 	position: absolute;
-	
-	border: 1px solid #fff;
-	border-radius: 50%;
-
-	font-size: 1em;
-
-	transition: border ease-in-out .5s;
-	}
-#cursor > div { /*contenedor que rota*/
-	position: fixed;
-	width: 1em;
-	height: 1em;
-	margin-left: -.5em;
-	transform-origin: center top;
-
-	/*background-color: darkred;*/
-	}
-#cursor > div > div { /*linea blanca*/
-	margin-left: 50%;
-	border-left: 1px solid #fff;
-	transition: border ease-in-out .5s;
 	}
 
+/*bordes*/
+#frame > img:nth-child(1) {
+	top: 0;
+	left: 0;
+	}
+#frame > img:nth-child(2) {	   top: 0; right: 0; transform: rotate( 90deg); }
+#frame > img:nth-child(3) {	bottom: 0; right: 0; transform: rotate(180deg); }
+#frame > img:nth-child(4) {	bottom: 0;  left: 0; transform: rotate(270deg); }
 
-/* sol */
 
-#sun {
-	z-index: 50;
+/*lineas verticales*/
+#frame > div:nth-child(5),
+#frame > div:nth-child(6) {
+	width: calc(100% - 134px);
+	height: 25px;
+	margin-left: 67px;
+	background: url("./img/index/framelinehoriz.svg") repeat-x;
+	/*background-color: rgba(0,0,255,.5);*/
+	}
+#frame > div:nth-child(5) {    top: 0;                            }
+#frame > div:nth-child(6) {	bottom: 0; transform: rotate(180deg); }
+
+/*líneas horizontales*/
+#frame > div:nth-child(7),
+#frame > div:nth-child(8) {
+	width: 25px;
+	height: calc(100% - 134px);
+	margin-top: 67px;
+	background: url("./img/index/framelinevert.svg") repeat-y;
+	/*background-color: rgba(0,0,255,.5);*/
+	}
+#frame > div:nth-child(7) {  left: 0;                            }
+#frame > div:nth-child(8) { right: 0; transform: rotate(180deg); }
+
+
+
+
+/*título*/
+
+
+#title {
+	z-index: 999;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 5em;
-	margin-top:-2.5em;
-	margin-left:-2.5em;
-	/*background-color: red;*/
-	/*border: 2px solid green;*/
-	/*transform: translateZ(1em);*/
+	margin-top: -17em;
+	margin-left: -10em;
+	width: 20em;
+	height: 5em;
+	overflow: hidden;
 	}
-#sun img {
-	width: 100%;
+#title > img {
+	position: absolute;
+	top: 0;
+	left: -1600em;
+	width: 8000%;
 	}
 
 
 
-/*-------------------------------------------------------------------
+/*resplandor*/
 
-primer eje
+#shine {
+	z-index: 40;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	}
+#shine > div {
+	position: absolute;
+	width: 0;
+	height: 0;
+	margin-top: 0;
+	margin-left: 0;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	}
 
--------------------------------------------------------------------*/
+#shine > div:nth-child(1) {	animation: rotacion 70s linear infinite; }
+#shine > div:nth-child(2) {	animation: rotacioninversa 80s linear infinite; }
+#shine > div:nth-child(3) {	animation: rotacioninversa 80s linear infinite; }
+
+/*lineas del primer anillo*/
+#shine > div:nth-child(1) > div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: .3em;
+	height: 0;
+	transform-origin: top left;
+	border-left: 1px solid #fff;
+	}
+#shine > div:nth-child(1) > div:nth-child(1)  { transform: rotate(   0deg) translatey(2.8em); /*background-color: red;*/ }
+#shine > div:nth-child(1) > div:nth-child(2)  { transform: rotate(  30deg) translatey(2.8em); /*background-color: red;*/ }
+#shine > div:nth-child(1) > div:nth-child(3)  { transform: rotate(  60deg) translatey(2.8em); /*background-color: red;*/ }
+#shine > div:nth-child(1) > div:nth-child(4)  { transform: rotate(  90deg) translatey(2.8em); /*background-color: red;*/ }
+#shine > div:nth-child(1) > div:nth-child(5)  { transform: rotate( 120deg) translatey(2.8em); /*background-color: red;*/ }
+#shine > div:nth-child(1) > div:nth-child(6)  { transform: rotate( 150deg) translatey(2.8em); /*background-color: red;*/ }
+#shine > div:nth-child(1) > div:nth-child(7)  { transform: rotate( 180deg) translatey(2.8em); /*background-color: red;*/ }
+#shine > div:nth-child(1) > div:nth-child(8)  { transform: rotate( 210deg) translatey(2.8em); /*background-color: red;*/ }
+#shine > div:nth-child(1) > div:nth-child(9)  { transform: rotate( 240deg) translatey(2.8em); /*background-color: red;*/ }
+#shine > div:nth-child(1) > div:nth-child(10) { transform: rotate( 270deg) translatey(2.8em); /*background-color: red;*/ }
+#shine > div:nth-child(1) > div:nth-child(11) { transform: rotate( 300deg) translatey(2.8em); /*background-color: red;*/ }
+#shine > div:nth-child(1) > div:nth-child(12) { transform: rotate( 330deg) translatey(2.8em); /*background-color: red;*/ }
+
+/*lineas del tercer anillo*/
+
+/*bloques*/
+#shine > div:nth-child(3) > div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	}
+/*rotación de los bloques*/
+#shine > div:nth-child(3) > div:nth-child(1)  { transform: rotate(  0deg); }
+#shine > div:nth-child(3) > div:nth-child(2)  { transform: rotate( 30deg); }
+#shine > div:nth-child(3) > div:nth-child(3)  { transform: rotate( 60deg); }
+#shine > div:nth-child(3) > div:nth-child(4)  { transform: rotate( 90deg); }
+#shine > div:nth-child(3) > div:nth-child(5)  { transform: rotate(120deg); }
+#shine > div:nth-child(3) > div:nth-child(6)  { transform: rotate(150deg); }
+#shine > div:nth-child(3) > div:nth-child(7)  { transform: rotate(180deg); }
+#shine > div:nth-child(3) > div:nth-child(8)  { transform: rotate(210deg); }
+#shine > div:nth-child(3) > div:nth-child(9)  { transform: rotate(240deg); }
+#shine > div:nth-child(3) > div:nth-child(10) { transform: rotate(270deg); }
+#shine > div:nth-child(3) > div:nth-child(11) { transform: rotate(300deg); }
+#shine > div:nth-child(3) > div:nth-child(12) { transform: rotate(330deg); }
+
+/*lineas*/
+#shine > div:nth-child(3) > div > div {
+	position: absolute;
+	border-left: 1px solid #fff;
+	width: .3em;
+	height: 0;
+	transform-origin: top left;
+	}
+/*rotacion y posición de las lineas respecto el bloque*/
+#shine > div:nth-child(3) > div > div:nth-child(1) { transform: rotate( 0deg) translatey(4em); /*background-color: red;*/    }
+#shine > div:nth-child(3) > div > div:nth-child(2) { transform: rotate( 5deg) translatey(4em); /*background-color: orange;*/ }
+#shine > div:nth-child(3) > div > div:nth-child(3) { transform: rotate(10deg) translatey(4em); /*background-color: yellow;*/ }
+#shine > div:nth-child(3) > div > div:nth-child(4) { transform: rotate(15deg) translatey(4em); /*background-color: green;*/  }
+#shine > div:nth-child(3) > div > div:nth-child(5) { transform: rotate(20deg) translatey(4em); /*background-color: blue;*/   }
+#shine > div:nth-child(3) > div > div:nth-child(6) { transform: rotate(25deg) translatey(4em); /*background-color: purple;*/ }
 
 
-#axis, #axis * {
+
+
+
+
+/* eje */
+
+#landpage, #landpage * {
 	transform-style: preserve-3d;
 	}
 
@@ -236,7 +349,7 @@ primer eje
 	/*background-color: pink;*/
 	/*transform: rotate3d(-0.8, -0.2, 0, 17deg); */
 	/*perspective: 1500px;*/
-	/*transition: transform cubic-bezier(.35,.28,0,.99) .5s;*/
+	/*transition: transform ease-in-out .1s;*/
 	}
 
 #axis > div {
@@ -245,15 +358,81 @@ primer eje
 	left: 50%;	
 	}
 
+
+
+
+/* sol */
+
+#sun {
+	/*z-index: 50;*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 2em;
+	height: 2em;
+	margin-top:-1em;
+	margin-left:-1em;
+	}
+
+#sun > div {
+	/*z-index: 50;*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 5em;
+	margin-top:-2.2em;
+	margin-left:-2.5em;
+	transform: translateZ(15em);
+	}
+
+
+#sun img {
+	width: 100%;
+	}
+
+
+
+
+/*marco diamante*/
+
+#diamondframe {
+	width: 24em;
+	height: 24em;
+	margin-top:-12em;
+	margin-left:-12em;
+	transform: translateZ(9.1em);
+	}
+#diamondframe > img {
+	width: 100%;
+	}
+
+/*diamante*/
+
 #diamond {
 	width: 16em;
 	height: 16em;
 	margin-top:-8em;
 	margin-left:-8em;
 	overflow: hidden;
-
 	background-color: #000;
 	transform: translateZ(9em) rotate(45deg);
+	}
+#diamond > div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 30em;
+	height: 30em;
+	margin-top:-15em;
+	margin-left:-15em;
+	transform: translateZ(-9em) rotate(-45deg);
+	}
+#diamond > div > img {
+	position: fixed;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
 	}
 
 
@@ -273,85 +452,156 @@ primer eje
 	width: 9.55em;
 	margin-top: 2.4em;
 	margin-left: -14.9em;
-	transform: translateZ(2em);
+	transform: translateZ(-4em);
 	}
 #gears > div:nth-child(3) {
 	width: 6.28em;
 	margin-top: 5.71em;
 	margin-left: -6.8em;
-	transform: translateZ(-1em);
+	transform: translateZ(-7em);
 	}
 #gears > div:nth-child(4) {
-	width: 8.3em;
-	margin-top: 8.25em;
-	margin-left: -12.9em;
-	transform: translateZ(-4em);
+	width: 8.8em;
+	margin-top: 8em;
+	margin-left: -13.15em;
+	transform: translateZ(-15em);
 	}
 #gears > div:nth-child(5) {
-	width: 5.25em;
-	margin-top: 12.69em;
-	margin-left: -5.8em;
-	transform: translateZ(-8em);
+	width: 6.2em;
+	margin-top: 12.1em;
+	margin-left: -5.75em;
+	transform: translateZ(-24em);
 	}
 #gears > div:nth-child(6) {
 	width: 3.31em;
-	margin-top: 16.05em;
-	margin-left: -7.6em;
-	transform: translateZ(-6em);
+	margin-top: 16.15em;
+	margin-left: -7.35em;
+	transform: translateZ(-10em);
 	}
 #gears > div:nth-child(7) {
-	width: 42em;
-	margin-top: -21em;
-	margin-left: -21em;
+	display: none;/*eliminado en la versión móbil*/
+	}
+#gears > div:nth-child(8) {
+	display: none;/*eliminado en la versión móbil*/
+	}
+#gears > div:nth-child(9) {
+	display: none;/*eliminado en la versión móbil*/
+	}
+#gears > div:nth-child(10) {
+	width: 50em;
+	margin-top: -25em;
+	margin-left: -25em;
 	transform: translateZ(-5em);
 	}
+/*cuerdas*/
+#gears > div:nth-child(11),
+#gears > div:nth-child(12),
+#gears > div:nth-child(13) {
+	display: none;/*eliminado en la versión móbil*/
+	}
 
-/*all gears*/
-/*#gears :nth-child(8) {
-	width: 42em;
-	margin-top: -21em;
-	margin-left: -21em;
-	transform: translateZ(-1em);
-	}*/
+
 
 
 /* rotación de los engranajes */
 
 #gears > div > img {width: 100%;}
 
-#gears > div:nth-child(1) > img { animation: rotacion 30s linear infinite; }
-#gears > div:nth-child(2) > img { animation: rotacioninversa 10s linear infinite; }
-#gears > div:nth-child(3) > img { animation: rotacion 5s linear infinite; }
-#gears > div:nth-child(4) > img { animation: tictacone 5s linear infinite 0.465s; }
-#gears > div:nth-child(5) > img { animation: tictactwo 5s linear infinite 0.465s; }
-#gears > div:nth-child(6) > img { animation: tictacthree 5s linear infinite 0.465s; }
-#gears > div:nth-child(7) > img { animation: tictacfour 5s linear infinite 0.465s; }
+#gears > div:nth-child(1) > img  { animation: rotacion         40.81632653s linear infinite;        }
+#gears > div:nth-child(2) > img  { animation: rotacioninversa  9.523809524s linear infinite;        }
+#gears > div:nth-child(3) > img  { animation: rotacion                   5s linear infinite;        }
+#gears > div:nth-child(4) > img  { animation: tictacone                 10s linear infinite 0.465s; }
+#gears > div:nth-child(5) > img  { animation: tictactwo                 20s linear infinite 0.465s; }
+#gears > div:nth-child(7) > img  { animation: tictacthree                5s linear infinite 0.465s; }
+#gears > div:nth-child(8) > img  { animation: tictacfour                 5s linear infinite 0.465s; }
+#gears > div:nth-child(6) > img,
+#gears > div:nth-child(9) > img  { animation: tictacfive                 5s linear infinite 0.465s; }
+#gears > div:nth-child(10) > img { animation: tictacsix                 25s linear infinite 0.465s; }
+
+
+/* corona */
+
+#crown { display:none; }
 
 
 @keyframes tictacone {
-	0% { transform: rotate(0deg); }
-	15% { transform: rotate(-60deg); }
-	100% { transform: rotate(-60deg); }
+	   0% { transform: rotate(   0deg); }
+	 7.5% { transform: rotate( -60deg); }
+	  50% { transform: rotate( -60deg); }
+	57.5% { transform: rotate(-120deg); }
+	 100% { transform: rotate(-120deg); }
 	}
 @keyframes tictactwo {
-	0% { transform: rotate(0deg); }
-	15% { transform: rotate(60deg); }
-	100% { transform: rotate(60deg); }
+	    0% { transform: rotate(  0deg); }
+	 3.75% { transform: rotate( 90deg); }
+
+	   25% { transform: rotate( 90deg); }
+	28.75% { transform: rotate(180deg); }
+
+	   50% { transform: rotate(180deg); }
+	53.75% { transform: rotate(270deg); }
+
+	   75% { transform: rotate(270deg); }
+	78.75% { transform: rotate(360deg); }
+
+	  100% { transform: rotate(360deg); }
 	}
 @keyframes tictacthree {
-	0% { transform: rotate(0deg); }
-	15% { transform: rotate(-60deg); }
-	100% { transform: rotate(-60deg); }
+	  0% { transform: rotate(   0deg); }
+	 15% { transform: rotate( -720deg); }
+	100% { transform: rotate( -720deg); }
 	}
 @keyframes tictacfour {
-	0% { transform: rotate(0deg); }
-	15% { transform: rotate(-7.5deg); }
-	100% { transform: rotate(-7.5deg); }
+	  0% { transform: rotate(   0deg); }
+	 15% { transform: rotate( 120deg); }
+	100% { transform: rotate( 120deg); }
+	}
+@keyframes tictacfive {
+	  0% { transform: rotate(   0deg); }
+	 15% { transform: rotate(-180deg); }
+	100% { transform: rotate(-180deg); }
+	}
+@keyframes tictacsix {
+	  0% { transform: rotate(  0deg); }
+	  3% { transform: rotate(-12deg); }
+
+	 20% { transform: rotate(-12deg); }
+	 23% { transform: rotate(-24deg); }
+
+	 40% { transform: rotate(-24deg); }
+	 43% { transform: rotate(-36deg); }
+
+	 60% { transform: rotate(-36deg); }
+	 63% { transform: rotate(-48deg); }
+
+	 80% { transform: rotate(-48deg); }
+	 83% { transform: rotate(-60deg); }
+
+	100% { transform: rotate(-60deg); }
 	}
 
-/*hack*/
-#gears > div {position: absolute;top: 0em;}
-#frame, #cursor, #sun, #planetone,#planettwo,#planetthree,#planetfour{display: non}
+
+
+
+
+
+/*hack para trabajar en gears*
+#title, #sun, #diamond, #planetone, #planettwo, #planetthree, #planetfour, .stars, #squarethree
+{ display: none; }
+
+#landpage { overflow: scroll; cursor: auto; }
+
+#gears > img {
+	z-index: -9999;
+	transform: translateZ(-99em);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    width: 50em;
+    margin-top: -25em;
+    margin-left: -25em;
+	}
+*/
 
 
 
@@ -360,21 +610,7 @@ primer eje
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*planetas*/
 
 
 
@@ -397,30 +633,14 @@ primer eje
 	transform: rotateX(70deg) rotatey(22deg);
 	}
 #planettwo {
-	transform: rotateX(67deg) rotatey(-4deg);
+	display: none;/*eliminado en la versión móbil*/
 	}
 #planetthree {
-	transform: rotateX(80deg);
+	display: none;/*eliminado en la versión móbil*/
 	}
 #planetfour {
-	transform: rotatez(-30deg) rotatey(80deg);
+	display: none;/*eliminado en la versión móbil*/
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* orbitas */
@@ -434,6 +654,7 @@ primer eje
 	border: 2px solid white;
 	border-radius: 50%;
 	}
+
 /*orbita mercurio*/
 #planetone > div {
 	width: 30em;
@@ -442,12 +663,721 @@ primer eje
 	margin-left: -15em;
 	animation: rotacioninversa 10s linear infinite;
 	}
+
+
+
+
+/* ejes de posición y rotación compensatoria */
+
+#planetone > div > div,
+#planettwo > div > div,
+#planetthree > div > div:nth-child(1),
+#planetfour > div > div {
+	position: absolute;
+	}
+/*mercurio*/
+#planetone > div > div {
+	top: 50%;
+	left: 0;
+	width: 1em;
+	height: 1em;
+	margin-top: -.5em;
+	margin-left: -.5em;
+	animation: rotacioninversa 4s linear infinite;
+	}
+
+
+
+/* ejes inclinados planetas */
+
+#planettwo > div > div > div,
+#planetthree > div > div:nth-child(1) > div,
+#planetfour > div > div > div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 2em;
+	height: 2em;
+	margin-top: -1em;
+	margin-left: -1em;
+	}
+
+
+/*poliedro de mercurio*/
+#planetone > div > div > div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1em;
+	height: 1em;
+	margin-top: -.5em;
+	margin-left: -.5em;
+	transform: rotateX(45deg) rotateY(45deg);
+	}
+#planetone > div > div > div > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	}
+#planetone > div > div > div > img:nth-child(1) { transform:                translatez(.5em);  }
+#planetone > div > div > div > img:nth-child(2) { transform:                translatez(-.5em); }
+#planetone > div > div > div > img:nth-child(3) { transform: rotatex(90deg) translatez(.5em);  }
+#planetone > div > div > div > img:nth-child(4) { transform: rotatex(90deg) translatez(-.5em); }
+#planetone > div > div > div > img:nth-child(5) { transform: rotatey(90deg) translatez(.5em);  }
+#planetone > div > div > div > img:nth-child(6) { transform: rotatey(90deg) translatez(-.5em); }
+
+
+
+
+
+
+
+@keyframes rotacion {
+	0%   { transform: rotate(  0deg); }
+	100% { transform: rotate(360deg); }
+	}
+@keyframes rotacioninversa {
+	0%   { transform: rotate(   0deg); }
+	100% { transform: rotate(-360deg); }
+	}
+
+
+
+
+
+/*rombo trasero*/
+#squarethree {
+	width: 50em;
+	height: 50em;
+	margin-top: -25em;
+	margin-left: -25em;
+	background-color: rgb(20,27,28);
+	transform: translateZ(-30em) rotate(45deg);
+	}
+
+
+
+
+/* fondo de estrellas*/
+.stars {
+	z-index: -999;
+	position: absolute;
+	width: 120%;
+	top: -30%;
+	left: -10%;
+	}
+.stars > img { width: 300%; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* interacción */
+
+
+
+
+#touch. {
+	top:120%;
+	opacity: 0;
+	}
+
+/*frame en la versión mobil*/
+#landpage.touched > #frame {
+	opacity: 1;
+	transition: opacity 1s ease-in-out;
+	}
+
+/*animación del título*/
+#landpage.touched > #title > img,
+#landpage.active > #title > img {
+	left: 0;
+	transition: left 3.1s steps(80);
+	}
+
+/*eje que sigue el cursor*/
+#closer:hover ~ #landpage > #axis
+ {	transform: none !important;/*anula la rotación del eje de javascript*/ }
+/*compensacion del sol*/
+#closer:hover ~ #landpage > #axis > #sun {	transform: none !important;/*anula la rotación del eje de javascript*/ }
+
+
+
+/*blanco y negro dentro del eje*/
+#diamondframe,
+#crown,
+#gears > div { transition: all ease-in-out 1s; -webkit-filter: grayscale(100%); filter: grayscale(100%); }
+
+#landpage.touched > #axis > #diamondframe,
+#closer:hover ~ #landpage > #axis > #diamondframe,
+#landpage.touched > #axis > #crown,
+#closer:hover ~ #landpage > #axis > #crown,
+#landpage.touched > #axis > #gears > div,
+#closer:hover ~ #landpage > #axis > #gears > div { -webkit-filter: grayscale(  0%); filter: grayscale(  0%); }
+
+
+
+/*resplandor*/
+
+/*transiciones de retorno*/
+#shine {
+	transition: all 1s ease-in-out;
+	}
+#shine > div:nth-child(1),
+#shine > div:nth-child(2),
+#shine > div:nth-child(3),
+#shine > div:nth-child(1) > div,
+#shine > div:nth-child(3) > div > div {
+	transition: all .2s ease-in-out;
+	}
+#shine > div:nth-child(1),
+#shine > div:nth-child(2),
+#shine > div:nth-child(3) {
+	transition-delay: .3s;
+	}
+
+/*anillos*/
+#landpage.touched > #shine,
+#closer:hover ~ #landpage > #shine {
+	opacity: 1;
+	}
+#landpage.touched > #shine > div,
+#closer:hover ~ #landpage > #shine > div {
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(0.57, 1.01, 0.75, 0.81);
+	}
+#landpage.touched > #shine > div:nth-child(1),
+#closer:hover ~ #landpage > #shine > div:nth-child(1) {
+	width: 5.8em;
+	height: 5.8em;
+	margin-top: -2.9em;
+	margin-left: -2.9em;
+	transition-delay: 0s;
+	}
+#landpage.touched > #shine > div:nth-child(2),
+#closer:hover ~ #landpage > #shine > div:nth-child(2) {
+	width: 7.5em;
+	height: 7.5em;
+	margin-top: -3.75em;
+	margin-left: -3.75em;
+	}
+#landpage.touched > #shine > div:nth-child(3),
+#closer:hover ~ #landpage > #shine > div:nth-child(3) {
+	width: 8em;
+	height: 8em;
+	margin-top: -4em;
+	margin-left: -4em;
+	}
+
+/*lineas primer anillo*/
+#landpage.touched > #shine > div:nth-child(1) > div,
+#closer:hover ~ #landpage > #shine > div:nth-child(1) > div {
+	transition: height 1.5s ease-out 1.8s;
+	height: .3em;
+	}
+
+/*lineas tercer anillo*/
+
+/*lineas cortas*/
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(2),
+#closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(2),
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(3),
+#closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(3),
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(4),
+#closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(4),
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(5),
+#closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(5),
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(6),
+#closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(6) {
+	height: .6em;
+	animation: shortline 1s ease-in-out;
+	}
+/*lineas largas*/
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(1),
+#closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(1) {
+	height: 1.5em;
+	animation: longline 1.3s ease-out;
+	}
+@keyframes shortline {
+	0%   { height:    0; }
+	50%  { height:  1em; }
+	100% { height: .6em; }
+	}
+@keyframes longline {
+	0%   { height:     0; }
+	50%  { height: 1.8em; }
+	100% { height: 1.5em; }
+	}
+/*delays*/
+/*observar que las lineas estan ordenadas por tiempos*/
+/*ademas tambien se incluye la propiedad transition-delay para evitar que se vean las lineas antes de tiempo*/
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(4),
+#closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(4) { animation-delay:  1.2s; transition-delay:  1.2s; }
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(3),
+#closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(3),
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(5),
+#closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(5) { animation-delay: 1.4s; transition-delay: 1.4s; }
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(2),
+#closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(2),
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(6),
+#closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(6) { animation-delay: 1.6s; transition-delay: 1.6s; }
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(1),
+#closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(1) { animation-delay: 1.8s; transition-delay: 1.8s; }
+
+
+
+
+#touch.closed,
+#closer.closed,
+#landpage.closed {
+	top:120%;
+	opacity: 0;
+	transition: all ease-in-out 1s;
+	}
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------
+
+idiomas
+
+-------------------------------------------------------------------*/
+
+
+#welcome {
+	z-index: 1;
+	position: fixed;
+	bottom: 50%;
+	left: 0;
+	width: 100%;
+	margin-bottom: .5em;
+
+	text-align: center;
+	font-size: 4em;
+	/*background: linear-gradient(to bottom, rgba(00,74,40,1) 0%, rgba(233,00,00,1) 100%);*/
+	}
+.typed-cursor {
+	margin-left: .05em;
+	opacity: 1;
+	animation: blink 0.7s infinite;
+	}
+	@keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+		}
+
+
+#language {
+	z-index: 1;
+	position: fixed;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 75%;
+	margin-top: 1em;
+	text-align: center;
+	}
+
+#language a {
+	position: relative;
+	margin: 2%;
+	padding: .6em;
+	text-align: center;
+	/*background: linear-gradient(to bottom, rgba(55,74,107,1) 0%, rgba(33,00,00,1) 100%);*/
+	}
+
+#language a:hover {
+	color: #B7B053;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#map {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	}
+#map > img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: opacity ease-in-out 1s;
+	}
+
+#map > img:nth-child(1) {
+	opacity: 1;
+	}
+#map.eng > img:nth-child(2) {
+	opacity: 1;
+	}
+#map.esp > img:nth-child(3) {
+	opacity: 1;
+	}
+#map.cat > img:nth-child(4) {
+	opacity: 1;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/* 3. Media queries desde 480px (tableta) */
+@media all and (min-width: 480px) {
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+
+
+
+/*-------------------------------------------*/
+/*final media queries*/ }
+/*-------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/* 4. Media queries desde 640px (escritorio) */
+@media all and (min-width: 640px) {
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+#touch,
+#closer,
+#landpage {
+	cursor: none;
+	}
+
+
+/*activación para dispositivos táctiles*/
+#touch { display:none; }
+
+/*botón para cerrar landpage*/
+#closer {
+	top: 50%;
+	left: 50%;
+	margin-top: -2em;
+	margin-left: -2em;
+	width: 4em;
+	height: 4em;
+	border-radius: 50%;
+	}
+
+
+
+
+
+/*cursor*/
+
+#cursor {
+	display: inherit;/*para compensar en primer query (móbiles)*/
+	z-index: 190;
+	position: absolute;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	font-size: 1em;
+	/*background-color: orange;*/
+	}
+/*contenedor que rota*/
+#cursor > div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1em;
+	height: 1em;
+	margin-left: -.5em;
+	transform-origin: center top;
+	/*background-color: darkred;*/
+	}
+/*linea blanca*/
+#cursor > div > div {
+	position: absolute;
+	margin-left: 50%;
+	border-left: 1px solid #fff;
+	transition: border ease-in-out .5s;
+	}
+/*puntas flecha*/
+#cursor > div > div > div {
+	position: absolute;
+	bottom: 0;
+	left: -1px;/*esto es para compensar el grueso de la linea larga*/
+	height: 2em;
+	border-left: 1px solid #fff;
+	transform-origin: bottom;
+	transition-property: transform, opacity;
+	transition-timing-function: ease-in-out;
+	transition-duration: .2s;
+	}
+
+
+
+
+/* eje */
+/* sol */
+/*marco diamante*/
+/*diamante*/
+
+
+
+/* engranajes */
+
+#gears > div:nth-child(7) {
+	display: inherit;/*para compensar en primer query (móbiles)*/
+	width: 1.2em;
+	margin-top: 13.64em;
+	margin-left: 0.64em;
+	transform: translateZ(-24em);
+	}
+#gears > div:nth-child(8) {
+	display: inherit;/*para compensar en primer query (móbiles)*/
+	width: 4.7em;
+	margin-top: 10.4em;
+	margin-left: 7.6em;
+	transform: translateZ(-24em);
+	}
+#gears > div:nth-child(9) {
+	display: inherit;/*para compensar en primer query (móbiles)*/
+	width: 3.31em;
+	margin-top: 11.65em;
+	margin-left: 11.58em;
+	transform: translateZ(-20em);
+	}
+/*cuerdas*/
+#gears > div:nth-child(11),
+#gears > div:nth-child(12),
+#gears > div:nth-child(13) {
+	display: inherit;/*para compensar en primer query (móbiles)*/
+	width: .4em;
+	overflow: hidden;
+	transform-origin: top center;
+	}
+#gears > div:nth-child(11) {
+	margin-top: 14.6em;
+	margin-left: 1em;
+	height: 4em;
+	transform: rotate(99deg) translateZ(-25em);
+	}
+#gears > div:nth-child(12) {
+	margin-top: 12.1em;
+	margin-left: 9.6em;
+	height: 9em;
+	transform: rotate(73.5deg) translateZ(-25em);
+	}
+#gears > div:nth-child(13) {
+	margin-top: 16.25em;
+    margin-left: -2.5em;
+    height: 12.8em;
+	transform: rotate(-103deg) translateZ(-25em);
+	}
+#gears > div:nth-child(11) > div,
+#gears > div:nth-child(12) > div,
+#gears > div:nth-child(13) > div {
+	position: absolute;
+	animation: tictaccord 5s linear infinite 0.465s;
+	}
+
+
+
+
+/* corona */
+
+#crown {
+	display: inherit;/*para compensar en primer query (móbiles)*/
+	width: 2em;
+	height: 2em;
+	margin-top: -1em;
+	margin-left: -1em;
+	animation: tictacsix 25s linear infinite 0.465s;
+	}
+#crown > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2em;
+	height: 2em;
+	}
+#crown > div:nth-child(2)  { transform:  rotate(20deg); }
+#crown > div:nth-child(3)  { transform:  rotate(40deg); }
+#crown > div:nth-child(4)  { transform:  rotate(60deg); }
+#crown > div:nth-child(5)  { transform:  rotate(80deg); }
+#crown > div:nth-child(6)  { transform: rotate(100deg); }
+#crown > div:nth-child(7)  { transform: rotate(120deg); }
+#crown > div:nth-child(8)  { transform: rotate(140deg); }
+#crown > div:nth-child(9)  { transform: rotate(160deg); }
+#crown > div:nth-child(10) { transform: rotate(180deg); }
+#crown > div:nth-child(11) { transform: rotate(200deg); }
+#crown > div:nth-child(12) { transform: rotate(220deg); }
+#crown > div:nth-child(13) { transform: rotate(240deg); }
+#crown > div:nth-child(14) { transform: rotate(260deg); }
+#crown > div:nth-child(15) { transform: rotate(280deg); }
+#crown > div:nth-child(16) { transform: rotate(300deg); }
+#crown > div:nth-child(17) { transform: rotate(320deg); }
+#crown > div:nth-child(18) { transform: rotate(340deg); }
+
+#crown > div > div {
+	position: absolute;
+	left: 50%;
+	width: 3em;
+	margin-left: -1.5em;
+	margin-top: -35em;
+	}
+#crown > div > img {
+	width: 100%;
+	}
+
+
+
+
+
+
+
+@keyframes tictaccord {
+	  0% { margin-top: 0em; }
+	 15% { margin-top: -3em; }
+	100% { margin-top: -3em; }
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*planetas*/
+
+#planettwo {
+	display: inherit;/*para compensar en primer query (móbiles)*/
+	transform: rotateX(67deg) rotatey(-4deg);
+	}
+#planetthree {
+	display: inherit;/*para compensar en primer query (móbiles)*/
+	transform: rotateX(80deg);
+	}
+#planetfour {
+	display: inherit;/*para compensar en primer query (móbiles)*/
+	transform: rotatez(-30deg) rotatey(80deg);
+	}
+
+/* orbitas */
+
 /*orbita saturno*/
 #planettwo > div {
-	width: 52em;
-	height: 52em;
-	margin-top: -26em;
-	margin-left: -26em;
+	width: 56em;
+	height: 56em;
+	margin-top: -28em;
+	margin-left: -28em;
 	animation: rotacioninversa 25s linear infinite;
 	}
 /*orbita tierra*/
@@ -464,42 +1394,10 @@ primer eje
 	height: 150em;
 	margin-top: -75em;
 	margin-left: -75em;
-	animation:  norotacioninversa 80s linear infinite;
+	animation:  rotacioninversa 120s linear infinite;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ejes de posición y rotación compensatoria */
-#planetone > div > div,
-#planettwo > div > div,
-#planetthree > div > div:nth-child(1),
-#planetfour > div > div {
-	position: absolute;
-	}
-/*mercurio*/
-#planetone > div > div {
-	top: 50%;
-	left: 0;
-	width: 1em;
-	height: 1em;
-	margin-top: -.5em;
-	margin-left: -.5em;
-	animation: rotacion 10s linear infinite;
-	}
 /*saturno*/
 #planettwo > div > div {
 	top: 50%;
@@ -522,135 +1420,28 @@ primer eje
 	}
 /*plutón*/
 #planetfour > div > div {
-	top: 100%;
+	top: 0;
 	left: 50%;
 	width: 1em;
 	height: 1em;
 	margin-top: -.5em;
 	margin-left: -.5em;
-	animation: rotacion 40s linear infinite;
+	animation: rotacion 4s linear infinite;/*esta en realidad no es una rotacion compensatoria porque no coincide la velocidad de rotación*/
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ejes inclinados planetas */
-
-
-#planettwo > div > div > div,
-#planetthree > div > div:nth-child(1) > div {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 2em;
-	height: 2em;
-	margin-top: -1em;
-	margin-left: -1em;
-	}
-
 #planettwo > div > div > div {
 	transform: rotateX(-16deg) rotatey(-17deg);
 	}
 #planetthree > div > div:nth-child(1) > div {
 	transform: rotateX(-21deg) rotatey(16deg);
 	} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*poliedro de mercurio*/
-#planetone > div > div > div {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 1em;
-	height: 1em;
-	margin-top: -.5em;
-	margin-left: -.5em;
-	animation: rotacioninversa 4s linear infinite;
+#planetfour > div > div > div {
+	transform: rotateX(-57deg);
 	}
-#planetone > div > div > div > img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	}
-#planetone > div > div > div > img:nth-child(1) { transform:                translatez(.5em);  }
-#planetone > div > div > div > img:nth-child(2) { transform:                translatez(-.5em); }
-#planetone > div > div > div > img:nth-child(3) { transform: rotatex(90deg) translatez(.5em);  }
-#planetone > div > div > div > img:nth-child(4) { transform: rotatex(90deg) translatez(-.5em); }
-#planetone > div > div > div > img:nth-child(5) { transform: rotatey(90deg) translatez(.5em);  }
-#planetone > div > div > div > img:nth-child(6) { transform: rotatey(90deg) translatez(-.5em); }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*poliedro de saturno*/
-#planettwo > div > div > div > div {
+#planettwo > div > div > div > div:nth-child(1) {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -658,44 +1449,48 @@ primer eje
 	height: 2em;
 	margin-top: -1em;
 	margin-left: -1em;
-	animation: rotacioninversa 2s linear infinite;
+	animation: rotacioninversa 4s linear infinite;
 	}
-#planettwo > div > div > div > div > div {
+#planettwo > div > div > div > div:nth-child(1) > div {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	}
-#planettwo > div > div > div > div > div:nth-child(1) {
+#planettwo > div > div > div > div:nth-child(1) > div:nth-child(1) {
 	transform: translatez(-1.4em);
 	}
-#planettwo > div > div > div > div > div:nth-child(2) {
+#planettwo > div > div > div > div:nth-child(1) > div:nth-child(2) {
 	margin-top: 8%;
 	transform: rotatex(180deg) translatez(-1.4em); 
 	}
-#planettwo > div > div > div > div > div > img {
+#planettwo > div > div > div > div:nth-child(1) > div > img {
 	position: absolute;
 	width: 100%;
 	transform-origin: 50% 100%;
 	}
-#planettwo > div > div > div > div > div > img:nth-child(1) { bottom: 3%;  left: 0;                                               }
-#planettwo > div > div > div > div > div > img:nth-child(2) { bottom: 80%; left: 25%;  transform: rotate(36deg)  rotatex(-64deg); }
-#planettwo > div > div > div > div > div > img:nth-child(3) { bottom: 33%; left: 40%;  transform: rotate(108deg) rotatex(-64deg); }
-#planettwo > div > div > div > div > div > img:nth-child(4) { bottom: 4%;  left: 0;    transform: rotate(180deg) rotatex(-64deg); }
-#planettwo > div > div > div > div > div > img:nth-child(5) { bottom: 33%; right: 40%; transform: rotate(252deg) rotatex(-64deg); }
-#planettwo > div > div > div > div > div > img:nth-child(6) { bottom: 80%; right: 25%; transform: rotate(324deg) rotatex(-64deg); }
+#planettwo > div > div > div > div:nth-child(1) > div > img:nth-child(1) { bottom: 3%;  left: 0;                                               }
+#planettwo > div > div > div > div:nth-child(1) > div > img:nth-child(2) { bottom: 80%; left: 25%;  transform: rotate(36deg)  rotatex(-64deg); }
+#planettwo > div > div > div > div:nth-child(1) > div > img:nth-child(3) { bottom: 33%; left: 40%;  transform: rotate(108deg) rotatex(-64deg); }
+#planettwo > div > div > div > div:nth-child(1) > div > img:nth-child(4) { bottom: 4%;  left: 0;    transform: rotate(180deg) rotatex(-64deg); }
+#planettwo > div > div > div > div:nth-child(1) > div > img:nth-child(5) { bottom: 33%; right: 40%; transform: rotate(252deg) rotatex(-64deg); }
+#planettwo > div > div > div > div:nth-child(1) > div > img:nth-child(6) { bottom: 80%; right: 25%; transform: rotate(324deg) rotatex(-64deg); }
 
-
-
-
-
-
-
-
-
-
-
+/*anillos*/
+#planettwo > div > div > div > div:nth-child(2) {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -4em;
+	margin-left: -4em;
+	width: 8em;
+	height: 8em;
+	opacity: .6;
+	}
+#planettwo > div > div > div > div:nth-child(2) > img {
+	width: 100%;
+	}
 
 /*poliedro de la tierra*/
 #planetthree > div > div:nth-child(1) > div > div {
@@ -752,18 +1547,8 @@ primer eje
 	transform: rotate(180deg);
 	}
 
-
-
-
-
-
-
-
-
-
-
 /*poliedro de plutón*/
-#planetfour > div > div > div {
+#planetfour > div > div > div > div {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -771,51 +1556,21 @@ primer eje
 	height: 1em;
 	margin-top: -.5em;
 	margin-left: -.5em;
-	animation: no rotacioninversa 4s linear infinite;
+	animation: rotacioninversa .8s linear infinite;
 	}
-#planetfour > div > div > div > div {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	}
-#planetfour > div > div > div > img {
+#planetfour > div > div > div > div > img {
 	position: absolute;
 	width: 100%;
 	transform-origin: 50% 100%;
 	}
-#planetfour > div > div > div > img:nth-child(1) { bottom: 100%;  left: 0;   transform:                rotatex(-125deg); }
-#planetfour > div > div > div > img:nth-child(2) { bottom: 50%;   left: 50%; transform: rotate(90deg)  rotatex(-125deg); }
-#planetfour > div > div > div > img:nth-child(3) { bottom: 0;     left: 0;   transform: rotate(180deg) rotatex(-125deg); }
-#planetfour > div > div > div > img:nth-child(4) { bottom: 50%;  right: 50%; transform: rotate(-90deg) rotatex(-125deg); }
-#planetfour > div > div > div > img:nth-child(5) { bottom: 100%;  left: 0;   transform:                rotatex(125deg);  }
-#planetfour > div > div > div > img:nth-child(6) { bottom: 50%;   left: 50%; transform: rotate(90deg)  rotatex(125deg);  }
-#planetfour > div > div > div > img:nth-child(7) { bottom: 0;     left: 0;   transform: rotate(180deg) rotatex(125deg);  }
-#planetfour > div > div > div > img:nth-child(8) { bottom: 50%;  right: 50%; transform: rotate(-90deg) rotatex(125deg);  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#planetfour > div > div > div > div > img:nth-child(1) { bottom: 100%;  left: 0;   transform:                rotatex(-125deg); }
+#planetfour > div > div > div > div > img:nth-child(2) { bottom: 50%;   left: 50%; transform: rotate(90deg)  rotatex(-125deg); }
+#planetfour > div > div > div > div > img:nth-child(3) { bottom: 0;     left: 0;   transform: rotate(180deg) rotatex(-125deg); }
+#planetfour > div > div > div > div > img:nth-child(4) { bottom: 50%;  right: 50%; transform: rotate(-90deg) rotatex(-125deg); }
+#planetfour > div > div > div > div > img:nth-child(5) { bottom: 100%;  left: 0;   transform:                rotatex(125deg);  }
+#planetfour > div > div > div > div > img:nth-child(6) { bottom: 50%;   left: 50%; transform: rotate(90deg)  rotatex(125deg);  }
+#planetfour > div > div > div > div > img:nth-child(7) { bottom: 0;     left: 0;   transform: rotate(180deg) rotatex(125deg);  }
+#planetfour > div > div > div > div > img:nth-child(8) { bottom: 50%;  right: 50%; transform: rotate(-90deg) rotatex(125deg);  }
 
 /* luna */
 
@@ -846,7 +1601,7 @@ primer eje
 	height: 12em;
 	margin-top: -6em;
 	margin-left: -6em;
-	animation: rotacioninversa 8s linear infinite;
+	animation: rotacioninversa 3.3s linear infinite;
 
 	border: 1px solid white;
 	border-radius: 50%;
@@ -861,7 +1616,6 @@ primer eje
 	margin-top: -.25em;
 	margin-left: -.25em;
 	animation: rotacioninversa 2s linear infinite;
-	background: red;
 	}
 #planetthree > div > div:nth-child(2) > div > div > div > img {
 	position: absolute;
@@ -888,101 +1642,14 @@ primer eje
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#squarethree {
-	width: 50em;
-	height: 50em;
-	margin-top: -25em;
-	margin-left: -25em;
-	background-color: rgb(20,27,28);
-	transform: translateZ(-30em) rotate(45deg);
-	}
-
-
+/*rombo trasero*/
 
 
 /* fondo de estrellas*/
-.stars {
-	z-index: -999;
-	position: absolute;
-	width: 120%;
-	top: -30%;
-	left: -10%;
-	}
 .stars > img { width: 100%; }
 
 
 
-#diamond > div {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 30em;
-	height: 30em;
-	margin-top:-15em;
-	margin-left:-15em;
-
-	transform: translateZ(-9em) rotate(-45deg);
-	}
-
-#diamond > div > img {
-	position: fixed;
-	top: -50%;
-	left: -50%;
-	width: 200%;
-	height: 200%;
-	}
 
 
 
@@ -990,201 +1657,37 @@ primer eje
 
 
 
+/*interacción*/
 
 
-
-
-
-
-
-
-#greyscale {
-	transition: all ease-in-out 1s;
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	}
-
-#greyscale.color {
-	-webkit-filter: grayscale(0%);
-	filter: grayscale(0%);
-	}
-
-#closer:hover {
-	background: #000;
-	border: 1px solid #000;
-	animation: woble .2s linear infinite;
-	}
-#closer:hover ~ #cursor {
-	border: 4px solid #000;
-	animation: woble .2s linear infinite;
-	}
-
-#closer:hover ~ #cursor * {
-	display: none;
-	border: 2px solid #000;
-	}
-/*#closer:hover ~ #axis #planetone,
-#closer:hover ~ #axis #planettwo,
-#closer:hover ~ #axis #planetthree {
-	animation: popup .5s ease;
-	}*/
-
-/*#closer:hover ~ #axis #diamond {animation-delay: .7s;}*/ /* cuadrado3 */
-/*#closer:hover ~ #axis #gearone {animation-delay: .6s;}*/ /* cuadrado2 */
-/*#closer:hover ~ #axis #squarethree {animation-delay: .5s;}*/ /* cuadrado1 */
-/*#closer:hover ~ #axis #planetone {animation-delay: .2s;}*/ /* orbita pequeña */
-/*#closer:hover ~ #axis #planettwo {animation-delay: .3s;}*/ /* orbita mediana*/
-/*#closer:hover ~ #axis #planetthree {animation-delay: .4s;}*/ /* orbita grande*/
-/*#closer:hover ~ #axis #sun {animation-delay: .1s;}*/ /* sol */
-
-/*@keyframes popup {
-	0% { font-size: 1em}
-	30% { font-size: 1.05em; }
-	100% { font-size: 1em; }
-	}*/
-
-
-
-
-
-
-
-
-
-
-
-
-@keyframes rotacion {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
-	}
-@keyframes rotacioninversa {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(-360deg); }
-	}
-@keyframes woble {
-	0% { transform: scale(1); }
-	50% { transform: scale(.8); }
-	100% { transform: scale(1); }
-	}
-
-/*-------------------------------------------------------------------
-
-idiomas
-
--------------------------------------------------------------------*/
-
-
-#welcome {
-	z-index: 1;
-	position: fixed;
-	bottom: 50%;
-	left: 0;
-	width: 100%;
-	margin-bottom: .5em;
-
-	text-align: center;
-	font-size: 4em;
-	/*background: linear-gradient(to bottom, rgba(00,74,40,1) 0%, rgba(233,00,00,1) 100%);*/
-	}
-.typed-cursor {
-	margin-left: .05em;
-	opacity: 1;
-	animation: blink 0.7s infinite;
-	}
-	@keyframes blink{
-		0% { opacity:1; }
-		50% { opacity:0; }
-		100% { opacity:1; }
-		}
-
-
-#language {
-	z-index: 1;
-	position: fixed;
-	top: 50%;
-	left: 0;
-	width: 100%;
-	height: 75%;
-	text-align: center;
-	}
-
-#language a {
-	position: relative;
-	margin: 2%;
-	padding: .6em;
-	text-align: center;
-	/*background: linear-gradient(to bottom, rgba(55,74,107,1) 0%, rgba(33,00,00,1) 100%);*/
-	}
-
-#language a:hover {
-	color: #B7B053;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#map {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	
-	}
-#map > img {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
+/*cursor*/
+#closer:hover ~ #landpage > #cursor {
+	width: 0 !important;/*anula javascript*/
+	height: 0 !important;/*anula javascript*/
+	margin: 0 !important;/*anula javascript*/
+	font-size: 0;
 	opacity: 0;
-	transition: opacity ease-in-out 1s;
+	transition-property: width, height, margin, font-size, opacity;
+	transition-duration: .4s;
+	transition-timing-function: ease-in-out;
 	}
 
-#map > img:nth-child(1) {
-	opacity: 1;
-	}
-#map.eng > img:nth-child(2) {
-	opacity: 1;
-	}
-#map.esp > img:nth-child(3) {
-	opacity: 1;
-	}
-#map.cat > img:nth-child(4) {
-	opacity: 1;
-	}
-
-/*-------------------------------------------------------------------
-
-media queries desde 480px
-
--------------------------------------------------------------------*/
 
 
 
-@media all and (min-width: 600px) {
-	}
 
-@media all and (min-width: 640px) {
 
-	}
 
-/*-------------------------------------------------------------------
 
-media queries desde 640px
 
--------------------------------------------------------------------*/
 
+
+
+
+
+/*-------------------------------------------*/
+/*final media queries*/ }
+/*-------------------------------------------*/
 
 
 </style>
@@ -1193,217 +1696,393 @@ media queries desde 640px
 
 <body>
 
-<!-- <div id="coordenates">
-	<div id="one"><span>dimensiones landpage</span><span class="x">x:</span><span class="y">y:</span></div>
-	<div id="two"><span>coordenadas cursor</span><span class="x">x:</span><span class="y">y:</span></div>
-	<div id="three"><span>coord. desde punto central</span><span class="x">x:</span><span class="y">y:</span></div>
-	<div id="four"><span>coord. pnto cntral porcentuales</span><span class="x">x:</span><span class="y">y:</span></div>
-	<div id="five"><span>coord. pnto cntral porcentuales 3 decimales</span><span class="x">x:</span><span class="y">y:</span></div>
-	<div id="six"><span>coord. pnto cntral porcentuales 3 decimales positivos</span><span class="x">x:</span><span class="y">y:</span></div>
-	<div id="seven"><span>suma de los dos ejes</span><span class="x">positivo:</span><span class="y">negativo:</span></div>
-	<div id="hipote"><span>hipotenusa (en píxeles)</span><span class="x"><br></span></div>		
-	<div id="sandbox"><span>sandbox</span><span class="x"><br></span></div>
-</div> -->
 
+<a id="touch"></a>
+<a id="closer"></a>
 
 <div id="landpage" class="">
-	<div id="closer"></div>
+	
+	
+	
 
-	<!-- <div id="frame"></div> -->
+	<div id="frame">
+		<img src="./img/index/frame.svg">
+		<img src="./img/index/frame.svg">
+		<img src="./img/index/frame.svg">
+		<img src="./img/index/frame.svg">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
 
 	<div id="cursor">
 		<div>
-			<div></div>
+			<div>
+				<div></div>
+				<div></div>
+			</div>
 		</div>
 	</div>
 
 
+	<div id="title"><img src="./img/index/title.svg"></div>
 
-	<div id="sun"><img src="./img/sun.gif"></div>
+	<div id="shine">
+		<!--primer anillo-->		
+		<div>
+			<!--<lineas>-->
+			<div></div><div></div><div></div>
+			<div></div><div></div><div></div>
+			<div></div><div></div><div></div>
+			<div></div><div></div><div></div>
+		</div>
+		<!--segundo anillo-->			
+		<div></div>
+		<!--tercer anillo-->			
+		<div>
+			<!--grupos-->
+			<div>
+				<!--lineas-->
+				<div></div><div></div><div></div>
+				<div></div><div></div><div></div>
+			</div>
+			<!--grupos-->
+			<div>
+				<!--lineas-->
+				<div></div><div></div><div></div>
+				<div></div><div></div><div></div>
+			</div>
+			<!--grupos-->
+			<div>
+				<!--lineas-->
+				<div></div><div></div><div></div>
+				<div></div><div></div><div></div>
+			</div>
+			<!--grupos-->
+			<div>
+				<!--lineas-->
+				<div></div><div></div><div></div>
+				<div></div><div></div><div></div>
+			</div>
+			<!--grupos-->
+			<div>
+				<!--lineas-->
+				<div></div><div></div><div></div>
+				<div></div><div></div><div></div>
+			</div>
+			<!--grupos-->
+			<div>
+				<!--lineas-->
+				<div></div><div></div><div></div>
+				<div></div><div></div><div></div>
+			</div>
+			<!--grupos-->
+			<div>
+				<!--lineas-->
+				<div></div><div></div><div></div>
+				<div></div><div></div><div></div>
+			</div>
+			<!--grupos-->
+			<div>
+				<!--lineas-->
+				<div></div><div></div><div></div>
+				<div></div><div></div><div></div>
+			</div>
+			<!--grupos-->
+			<div>
+				<!--lineas-->
+				<div></div><div></div><div></div>
+				<div></div><div></div><div></div>
+			</div>
+			<!--grupos-->
+			<div>
+				<!--lineas-->
+				<div></div><div></div><div></div>
+				<div></div><div></div><div></div>
+			</div>
+			<!--grupos-->
+			<div>
+				<!--lineas-->
+				<div></div><div></div><div></div>
+				<div></div><div></div><div></div>
+			</div>
+			<!--grupos-->
+			<div>
+				<!--lineas-->
+				<div></div><div></div><div></div>
+				<div></div><div></div><div></div>
+			</div>
+		</div>
+	</div>
+	<div id="axis">
+		
+		<div id="sun">
+			<div>
+				<img src="./img/index/sun.gif">
+			</div>
+		</div>
+
+		<div id="diamondframe">
+			<img src="./img/index/diamondframe.svg">
+		</div>
+
+		<div id="diamond">
+			<div><img src="./img/index/stars1.svg"/></div>
+		</div>
+		
+
+		<!--sistema de engranajes-->
+		<div id="gears">
+			<div><img src="./img/index/gear1.svg"></div>
+			<div><img src="./img/index/gear2.svg"></div>
+			<div><img src="./img/index/gear3.svg"></div>
+			<div><img src="./img/index/gear4.svg"></div>
+			<div><img src="./img/index/gear5.svg"></div>
+			<div><img src="./img/index/gear6.svg"></div>
+			<div><img src="./img/index/gear7.svg"></div>
+			<div><img src="./img/index/gear8.svg"></div>
+			<div><img src="./img/index/gear9.svg"></div>
+			<div><img src="./img/index/gear10.svg"></div>
+
+			<div><div><img src="./img/index/cord.svg"></div></div>
+			<div><div><img src="./img/index/cord.svg"></div></div>
+			<div><div><img src="./img/index/cord.svg"></div></div>
+
+			<!-- <img src="./img/index/allgears.svg"> -->
+		</div>
+
+		<!--corona-->
+		<div id="crown">
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+			<div>
+				<div><img src="./img/index/crown.svg"></div>				
+			</div>
+		</div>
 
 
-	<div id="greyscale" class="color">
-		<div id="axis">
-				
- 				<div id="diamond">
- 					<div><img src="./img/stars1.svg"/></div>
- 				</div>
 
-				<div id="gears">
-					<div><img src="./img/gear1.svg"/></div>
-					<div><img src="./img/gear2.svg"/></div>
-					<div><img src="./img/gear3.svg"/></div>
-					<div><img src="./img/gear4.svg"/></div>
-					<div><img src="./img/gear5.svg"/></div>
-					<div><img src="./img/gear6.svg"/></div>
-					<div><img src="./img/gear7.svg"/></div>
-					<!--<img src="./img/allgears.svg"/>-->
-				</div>
-
-				<!--mercurio-->
-				<!--eje-->
-				<div id="planetone">
-					<!--orbita-->
+		<!--mercurio-->
+		<!--eje-->
+		<div id="planetone">
+			<!--orbita-->
+			<div>
+				<!--eje de posición y rotación (no compensatoria)-->
+				<div>
+					<!--eje planeta-->
 					<div>
-						<!--planeta-->
+						<!--lados de polígono-->
+						<img src="./img/index/planetsquare.svg">
+						<img src="./img/index/planetsquare.svg">
+						<img src="./img/index/planetsquare.svg">
+						<img src="./img/index/planetsquare.svg">
+						<img src="./img/index/planetsquare.svg">
+						<img src="./img/index/planetsquare.svg">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--saturno-->
+		<!--eje-->
+		<div id="planettwo">
+			<!--orbita-->
+			<div>
+				<!--eje de posición y rotación compensatoria-->
+				<div>
+					<!--eje planeta-->
+					<div>
+						<!--poliedro-->
 						<div>
-							<!--eje-->
+							<!--primer grupo-->
+							<div>
+								<img src="./img/index/planetpentagon.svg">
+								<img src="./img/index/planetpentagon.svg">
+								<img src="./img/index/planetpentagon.svg">
+								<img src="./img/index/planetpentagon.svg">
+								<img src="./img/index/planetpentagon.svg">
+								<img src="./img/index/planetpentagon.svg">
+							</div>
+							<!--segundo grupo-->
+							 <div>
+								<img src="./img/index/planetpentagon.svg">
+								<img src="./img/index/planetpentagon.svg">
+								<img src="./img/index/planetpentagon.svg">
+								<img src="./img/index/planetpentagon.svg">
+								<img src="./img/index/planetpentagon.svg">
+								<img src="./img/index/planetpentagon.svg">
+							</div>
+						</div>
+
+						<div>
+							<img src="./img/index/rings.svg">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--tierra-->
+		<!--eje-->
+		<div id="planetthree">
+			<!--orbita-->
+			<div>
+				<!--eje de posición y rotación compensatoria (sólo tierra)-->
+				<div>
+					<!--eje planeta-->
+					<div>
+						<!--poliedro-->
+						<div>
+							<div>
+								<div>
+									<img src="./img/index/planettriangle.svg">
+									<div><img src="./img/index/planettriangle.svg"></div>
+								</div>
+								<div>
+									<img src="./img/index/planettriangle.svg">
+									<div><img src="./img/index/planettriangle.svg"></div>
+								</div>
+								<div>
+									<img src="./img/index/planettriangle.svg">
+									<div><img src="./img/index/planettriangle.svg"></div>
+								</div>
+								<div>
+									<img src="./img/index/planettriangle.svg">
+									<div><img src="./img/index/planettriangle.svg"></div>
+								</div>
+								<div>
+									<img src="./img/index/planettriangle.svg">
+									<div><img src="./img/index/planettriangle.svg"></div>
+								</div>
+							</div>
+							<div>
+								<div>
+									<img src="./img/index/planettriangle.svg">
+									<div><img src="./img/index/planettriangle.svg"></div>
+								</div>
+								<div>
+									<img src="./img/index/planettriangle.svg">
+									<div><img src="./img/index/planettriangle.svg"></div>
+								</div>
+								<div>
+									<img src="./img/index/planettriangle.svg">
+									<div><img src="./img/index/planettriangle.svg"></div>
+								</div>
+								<div>
+									<img src="./img/index/planettriangle.svg">
+									<div><img src="./img/index/planettriangle.svg"></div>
+								</div>
+								<div>
+									<img src="./img/index/planettriangle.svg">
+									<div><img src="./img/index/planettriangle.svg"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--luna-->
+				<!--eje de posición y rotación compensatoria-->
+				<div>
+					<!--eje orbita-->
+					<div>
+						<!--orbita-->
+						<div>
+							<!--luna-->
 							<div>
 								<!--lados de polígono-->
-								<img src="./img/cuadrado.svg">
-								<img src="./img/cuadrado.svg">
-								<img src="./img/cuadrado.svg">
-								<img src="./img/cuadrado.svg">
-								<img src="./img/cuadrado.svg">
-								<img src="./img/cuadrado.svg">
+								<img src="./img/index/planetsquare.svg">
+								<img src="./img/index/planetsquare.svg">
+								<img src="./img/index/planetsquare.svg">
+								<img src="./img/index/planetsquare.svg">
+								<img src="./img/index/planetsquare.svg">
+								<img src="./img/index/planetsquare.svg">
 							</div>
 						</div>
 					</div>
 				</div>
-
-				<!--saturno-->
-				<!--eje-->
-				<div id="planettwo">
-					<!--orbita-->
+			</div>
+		</div>
+	
+		<!--plutón-->
+		<!--eje-->
+		<div id="planetfour">
+			<!--orbita-->
+			<div>
+				<!--eje de posición y rotación compensatoria-->
+				<div>
+					<!--eje planeta-->
 					<div>
-						<!--eje de posición y rotación compensatoria-->
+						<!--poliedro-->
 						<div>
-							<!--eje planeta-->
-							<div>
-								<!--poliedro-->
-								<div>
-									<!--primer grupo-->
-									<div>
-										<img src="./img/pentagono.svg">
-										<img src="./img/pentagono.svg">
-										<img src="./img/pentagono.svg">
-										<img src="./img/pentagono.svg">
-										<img src="./img/pentagono.svg">
-										<img src="./img/pentagono.svg">
-									</div>
-									<!--segundo grupo-->
-									 <div>
-										<img src="./img/pentagono.svg">
-										<img src="./img/pentagono.svg">
-										<img src="./img/pentagono.svg">
-										<img src="./img/pentagono.svg">
-										<img src="./img/pentagono.svg">
-										<img src="./img/pentagono.svg">
-									</div>
-								</div>
-							</div>
+							<img src="./img/index/planettriangle.svg">
+							<img src="./img/index/planettriangle.svg">
+							<img src="./img/index/planettriangle.svg">
+							<img src="./img/index/planettriangle.svg">
+							<img src="./img/index/planettriangle.svg">
+							<img src="./img/index/planettriangle.svg">
+							<img src="./img/index/planettriangle.svg">
+							<img src="./img/index/planettriangle.svg">
 						</div>
 					</div>
 				</div>
-
-				<!--tierra-->
-				<!--eje-->
-				<div id="planetthree">
-					<!--orbita-->
-					<div>
-						<!--eje de posición y rotación compensatoria (sólo tierra)-->
-						<div>
-							<!--eje planeta-->
-							<div>
-								<!--poliedro-->
-								<div>
-									<div>
-										<div>
-											<img src="./img/triangulo.svg">
-											<div><img src="./img/triangulo.svg"></div>
-										</div>
-										<div>
-											<img src="./img/triangulo.svg">
-											<div><img src="./img/triangulo.svg"></div>
-										</div>
-										<div>
-											<img src="./img/triangulo.svg">
-											<div><img src="./img/triangulo.svg"></div>
-										</div>
-										<div>
-											<img src="./img/triangulo.svg">
-											<div><img src="./img/triangulo.svg"></div>
-										</div>
-										<div>
-											<img src="./img/triangulo.svg">
-											<div><img src="./img/triangulo.svg"></div>
-										</div>
-									</div>
-									<div>
-										<div>
-											<img src="./img/triangulo.svg">
-											<div><img src="./img/triangulo.svg"></div>
-										</div>
-										<div>
-											<img src="./img/triangulo.svg">
-											<div><img src="./img/triangulo.svg"></div>
-										</div>
-										<div>
-											<img src="./img/triangulo.svg">
-											<div><img src="./img/triangulo.svg"></div>
-										</div>
-										<div>
-											<img src="./img/triangulo.svg">
-											<div><img src="./img/triangulo.svg"></div>
-										</div>
-										<div>
-											<img src="./img/triangulo.svg">
-											<div><img src="./img/triangulo.svg"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!--eje de posición y rotación compensatoria (sólo tierra)-->
-						<div>
-							<!--eje orbita-->
-							<div>
-								<!--orbita-->
-								<div>
-									<!--luna-->
-									<div>
-										<!--lados de polígono-->
-										<img src="./img/cuadrado.svg">
-										<img src="./img/cuadrado.svg">
-										<img src="./img/cuadrado.svg">
-										<img src="./img/cuadrado.svg">
-										<img src="./img/cuadrado.svg">
-										<img src="./img/cuadrado.svg">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			
-				<!--plutón-->
-				<!--eje-->
-				<div id="planetfour">
-					<!--orbita-->
-					<div>
-						<!--planeta-->
-						<div>
-							<div>
-								<img src="./img/triangulo.svg">
-								<img src="./img/triangulo.svg">
-								<img src="./img/triangulo.svg">
-								<img src="./img/triangulo.svg">
-								<img src="./img/triangulo.svg">
-								<img src="./img/triangulo.svg">
-								<img src="./img/triangulo.svg">
-								<img src="./img/triangulo.svg">
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-				<div id="squarethree"></div>
+			</div>
 		</div>
 
-		<div class="stars"><img src="./img/stars2.svg"/></div>
 
+		<div id="squarethree"></div>
 	</div>
+
+	<div class="stars"><img src="./img/index/stars2.svg"/></div>
 	
 </div>
 
@@ -1418,10 +2097,10 @@ media queries desde 640px
 </div>
 
 <div id="map">
-	<img src="./img/map.svg">
-	<img src="./img/mapeng.svg">
-	<img src="./img/mapesp.svg">
-	<img src="./img/mapcat.svg">
+	<img src="./img/ui/map.svg">
+	<img src="./img/ui/mapeng.svg">
+	<img src="./img/ui/mapesp.svg">
+	<img src="./img/ui/mapcat.svg">
 </div>
 
 
@@ -1436,20 +2115,29 @@ media queries desde 640px
 <script type="text/javascript" src="./js/cursorscripts.js"></script>
 <script type="text/javascript" src="./js/typed.min.js"></script>
 
+
 <script type="text/javascript">
 
+// al clicar en #touch
 $(function() {
-	$("#closer").hover(function() {
-		$("#greyscale").addClass("color");
+	$("#touch").click(function() {
+		$("#touch").addClass("closed");
+		$("#landpage").addClass("touched");
 	});
 });
 
+// al :hover en #closer
+$(function() {
+	$("#closer").hover(function() {
+		$("#landpage").addClass("active");
+	});
+});
 
-
-
+// al clicar en #closer
 $(function() {
 	$("#closer").click(function() {
 		//
+		$("#closer").addClass("closed");
 		$("#landpage").addClass("closed");
 
 		$(".typed").typed({
@@ -1485,7 +2173,7 @@ $(function() {
 });
 
 $(function() {
-$("#esp").hover(function() {
+	$("#esp").hover(function() {
 		$("#map").toggleClass("esp");
 	});
 });
@@ -1502,8 +2190,29 @@ $(function() {
 
 </script>
 
+
+
+
+
+
+
+
+
+<!-- <div id="coordenates">
+	<div id="one"><span>dimensiones landpage</span><span class="x">x:</span><span class="y">y:</span></div>
+	<div id="two"><span>coordenadas cursor</span><span class="x">x:</span><span class="y">y:</span></div>
+	<div id="three"><span>coord. desde punto central</span><span class="x">x:</span><span class="y">y:</span></div>
+	<div id="four"><span>coord. pnto cntral porcentuales</span><span class="x">x:</span><span class="y">y:</span></div>
+	<div id="five"><span>coord. pnto cntral porcentuales 3 decimales</span><span class="x">x:</span><span class="y">y:</span></div>
+	<div id="six"><span>coord. pnto cntral porcentuales 3 decimales positivos</span><span class="x">x:</span><span class="y">y:</span></div>
+	<div id="seven"><span>suma de los dos ejes</span><span class="x">positivo:</span><span class="y">negativo:</span></div>
+	<div id="hipote"><span>hipotenusa (en píxeles)</span><span class="x"><br></span></div>		
+	<div id="sandbox"><span>sandbox</span><span class="x"><br></span></div>
+</div> -->
+<!--<link rel="stylesheet" type="text/css" href="./css/rainbow2.css">-->
+
 </body>
 
-<ink rel="stylesheet" type="text/css" href="./css/rainbow2.css">
+
 
 </html>

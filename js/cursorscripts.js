@@ -1,4 +1,4 @@
-	$(document).ready(function() {
+$(document).ready(function() {
 	$("#landpage").mousemove(function(event) {
 
 		cx = Math.ceil($("#landpage").width() / 2.0);
@@ -26,12 +26,13 @@
 		cursoradius = (0.75 + (hptnusa / 80));
 
 		
+
 		$('#frame')
 			.css('opacity', + (1 - (hptnusa / 300)))
 			;
-		$('#closer')
-			.css('opacity', + (1.5 - (hptnusa / 300)))
-			;
+		// $('#closer')
+		// 	.css('opacity', + (1.5 - (hptnusa / 300)))
+		// 	;
 
 		$('#cursor')
 			.css('left', + event.pageX + 'px')
@@ -42,38 +43,69 @@
 			.css('margin-left', - (cursoradius) + 'em')
 			;
 
-		// la linea que rota
-
+		// el ancla que rota
 		$('#cursor > div')
-			.css('top', + event.pageY + 'px')
-			.css('left', + event.pageX + 'px')
 			.css('transform','rotate(' + angulo + 'deg')
 			;
 
+		// linea de la flecha
 		$('#cursor > div > div')
 			.css('height','calc(' + (hptnusa) + 'px - ' + (cursoradius * 2) + 'em')
 			.css('margin-top', + (cursoradius) + 'em')
 			;
 
-		
+		// puntas de flecha
 
+		$('#cursor > div > div > div')
+			.css('height', + xplusy * 3 + 'em')
+			;
+
+
+		if((xplusy * 60) > 15) {
+			$('#cursor > div > div > div')
+				.css('opacity','1')
+				;
+			// punta de la flecha 1
+			$('#cursor > div > div > div:nth-child(1)')
+				.css('transform','rotate(' + xplusy * 60 + 'deg')
+				;
+			// punta de la flecha 2
+			$('#cursor > div > div > div:nth-child(2)')
+				.css('transform','rotate(' + xplusy * -60 + 'deg')
+				;
+			}
+		else {
+			$('#cursor > div > div > div')
+				.css('transform','rotate(0deg)')
+				.css('opacity','0')
+				;
+			}
+		
+		
+		
 
 		// rotación del eje
 		$('#axis').css('transform','rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)');
+		// compensación de la rotación del sol
+		$('#sun').css('transform','rotate3d(' + -tiltx + ', ' + -tilty + ', 0, ' + degree + 'deg)');
 
 
 		// estrellas
 		$('#diamond div img')
-			.css('margin-top', + ((tiltx * 20)) + '%')
+			.css('margin-top', + (tiltx * 20) + '%')
 			.css('margin-left', + (- (tilty * 20)) + '%')
 			;
 		$('.stars')
-			.css('margin-top', + ((tiltx * 10)) + '%')
+			.css('margin-top', + (tiltx * 10) + '%')
 			.css('margin-left', + (- (tilty * 10)) + '%')
 			;
 		
 
 
+
+
+
+		
 
 
 
@@ -106,5 +138,7 @@
 		// sandbox
 		sandbox = 2;
 		$("#coordenates #sandbox .x").text(sandbox);
+	
 	});
+
 });

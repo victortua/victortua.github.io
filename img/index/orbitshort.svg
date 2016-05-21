@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="270px"
+	 height="270px" viewBox="0 0 270 270" enable-background="new 0 0 270 270" xml:space="preserve">
+<g id="exportaciones">
+	<rect x="-1443.368" y="-988.855" display="none" width="1474" height="2447.511"/>
+	<path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M135,1.569c73.691,0,133.431,59.739,133.431,133.431
+		c0,60.609-40.411,111.78-95.758,128.039"/>
+</g>
+<g id="titulo" display="none">
+</g>
+<g id="screenshots" display="none">
+</g>
+<g id="fondo_negro" display="none">
+</g>
+<g id="imagenes" display="none">
+</g>
+<g id="graficas" display="none">
+</g>
+<g id="texto" display="none">
+</g>
+<g id="bienvenido" display="none">
+</g>
+<g id="landpage" display="none">
+	<g id="movil_horiz" display="inline">
+		<defs>
+			<rect id="SVGID_12_" x="-2868.166" y="226.79" width="217.259" height="123.013"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_12_"  overflow="visible"/>
+		</clipPath>
+	</g>
+	<g id="movil_vert_copia" display="inline">
+		<defs>
+			<rect id="SVGID_16_" x="-3079.731" y="179.307" width="123.013" height="217.259"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_16_"  overflow="visible"/>
+		</clipPath>
+	</g>
+	<g id="tableta_horizontal" display="inline">
+		<defs>
+			<rect id="SVGID_20_" x="-3570.338" y="143.121" width="409.16" height="288.831"/>
+		</defs>
+		<clipPath id="SVGID_6_">
+			<use xlink:href="#SVGID_20_"  overflow="visible"/>
+		</clipPath>
+	</g>
+	<g id="tableta_vert" display="inline">
+		<defs>
+			<rect id="SVGID_28_" x="-3934.715" y="83.345" width="287.964" height="409.479"/>
+		</defs>
+		<clipPath id="SVGID_8_">
+			<use xlink:href="#SVGID_28_"  overflow="visible"/>
+		</clipPath>
+	</g>
+	<g id="escritorio_1_" display="inline">
+		<defs>
+			<rect id="ventana" x="-5029.702" y="43.947" width="1024.5" height="487.98"/>
+		</defs>
+		<clipPath id="ventana_1_">
+			<use xlink:href="#ventana"  overflow="visible"/>
+		</clipPath>
+	</g>
+</g>
+<g id="bocetos" display="none">
+</g>
+<g id="notas" display="none">
+</g>
+</svg>

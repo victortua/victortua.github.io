@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="70px"
+	 height="70px" viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
+<g id="exportaciones">
+	<rect x="-757.882" y="-966.628" display="none" width="1474" height="2447.511"/>
+	<g>
+		<polyline fill="none" stroke="#FFFFFF" stroke-miterlimit="10" points="2.625,67.377 2.625,42.435 7.602,42.435 7.602,47.411 
+			22.531,47.411 22.531,32.481 12.578,32.481 12.578,42.435 32.483,42.435 32.483,37.458 27.508,37.458 27.508,7.601 17.555,7.601 
+			17.555,22.53 22.531,22.53 22.531,17.553 7.602,17.553 7.602,27.505 37.461,27.505 37.461,32.481 42.437,32.481 42.437,12.576 
+			32.483,12.576 32.483,22.53 47.414,22.53 47.414,7.601 42.437,7.601 42.437,2.623 67.375,2.623 		"/>
+		<rect x="2.625" y="2.623" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" width="9.953" height="9.953"/>
+	</g>
+</g>
+<g id="screenshots" display="none">
+</g>
+<g id="fondo_negro" display="none">
+</g>
+<g id="imagenes" display="none">
+</g>
+<g id="texto" display="none">
+</g>
+<g id="bienvenido" display="none">
+</g>
+<g id="landpage" display="none">
+	<defs>
+		<rect id="ventana" x="-4344.216" y="66.174" width="1024.5" height="487.98"/>
+	</defs>
+	<clipPath id="ventana_1_" display="inline">
+		<use xlink:href="#ventana"  overflow="visible"/>
+	</clipPath>
+</g>
+<g id="titulo" display="none">
+</g>
+<g id="bocetos" display="none">
+</g>
+<g id="notas" display="none">
+</g>
+</svg>
