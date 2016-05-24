@@ -130,7 +130,7 @@ body, a {font-family: 'robotothin';}
 	height: 100%;
 	overflow: hidden;
 	background: #000;
-	font-size: .3em;
+	font-size: .8em;
 	}
 
 
@@ -171,7 +171,7 @@ body, a {font-family: 'robotothin';}
 	height: calc(100% - 2em);
 	margin: 1em;
 	opacity: 0;/*valor modificado con js*/
-	transition: all ease-in-out .2s;
+	transition: opacity ease-in-out .2s;
 	/*background-color: rgba(255,0,0,.5);*/
 	}
 
@@ -224,21 +224,20 @@ body, a {font-family: 'robotothin';}
 #title {
 	z-index: 999;
 	position: absolute;
-	top: 50%;
+	top: 6em;
 	left: 50%;
-	margin-top: -17em;
-	margin-left: -10em;
-	width: 20em;
-	height: 5em;
+	margin-left: -12.5em;
+	width: 25em;
+	height: 6em;
 	overflow: hidden;
+	/*background-color: green;*/
 	}
 #title > img {
 	position: absolute;
 	top: 0;
-	left: -1600em;
+	left: -2000em; /* #title{width} x 8000% */
 	width: 8000%;
 	}
-
 
 
 /*resplandor*/
@@ -246,7 +245,7 @@ body, a {font-family: 'robotothin';}
 #shine {
 	z-index: 40;
 	position: absolute;
-	top: 50%;
+	bottom: 8em;
 	left: 50%;
 	opacity: 0;
 	}
@@ -338,12 +337,8 @@ body, a {font-family: 'robotothin';}
 
 #axis {
 	position: absolute;
-	top: 50%;
+	bottom: 8em;
 	left:50%;
-	width: 10em;
-	height: 10em;
-	margin-top: -5em;
-	margin-left: -5em;
 
 	/*background-color: pink;*/
 	/*transform: rotate3d(-0.8, -0.2, 0, 17deg); */
@@ -783,35 +778,17 @@ body, a {font-family: 'robotothin';}
 
 
 
-/* interacción */
+/* interacción escritorio */
+/*esta sección es exactamente igual a la sección de interacción :hover
+de la versión touch, en el media querie max-width: 640px*/
 
 
-
-
-#touch. {
-	top:120%;
-	opacity: 0;
-	}
-
-/*frame en la versión mobil*/
-#landpage.touched > #frame {
-	opacity: 1;
-	transition: opacity 1s ease-in-out;
-	}
 
 /*animación del título*/
-#landpage.touched > #title > img,
 #landpage.active > #title > img {
 	left: 0;
 	transition: left 3.1s steps(80);
 	}
-
-/*eje que sigue el cursor*/
-#closer:hover ~ #landpage > #axis
- {	transform: none !important;/*anula la rotación del eje de javascript*/ }
-/*compensacion del sol*/
-#closer:hover ~ #landpage > #axis > #sun {	transform: none !important;/*anula la rotación del eje de javascript*/ }
-
 
 
 /*blanco y negro dentro del eje*/
@@ -819,11 +796,8 @@ body, a {font-family: 'robotothin';}
 #crown,
 #gears > div { transition: all ease-in-out 1s; -webkit-filter: grayscale(100%); filter: grayscale(100%); }
 
-#landpage.touched > #axis > #diamondframe,
 #closer:hover ~ #landpage > #axis > #diamondframe,
-#landpage.touched > #axis > #crown,
 #closer:hover ~ #landpage > #axis > #crown,
-#landpage.touched > #axis > #gears > div,
 #closer:hover ~ #landpage > #axis > #gears > div { -webkit-filter: grayscale(  0%); filter: grayscale(  0%); }
 
 
@@ -848,16 +822,13 @@ body, a {font-family: 'robotothin';}
 	}
 
 /*anillos*/
-#landpage.touched > #shine,
 #closer:hover ~ #landpage > #shine {
 	opacity: 1;
 	}
-#landpage.touched > #shine > div,
 #closer:hover ~ #landpage > #shine > div {
 	transition-duration: 1s;
 	transition-timing-function: cubic-bezier(0.57, 1.01, 0.75, 0.81);
 	}
-#landpage.touched > #shine > div:nth-child(1),
 #closer:hover ~ #landpage > #shine > div:nth-child(1) {
 	width: 5.8em;
 	height: 5.8em;
@@ -865,14 +836,12 @@ body, a {font-family: 'robotothin';}
 	margin-left: -2.9em;
 	transition-delay: 0s;
 	}
-#landpage.touched > #shine > div:nth-child(2),
 #closer:hover ~ #landpage > #shine > div:nth-child(2) {
 	width: 7.5em;
 	height: 7.5em;
 	margin-top: -3.75em;
 	margin-left: -3.75em;
 	}
-#landpage.touched > #shine > div:nth-child(3),
 #closer:hover ~ #landpage > #shine > div:nth-child(3) {
 	width: 8em;
 	height: 8em;
@@ -881,7 +850,6 @@ body, a {font-family: 'robotothin';}
 	}
 
 /*lineas primer anillo*/
-#landpage.touched > #shine > div:nth-child(1) > div,
 #closer:hover ~ #landpage > #shine > div:nth-child(1) > div {
 	transition: height 1.5s ease-out 1.8s;
 	height: .3em;
@@ -890,21 +858,15 @@ body, a {font-family: 'robotothin';}
 /*lineas tercer anillo*/
 
 /*lineas cortas*/
-#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(2),
 #closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(2),
-#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(3),
 #closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(3),
-#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(4),
 #closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(4),
-#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(5),
 #closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(5),
-#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(6),
 #closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(6) {
 	height: .6em;
 	animation: shortline 1s ease-in-out;
 	}
 /*lineas largas*/
-#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(1),
 #closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(1) {
 	height: 1.5em;
 	animation: longline 1.3s ease-out;
@@ -915,38 +877,26 @@ body, a {font-family: 'robotothin';}
 	100% { height: .6em; }
 	}
 @keyframes longline {
-	0%   { height:     0; }
 	50%  { height: 1.8em; }
 	100% { height: 1.5em; }
 	}
 /*delays*/
 /*observar que las lineas estan ordenadas por tiempos*/
 /*ademas tambien se incluye la propiedad transition-delay para evitar que se vean las lineas antes de tiempo*/
-#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(4),
 #closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(4) { animation-delay:  1.2s; transition-delay:  1.2s; }
-#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(3),
 #closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(3),
-#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(5),
 #closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(5) { animation-delay: 1.4s; transition-delay: 1.4s; }
-#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(2),
 #closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(2),
-#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(6),
 #closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(6) { animation-delay: 1.6s; transition-delay: 1.6s; }
-#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(1),
 #closer:hover ~ #landpage > #shine > div:nth-child(3) > div > div:nth-child(1) { animation-delay: 1.8s; transition-delay: 1.8s; }
 
 
 
-
-#touch.closed,
 #closer.closed,
 #landpage.closed {
 	top:120%;
 	opacity: 0;
 	transition: all ease-in-out 1s;
-	}
-#touch.closed {
-	transition-delay: 2s;
 	}
 
 
@@ -1136,6 +1086,200 @@ idiomas
 
 
 
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/* parte exclusiva para móbiles y tabletas (versiones táctiles)*/
+@media all and (max-width: 640px) {
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+
+/*frame*/
+#landpage.touched > #frame {
+	opacity: 1 !important;/*si no se pone !important, es posible que javascript sobreescriva la propiedad por error*/
+	transition: opacity 1s ease-in-out;
+	}
+
+/*animación del título*/ 
+#landpage.touched > #title > img {
+	left: 0;
+	transition: left 3.1s steps(80);
+	}
+
+
+/*esto es para asegurar que en las versiones tactiles, el eje no rota por nada del mundo*/
+#landpage > #axis { transform: none !important; }/*anula la rotación del eje de javascript*/
+#landpage > #axis > #sun {	transform: none !important; }/*anula la rotación del eje de javascript*/
+
+
+
+
+
+/* toda la interacción touch */
+/*esta sección es exactamente igual a la sección de interacción :hover
+de la versión escritorio, en el media querie min-width: 640px*/
+
+
+/*blanco y negro dentro del eje*/
+#diamondframe,
+#crown,
+#gears > div { transition: all ease-in-out 1s; -webkit-filter: grayscale(100%); filter: grayscale(100%); }
+
+#landpage.touched > #axis > #diamondframe, 
+#landpage.touched > #axis > #crown,
+#landpage.touched > #axis > #gears > div { -webkit-filter: grayscale(  0%); filter: grayscale(  0%); }
+
+
+
+
+
+/*resplandor*/
+
+/*anillos*/
+#landpage.touched > #shine {
+	opacity: 1;
+	}
+#landpage.touched > #shine > div {
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(0.57, 1.01, 0.75, 0.81);
+	}
+#landpage.touched > #shine > div:nth-child(1) {
+	width: 5.8em;
+	height: 5.8em;
+	margin-top: -2.9em;
+	margin-left: -2.9em;
+	transition-delay: 0s;
+	}
+#landpage.touched > #shine > div:nth-child(2) {
+	width: 7.5em;
+	height: 7.5em;
+	margin-top: -3.75em;
+	margin-left: -3.75em;
+	}
+#landpage.touched > #shine > div:nth-child(3) {
+	width: 8em;
+	height: 8em;
+	margin-top: -4em;
+	margin-left: -4em;
+	}
+
+/*lineas primer anillo*/
+#landpage.touched > #shine > div:nth-child(1) > div {
+	transition: height 1.5s ease-out 1.8s;
+	height: .3em;
+	}
+
+/*lineas tercer anillo*/
+
+/*lineas cortas*/
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(2),
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(3),
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(4),
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(5),
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(6) {
+	height: .6em;
+	animation: shortline 1s ease-in-out;
+	}
+/*lineas largas*/
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(1) {
+	height: 1.5em;
+	animation: longline 1.3s ease-out;
+	}
+@keyframes shortline {
+	0%   { height:    0; }
+	50%  { height:  1em; }
+	100% { height: .6em; }
+	}
+@keyframes longline {
+	0%   { height:     0; }
+	50%  { height: 1.8em; }
+	100% { height: 1.5em; }
+	}
+/*delays*/
+/*observar que las lineas estan ordenadas por tiempos*/
+/*ademas tambien se incluye la propiedad transition-delay para evitar que se vean las lineas antes de tiempo*/
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(4) { animation-delay:  1.2s; transition-delay:  1.2s; }
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(3),
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(5) { animation-delay: 1.4s; transition-delay: 1.4s; }
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(2),
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(6) { animation-delay: 1.6s; transition-delay: 1.6s; }
+#landpage.touched > #shine > div:nth-child(3) > div > div:nth-child(1) { animation-delay: 1.8s; transition-delay: 1.8s; }
+
+
+
+
+#touch.closed {
+	top:120%;
+	opacity: 0;
+	transition: all ease-in-out 1s;
+	transition-delay: 2s;
+	}
+
+
+
+
+/*-------------------------------------------*/
+/*final media queries*/ }
+/*-------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-------------------------------------------*/
 /*-------------------------------------------*/
 /*-------------------------------------------*/
@@ -1155,10 +1299,13 @@ idiomas
 	cursor: none;
 	}
 
-
-/*activación para dispositivos táctiles*/
+/*activación para dispositivos táctiles eliminada*/
 #touch { display:none; }
 
+/* agrandar los elementos */
+#landpage {
+	font-size: 1em;
+	}
 /*botón para cerrar landpage*/
 #closer {
 	top: 50%;
@@ -1170,6 +1317,22 @@ idiomas
 	border-radius: 50%;
 	}
 
+
+
+#title {
+	top: 50%;
+	left: 50%;
+	margin-top: -17em;
+	margin-left: -10em;
+	width: 20em;
+	height: 5em;
+	}
+#title > img {
+	position: absolute;
+	top: 0;
+	left: -1600em;
+	width: 8000%;
+	}
 
 
 
@@ -1218,8 +1381,17 @@ idiomas
 
 
 
+/*resplandor*/
+
+#shine {
+	bottom: 50%;
+	}
 
 /* eje */
+
+#axis {
+	bottom: 50%;
+	}
 /* sol */
 /*marco diamante*/
 /*diamante*/
@@ -1653,7 +1825,11 @@ idiomas
 
 
 
-
+/*eje que sigue el cursor*/
+#closer:hover ~ #landpage > #axis
+ {	transform: none !important;/*anula la rotación del eje de javascript*/ }
+/*compensacion del sol*/
+#closer:hover ~ #landpage > #axis > #sun {	transform: none !important;/*anula la rotación del eje de javascript*/ }
 
 
 
@@ -2113,17 +2289,29 @@ idiomas
 
 
 <script type="text/javascript" src="./js/jquery-1.9.0.min.js"></script>
+
+
+<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
+<!-- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
 <script type="text/javascript" src="./js/cursorscripts.js"></script>
 <script type="text/javascript" src="./js/typed.min.js"></script>
 
 
 <script type="text/javascript">
 
-// al clicar en #touch
+// al clicar o swipear en #touch
 $(function() {
 	$("#touch").click(function() {
 		$("#touch").addClass("closed");
 		$("#landpage").addClass("touched");
+	});
+
+	$("#touch").on("swipe",function(){
+		$("#touch").addClass("closed");
+  		$("#landpage").addClass("touched");
 	});
 });
 
