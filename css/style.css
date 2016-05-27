@@ -49,35 +49,6 @@
 
 
 /*----------------------------
-1.1. fuente Poly
------------------------------*/
-
-
-@font-face {
-	font-family: 'polyitalic';
-	src: url('../fonts/poly-italic.eot');
-	src: url('../fonts/poly-italic.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/poly-italic.woff2') format('woff2'),
-	url('../fonts/poly-italic.woff') format('woff'),
-	url('../fonts/poly-italic.ttf') format('truetype'),
-	url('../fonts/poly-italic.svg#polyitalic') format('svg');
-	font-weight: normal;
-	font-style: normal;
-	}
-@font-face {
-	font-family: 'polyregular';
-	src: url('../fonts/poly-regular.eot');
-	src: url('../fonts/poly-regular.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/poly-regular.woff2') format('woff2'),
-	url('../fonts/poly-regular.woff') format('woff'),
-	url('../fonts/poly-regular.ttf') format('truetype'),
-	url('../fonts/poly-regular.svg#polyregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-	}
-
-
-/*----------------------------
 1.2. fuente Roboto 2014
 -----------------------------*/
 
@@ -326,7 +297,6 @@ a {text-decoration: none;}
 
 /* fuentes */
 
-h1, h2 {font-family: 'polyitalic';}
 body, button {font-family: 'robotothin';}
 
 /* colores */
@@ -407,7 +377,7 @@ body {background-color: #000;}
 	cursor: pointer;
 	}
 #filters button:active,
- #filters button:focus {
+#filters button:focus {
 	outline: none;
 	}
 
@@ -419,68 +389,42 @@ body {background-color: #000;}
 	
 	top: 6em;
 	left: 1em;
-	max-height: 6em;
+	height: 6em;
 	text-align: left;
-	/*background-color: red;*/
+	background-color: darkred;
 	}
-#titles div {
-	font-size: 3em;
-	display: none; /*no tocar. interaccion con javascript*/
-	}
+
 
 
 /*----------------------------
 2.3. Rejilla
 -----------------------------*/
 
-
 #grid {
-	position: fixed;
-	top: 0;
-	left: 0;
 	width: 100%;
 	height: 100%;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	
-	text-align: justify;
-	/*-webkit-backface-visibility: hidden;*/
-	}
-/*#grid:after {
-	content: '';
-	display: inline-block;
-	width: 100%;
-	}*/
-
-#grid a/*,
-#grid .gap*/ {
-	width: 100%;
-	text-align: left;
-	/*margin-bottom: 2%;*/
-	display: none; /*no tocar. interaccion con javascript*/
 	background-color: orange;
+	overflow-x: hidden;
+	overflow-y: auto;
 	}
 
-/*#grid a:before {
-	content: attr(title);
-	color: white;
-	font-size: 16px;
-	display: inline-block;
-	vertical-align: top;
-	padding: 4% 6%;
-	font-weight: 700;
-	}*/
-
-/*#grid a:before {
-	content: attr(class);
-	display: inline-block;
-	padding-top: 60%;
-	}*/
-
-#grid a img {
-	display: block;
-	width: 100%;
+#grid > .isotope {
+	background: red;
 	}
+
+
+#grid > .isotope > div {
+	float: left;
+	width: 10em;
+	height: 10em;
+	background: blue;
+	border: 2px solid cyan;
+	}
+
+#grid > .isotope > div.thick { width: 20em; }
+#grid > .isotope > div.tall { height: 20em; }
+
+
 
 
 /*----------------------------
@@ -497,7 +441,7 @@ body {background-color: #000;}
 	left: 0;
 	}
 #projects > div,
-          #info {
+#info {
 	z-index: 20;
 	position: fixed;
 	width: 100%;
@@ -793,8 +737,7 @@ body {background-color: #000;}
 
 
 /*----------------------------
-4.1. Header
------------------------------*/
+4.1. Header -----------------------------*/
 
 
 #header {
@@ -833,7 +776,7 @@ body {background-color: #000;}
 
 	transition: all ease-in-out .3s;
 	}
-#header #filters .active {
+#header #filters button.hide {
 	padding: .4em 0;
 	font-size: 0em;
 	border-width: 0;
@@ -908,7 +851,7 @@ body {background-color: #000;}
 	height: 0;
 	}
 
-#grid a .gridinfo {
+#grid a #isotopeinfo {
 	position: relative;
 	display: inline-block;
 	width: 100%;
@@ -920,34 +863,34 @@ body {background-color: #000;}
 	/*background-color: rgba(255,0,255,.5);*/
 	}
 
-#grid a .gridinfo span {
+#grid a #isotopeinfo span {
 	position: absolute;
 	}
-#grid a .gridinfo span {
+#grid a #isotopeinfo span {
 	top: 6em;
 	transition: all ease-in-out 2s;
 	/*opacity: 0;*/
 	/*background-color: red;*/
 	}
 
-#grid a .gridinfo span:nth-child(1) {
+#grid a #isotopeinfo span:nth-child(1) {
 	font-size: 2.5em;
 	}
-#grid a .gridinfo span:nth-child(2) {
+#grid a #isotopeinfo span:nth-child(2) {
 	font-size: 1.5em;
 	}
 
 /* info den hover */
 
-#grid a:hover .gridinfo span {
+#grid a:hover #isotopeinfo span {
 	/*opacity: 1;*/
 	transition: all cubic-bezier(.11,.83,.73,.96) .5s;
 	}
 
-#grid a:hover .gridinfo span:nth-child(1) {
+#grid a:hover #isotopeinfo span:nth-child(1) {
 	top: 1em;
 	}
-#grid a:hover .gridinfo span:nth-child(2) {
+#grid a:hover #isotopeinfo span:nth-child(2) {
 	top: .3em;
 	transition-duration: 1s;
 	transition-delay: .1s;
