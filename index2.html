@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="Victor Tuà">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>Victor Tuà portfolio</title>
+
+<style media="screen">
+
+/*----------------------------
+1.1. fuente Poly
+-----------------------------*/
+
+
+@font-face {
+	font-family: 'polyitalic';
+	src: url('./fonts/poly-italic.eot');
+	src: url('./fonts/poly-italic.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/poly-italic.woff2') format('woff2'),
+	url('./fonts/poly-italic.woff') format('woff'),
+	url('./fonts/poly-italic.ttf') format('truetype'),
+	url('./fonts/poly-italic.svg#polyitalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'polyregular';
+	src: url('./fonts/poly-regular.eot');
+	src: url('./fonts/poly-regular.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/poly-regular.woff2') format('woff2'),
+	url('./fonts/poly-regular.woff') format('woff'),
+	url('./fonts/poly-regular.ttf') format('truetype'),
+	url('./fonts/poly-regular.svg#polyregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+
+
+
+
+
+
+
+
+
+@font-face {
+	font-family: 'robotothin';
+	src: url('./fonts/roboto-thin.eot');
+	src: url('./fonts/roboto-thin.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/roboto-thin.woff2') format('woff2'),
+	url('./fonts/roboto-thin.woff') format('woff'),
+	url('./fonts/roboto-thin.ttf') format('truetype'),
+	url('./fonts/roboto-thin.svg#robotothin') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+/*Eric Meyer's Reset CSS v2.0*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}/*HTML5 display-role reset for older browsers*/article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul,li{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+/*end of reset*/
+
+* { box-sizing: border-box;	}
+
+body{
+	background: #3B82FF;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	font-size: 1em;
+	/*-webkit-perspective: 1000;*/
+	}
+
+body, a {color: #eee;}
+a {text-decoration: none;}
+
+
+body, a {font-family: 'robotothin';}
+
+
+#landpage {
+	z-index: 100;
+	position: absolute;
+	top: 0%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #3B82FF;
+	font-size: .8em;
+	
+	}
+
+
+
+
+/*botón para cerrar landpage*/
+#closer {
+	z-index: 200;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/*background: rgba(0,255,0,.5);*/
+	}
+
+
+
+
+
+/* eje */
+
+#landpage, #landpage * {
+	transform-style: preserve-3d;
+	}
+
+#axis {
+	position: absolute;
+	bottom: 8em;
+	left:50%;
+
+	/*background-color: pink;*/
+	/*transform: rotate3d(-0.8, -0.2, 0, 17deg); */
+	/*perspective: 1500px;*/
+	/*transition: transform ease-in-out .1s;*/
+	}
+
+#axis > div {
+	position: absolute;
+	top: 50%;
+	left: 50%;	
+	}
+
+
+
+
+
+
+/* engranajes */
+
+#gears > div {
+	position: absolute;
+	}
+
+#gears > div:nth-child(1) {
+	width: 20.7em;
+	margin-top: -10.35em;
+	margin-left: -10.35em;
+	transform: translateZ(4em);
+	}
+#gears > div:nth-child(2) {
+	width: 9.55em;
+	margin-top: 2.4em;
+	margin-left: -14.9em;
+	transform: translateZ(-4em);
+	}
+#gears > div:nth-child(3) {
+	width: 6.28em;
+	margin-top: 5.71em;
+	margin-left: -6.8em;
+	transform: translateZ(-7em);
+	}
+#gears > div:nth-child(4) {
+	width: 8.8em;
+	margin-top: 8em;
+	margin-left: -13.15em;
+	transform: translateZ(-15em);
+	}
+
+
+
+/* rotación de los engranajes */
+
+#gears > div > img {width: 100%;}
+
+#gears > div:nth-child(1) > img  { animation: rotacion         408.1632653s linear infinite;        }
+#gears > div:nth-child(2) > img  { animation: rotacioninversa  95.23809524s linear infinite;        }
+#gears > div:nth-child(3) > img  { animation: rotacion                   50s linear infinite;        }
+#gears > div:nth-child(4) > img  { animation: tictacone                 100s linear infinite 4.65s; }
+
+
+@keyframes tictacone {
+	   0% { transform: rotate(   0deg); }
+	 7.5% { transform: rotate( -60deg); }
+	  50% { transform: rotate( -60deg); }
+	57.5% { transform: rotate(-120deg); }
+	 100% { transform: rotate(-120deg); }
+	}
+
+
+
+
+
+
+@keyframes rotacion {
+	0%   { transform: rotate(  0deg); }
+	100% { transform: rotate(360deg); }
+	}
+@keyframes rotacioninversa {
+	0%   { transform: rotate(   0deg); }
+	100% { transform: rotate(-360deg); }
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/* 3. Media queries desde 480px (tableta) */
+@media all and (min-width: 480px) {
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+
+
+
+/*-------------------------------------------*/
+/*final media queries*/ }
+/*-------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/* parte exclusiva para móbiles y tabletas (versiones táctiles)*/
+@media all and (max-width: 640px) {
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+
+/*esto es para asegurar que en las versiones tactiles, el eje no rota por nada del mundo*/
+#landpage > #axis { transform: none !important; }/*anula la rotación del eje de javascript*/
+#landpage > #axis > #sun {	transform: none !important; }/*anula la rotación del eje de javascript*/
+
+
+
+
+
+/* toda la interacción touch */
+/*esta sección es exactamente igual a la sección de interacción :hover
+de la versión escritorio, en el media querie min-width: 640px*/
+
+
+
+
+
+/*-------------------------------------------*/
+/*final media queries*/ }
+/*-------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/* 4. Media queries desde 640px (escritorio) */
+@media all and (min-width: 640px) {
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+
+
+/*activación para dispositivos táctiles eliminada*/
+#touch { display:none; }
+
+/* agrandar los elementos */
+#landpage {
+	font-size: 1em;
+	}
+/*botón para cerrar landpage*/
+#closer {
+	top: 50%;
+	left: 50%;
+	margin-top: -2em;
+	margin-left: -2em;
+	width: 4em;
+	height: 4em;
+	border-radius: 50%;
+	}
+
+
+
+#title {
+	top: 50%;
+	left: 50%;
+	margin-top: -17em;
+	margin-left: -10em;
+	width: 20em;
+	height: 5em;
+	}
+#title > img {
+	position: absolute;
+	top: 0;
+	left: -1600em;
+	width: 8000%;
+	}
+
+
+
+
+
+/* eje */
+
+#axis {
+	bottom: 50%;
+	}
+/* sol */
+/*marco diamante*/
+/*diamante*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------*/
+/*final media queries*/ }
+/*-------------------------------------------*/
+
+
+
+#pencil {
+	left: -3em;
+	bottom: -10em;
+	position: absolute;
+	transform: rotate(40deg);
+}
+
+
+#texte {
+	z-index: 999;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -10em;
+	margin-left: -25em;
+	max-width: 50em;
+	padding: 2em;
+	background-color: rgba(59,130,255,.9);
+	border: 1px solid #ddd;
+	text-align: center;
+
+	}
+#texte :nth-child(1) {
+	font-size: 5em;
+	}
+#texte :nth-child(2) {
+	font-size: 2em;
+	margin-bottom: .9em;
+
+	}
+#texte :nth-child(3) {
+	font-size: .8em;
+	margin-bottom: 1em;
+	padding-left: 5em;
+	padding-right: 5em;
+}
+
+#texte :nth-child(4) {
+	width: 40em;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#frame {opacity: 1;}
+/*#closer {background-color: red;}*/
+#axis {
+	margin-bottom: 40em;
+	margin-left: 55em;
+	}
+#axis #gears {font-size: 4em;}
+#axis #gears div {opacity: 0.9}
+
+#bg {
+	box-shadow: inset 0 0 300px rgba(0,0,0,.5);}
+
+#bg,
+#bg > ul {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	
+	}
+#bg > ul > ul {
+	position: absolute;
+	width: 100em;
+	height: 100em;
+	top: 0;
+	left: 0;
+
+	}
+#bg ul:nth-child(1) ul li {
+	position: absolute;
+	width: 1em;
+	height: 100%;
+	border-right: 1px solid #ddd;
+	}
+
+#bg ul:nth-child(2) ul li {
+	position: absolute;
+	width: 100%;
+	height: 1em;
+	border-bottom: 1px solid #ddd;
+	}
+
+#bg ul:nth-child(1) ul li:nth-child(1) {left:0em;}
+#bg ul:nth-child(1) ul li:nth-child(2) {left:3em;}
+#bg ul:nth-child(1) ul li:nth-child(3) {left:6em;}
+#bg ul:nth-child(1) ul li:nth-child(4) {left:9em;}
+#bg ul:nth-child(1) ul li:nth-child(5) {left:12em;}
+#bg ul:nth-child(1) ul li:nth-child(6) {left:15em;}
+#bg ul:nth-child(1) ul li:nth-child(7) {left:18em;}
+#bg ul:nth-child(1) ul li:nth-child(8) {left:21em;}
+#bg ul:nth-child(1) ul li:nth-child(9) {left:24em;}
+#bg ul:nth-child(1) ul li:nth-child(10) {left:27em;}
+
+
+#bg ul:nth-child(1) ul:nth-child(1) {margin-left: 0em;}
+#bg ul:nth-child(1) ul:nth-child(2) {margin-left: 27em;}
+#bg ul:nth-child(1) ul:nth-child(3) {margin-left: 54em;}
+#bg ul:nth-child(1) ul:nth-child(4) {margin-left: 81em;}
+#bg ul:nth-child(1) ul:nth-child(5) {margin-left: 108em;}
+#bg ul:nth-child(1) ul:nth-child(6) {margin-left: 135em;}
+#bg ul:nth-child(1) ul:nth-child(7) {margin-left: 162em;}
+
+
+
+#bg ul:nth-child(2) ul li:nth-child(1) {top:0em;}
+#bg ul:nth-child(2) ul li:nth-child(2) {top:3em;}
+#bg ul:nth-child(2) ul li:nth-child(3) {top:6em;}
+#bg ul:nth-child(2) ul li:nth-child(4) {top:9em;}
+#bg ul:nth-child(2) ul li:nth-child(5) {top:12em;}
+#bg ul:nth-child(2) ul li:nth-child(6) {top:15em;}
+#bg ul:nth-child(2) ul li:nth-child(7) {top:18em;}
+#bg ul:nth-child(2) ul li:nth-child(8) {top:21em;}
+#bg ul:nth-child(2) ul li:nth-child(9) {top:24em;}
+#bg ul:nth-child(2) ul li:nth-child(10) {top:27em;}
+
+
+#bg ul:nth-child(2) ul:nth-child(1) {margin-top: 0em;}
+#bg ul:nth-child(2) ul:nth-child(2) {margin-top: 27em;}
+#bg ul:nth-child(2) ul:nth-child(3) {margin-top: 54em;}
+#bg ul:nth-child(2) ul:nth-child(4) {margin-top: 81em;}
+#bg ul:nth-child(2) ul:nth-child(5) {margin-top: 108em;}
+#bg ul:nth-child(2) ul:nth-child(6) {margin-top: 135em;}
+#bg ul:nth-child(2) ul:nth-child(7) {margin-top: 162em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+<a id="closer"></a>
+
+<div id="landpage" class="active">
+	
+	<div id="bg">
+	<ul>
+		<ul>
+			<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+		</ul>
+		<ul>
+			<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+		</ul>
+		<ul>
+			<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+		</ul>
+		<ul>
+			<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+		</ul>
+		<ul>
+			<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+		</ul>
+		<ul>
+			<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+		</ul>
+		<ul>
+			<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+		</ul>
+	</ul>
+	<ul>
+		<ul>
+			<li></li><li></li><li></li><li></li><li></li>
+			<li></li><li></li><li></li><li></li><li></li>
+		</ul>
+		<ul>
+			<li></li><li></li><li></li><li></li><li></li>
+			<li></li><li></li><li></li><li></li><li></li>
+		</ul>
+		<ul>
+			<li></li><li></li><li></li><li></li><li></li>
+			<li></li><li></li><li></li><li></li><li></li>
+		</ul>
+		<ul>
+			<li></li><li></li><li></li><li></li><li></li>
+			<li></li><li></li><li></li><li></li><li></li>
+		</ul>
+		<ul>
+			<li></li><li></li><li></li><li></li><li></li>
+			<li></li><li></li><li></li><li></li><li></li>
+		</ul>
+		<ul>
+			<li></li><li></li><li></li><li></li><li></li>
+			<li></li><li></li><li></li><li></li><li></li>
+		</ul>
+		<ul>
+			<li></li><li></li><li></li><li></li><li></li>
+			<li></li><li></li><li></li><li></li><li></li>
+		</ul>
+	</ul>
+</div>
+	
+<div id="texte">
+	<div>Victor Tuà Portfolio</div>	
+	<div>this summer / este verano / aquest estiu</div>
+	<div>He rebut una subvenció dins dels programes de garantia  juvenil, ORDRE EMO/298/2015, de 16 de setembre i ORDRE EMO/361/2015 de  10 de Desembre gràcies a:</div>
+	<img src="./img/index/logos.svg">
+</div>
+
+
+
+<img id="pencil" src="./img/index/pencil.png">
+
+	<div id="axis">
+		<!--sistema de engranajes-->
+		<div id="gears">
+			<div></div>
+			<div><img src="./img/index/gear2blue.svg"></div>
+			<div><img src="./img/index/gear3blue.svg"></div>
+			<div><img src="./img/index/gear4blue.svg"></div>
+
+
+			<!-- <img src="./img/index/allgears.svg"> -->
+		</div>
+	</div>
+	
+</div>
+
+
+
+<script type="text/javascript" src="./js/jquery-1.9.0.min.js"></script>
+
+<script type="text/javascript" src="./js/typed.min.js"></script>
+
+
+<script type="text/javascript">
+
+
+
+// al :hover en #closer
+$(function() {
+	$("#closer").hover(function() {
+		$("#landpage").addClass("active");
+	});
+});
+
+
+
+</script>
+
+
+<!--<link rel="stylesheet" type="text/css" href="./css/rainbow2.css">-->
+
+</body>
+
+
+
+</html>
