@@ -1,5 +1,5 @@
 {
-    "name": "",
+    "name": "warap",
     "icons": [
         {
             "src": "/android-chrome-192x192.png?v=1",
@@ -12,6 +12,6 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
+    "theme_color": "#3b82ff",
     "background_color": "#ffffff"
 }
