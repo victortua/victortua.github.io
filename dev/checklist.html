@@ -19,6 +19,91 @@ html,body {
 	height:100%;
 	color: #000;
 	font-size: 100%;
+	font-family: sans-serif;
+	}
+
+body {
+	background-color: #eee;
+	}
+
+
+h1 {
+	margin-top:  1em;
+	margin-bottom: 1em;
+	margin-left: .5em;
+	font-size: 4em;
+	font-weight: bold;
+	}
+
+h2 {
+	font-size: 2em;
+	}
+h3 {
+	font-size: 1.5em;
+	color:#d00;}
+p {font-size: 1.3em;}
+
+body > ul > li > div:nth-child(2) > ul > li {
+	font-size: 1.3em;
+	margin-left: 1em;
+	margin-bottom: .2em;
+	list-style-type: circle;
+	}
+body > ul > li > div:nth-child(2) > ul > li.done {
+	text-decoration: line-through;
+	opacity: .5;
+	}
+
+
+body > ul {
+	margin: 2em;
+	}
+
+body > ul > li {
+	background-color: #fff;
+	border-radius: .4em;
+	border: 2px solid #aaa;
+	padding: 1em 0;
+	margin-bottom: .8em;
+	}
+
+body > ul > li > div:nth-child(1) {
+	content: url(./checkno.png);
+	position: absolute;
+	display: block;
+	width: 2em;
+	margin-left: 1em;
+	}
+
+
+
+
+
+body > ul > li > div:nth-child(2) {
+	display: block;
+	margin-left: 4em;
+	}
+
+body > ul > li > div:nth-child(2) > * {
+	margin-bottom: .5em;
+	}
+
+
+
+
+
+
+
+
+body > ul > li.done {
+	opacity: .5;
+	color: #aaa;
+	}	
+body > ul > li.done > *{
+	opacity: .5;
+	}	
+body > ul > li.done > div:nth-child(1) {
+	content: url(./checkyes.png)
 	}
 
 </style>
@@ -26,7 +111,114 @@ html,body {
 </head>
 
 <body>
-checklist
+
+<h1>Coses que fer</h1>
+
+<ul>
+
+
+	<li class="done">
+		<div></div>
+		<div>
+			<h2>decidir nom</h2>
+			<p>sos3bcn</p>
+		</div>
+	</li>
+	
+	<li class="">
+		<div></div>
+		<div>
+			<h2>eliminar twitter</h2>
+		</div>
+	</li>
+
+	<li class="">
+		<div></div>
+		<div>
+			<h2>eliminar sos3barcelona.wordpress.com</h2>
+		</div>
+	</li>
+
+	<li class="">
+		<div></div>
+		<div>
+			<h2>logotips de entitats colaboradores</h2>
+			<ul>
+				<li class="">ajutssi</li>
+				<li class="">amics de hetauda</li>
+				<li class="">?</li>
+			<ul>
+		</div>
+	</li>
+
+	<li class="">
+		<div></div>
+		<div>
+			<h2>informació de projectes</h2>
+			<ul>
+				<li class="">nepal</li>
+				<li class="">kenia</li>
+				<li class="">india</li>
+				<li class="">autobús</li>
+				<li class="">?</li>
+			<ul>
+		</div>
+	</li>
+
+	<li class="">
+		<div></div>
+		<div>
+			<h2>imatges i videos de projectes</h2>
+			<ul>
+				<li class="">nepal</li>
+				<li class="">kenia</li>
+				<li class="">india</li>
+				<li class="">autobús</li>
+				<li class="">?</li>
+			<ul>
+		</div>
+	</li>
+
+	<li class="">
+		<div></div>
+		<div>
+			<h2>informació de entitats colaboradores</h2>
+			<ul>
+				<li class="">ajutssi</li>
+				<li class="">amics de hetauda</li>
+				<li class="">?</li>
+			<ul>
+		</div>
+	</li>
+
+	<li class="">
+		<div></div>
+		<div>
+			<h2>canviar foto de perfil de xarxes socials</h2>
+			<ul>
+				<li class="">facebook</li>
+				<li class="">instagram</li>
+				<li class="">youtube</li>
+			<ul>
+		</div>
+	</li>
+
+	<li class="">
+		<div></div>
+		<div>
+			<h2>Pàgina web acabada</h2>
+			<h3>data límit: 15/12/2018</h3>
+		</div>
+	</li>	
+
+
+
+</ul>
+
+
+
+
+
 </body>
 
 </html>
