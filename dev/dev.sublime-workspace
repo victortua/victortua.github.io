@@ -1,0 +1,915 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"font-s",
+				"font-size\tproperty"
+			],
+			[
+				"mar",
+				"margin-left\tproperty"
+			],
+			[
+				"padd",
+				"padding-bottom\tproperty"
+			],
+			[
+				"marg",
+				"margin-bottom\tproperty"
+			],
+			[
+				"marign",
+				"margin-bottom\tproperty"
+			],
+			[
+				"in",
+				"inline-block\tdisplay"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"borer-r",
+				"border-radius\tproperty"
+			],
+			[
+				"background-c",
+				"background-color\tproperty"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"ove",
+				"overflow"
+			],
+			[
+				"transi",
+				"transition"
+			],
+			[
+				"text",
+				"text-shadow"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"cl",
+				"click"
+			],
+			[
+				"backg",
+				"background-size"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"pro",
+				"product"
+			],
+			[
+				"margi",
+				"margin-right"
+			],
+			[
+				"iul",
+				"illustration"
+			],
+			[
+				"w",
+				"web"
+			],
+			[
+				"tran",
+				"transition-delay"
+			],
+			[
+				"to",
+				"touch"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"trnas",
+				"transform-style"
+			],
+			[
+				"tr",
+				"transition-timing-function"
+			],
+			[
+				"transiti",
+				"transition-property"
+			],
+			[
+				"rott",
+				"rotate"
+			],
+			[
+				"trans",
+				"transform-origin"
+			],
+			[
+				"tra",
+				"transition-delay"
+			],
+			[
+				"transition",
+				"transition-delay"
+			],
+			[
+				"bord",
+				"border"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"borde",
+				"border"
+			],
+			[
+				"TRA",
+				"transition-property"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"div",
+				"div"
+			],
+			[
+				"sty",
+				"style"
+			],
+			[
+				"ease",
+				"ease-in-out"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"ea",
+				"ease-in-out"
+			],
+			[
+				"rot",
+				"rotate"
+			],
+			[
+				"rota",
+				"rotate"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"marin",
+				"margin-top"
+			],
+			[
+				"wdi",
+				"width"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"hea",
+				"headerdos"
+			],
+			[
+				"head",
+				"headeruno"
+			],
+			[
+				"header",
+				"headertrigger"
+			],
+			[
+				"he",
+				"header"
+			],
+			[
+				"TE",
+				"text-align"
+			],
+			[
+				"roboto_condensedlight",
+				"roboto_condensedlight_italic"
+			],
+			[
+				"roboto",
+				"roboto_condensedlight"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"border",
+				"border-width"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"f",
+				"for\tAttr"
+			],
+			[
+				"la",
+				"label\tTag"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"li",
+				"li\tTag"
+			],
+			[
+				"l",
+				"li\tTag"
+			],
+			[
+				"u",
+				"ul\tTag"
+			],
+			[
+				"h",
+				"href\tAttr"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"idne",
+				"z-index"
+			],
+			[
+				"clo",
+				"closed"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "checklist.html",
+			"settings":
+			{
+				"buffer_size": 3546,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 490.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pack add",
+				"Package Control: Add Repository"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 501.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/OBE/Dropbox/projectes/web/dev"
+	],
+	"file_history":
+	[
+		"/C/Users/vt/Desktop/victortua.github.io/dev/checklist.html",
+		"/C/OBE/Dropbox/projectes/web/dev/index.html",
+		"/C/Users/vt/Desktop/ruta b.gpx",
+		"/C/Users/vt/Desktop/ruta uno.gpx",
+		"/C/Users/vt/Desktop/ruta uno.kml",
+		"/C/Users/vt/Desktop/ruta a.gpx",
+		"/E/4767 - aramark/Acreditaciones - Concurso/lista nombres.xlsx",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/esp.html",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/css/portfolio.css",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/js/portfolio.js",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/js/common.js",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/js/cursorscripts.js",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/js/index.js",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/index.html",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/css/portfolio800px.css",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/css/common.css",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/css/index.css",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/js/portfolio",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/mouse.html",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/css/style.css",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/sync.js",
+		"/C/OBE/Dropbox/projectes/web/portfolio/sync.js",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/Event listener mouse only_files/style.css",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/mousebackup.html",
+		"/C/Users/vt/AppData/Roaming/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/indexprev.html",
+		"/C/Users/vt/Desktop/test/gulpfile.js",
+		"/C/Users/vt/Desktop/gulpfile.js",
+		"/C/Users/vt/Desktop/test/package.json",
+		"/C/Users/vt/Desktop/snatched-2017-720p-bluray-x264-ytsag-spanish-112863.zip",
+		"/C/OBE/Dropbox/backups/speed dial config",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/favicon/manifest.json",
+		"/C/Users/vt/Desktop/victortua.github.io/index.html",
+		"/C/Users/vt/Desktop/victortua.github.io/favicon/manifest.json",
+		"/C/Users/vt/Desktop/victortua.github.io/favicon/browserconfig.xml",
+		"/C/Users/vt/Desktop/favicon/manifest.json",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/img/indexprev/logoministerioblue.svg",
+		"/C/Users/vt/AppData/Roaming/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/img/index/gear2blue.svg",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/img/index/gear4blue.svg",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/img/index/logosblue.svg",
+		"/C/Users/vt/Desktop/software para instalar/Luxion KeyShot Pro 4.0.74 (64 bits)/keygen/keygen.exe",
+		"/C/Users/000/Desktop/PCVARE_11-01-2016 03-22/Mail/supply chain strategy.mbox/Msg4.msg",
+		"/C/Users/000/Desktop/takeout-20161101T140736Z/Takeout/Mail/supply chain strategy.mbox",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/404.html",
+		"/C/Users/000/Desktop/Bookmarks.bak",
+		"/C/Users/000/Desktop/SkyCompleteLegendary.esp",
+		"/C/OBE/Dropbox/projectes/web/portfolio/backups/2016-05-25/esp.html",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/js/packery-mode.pkgd.js",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/js/owl.transitions.css",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/n",
+		"/C/Users/000/Desktop/isotope-docs/layout.html",
+		"/C/Users/000/Desktop/isotope-docs/isotope.pkgd.js",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/esp-backup.html",
+		"/C/OBE/Dropbox/projectes/web/portfolio/codigo original de frame",
+		"/C/Users/000/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/000/AppData/Roaming/Sublime Text 3/Packages/Browser Refresh/Default (Windows).sublime-keymap",
+		"/C/OBE/Dropbox/projectes/web/portfolio/title/title.html",
+		"/C/OBE/Dropbox/projectes/web/portfolio/victortua.github.io/title/title.html",
+		"/C/Users/000/Desktop/title.html",
+		"/C/Users/000/Desktop/Copia de Proyecto sin título.aepx",
+		"/C/Users/000/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/juegos/The Binding of Isaac Afterbirth (update 10)/resources/players.xml",
+		"/C/juegos/The Binding of Isaac Afterbirth (update 10)/resources/player.xml",
+		"/C/Users/000/Desktop/player.xml",
+		"/C/Users/vic/Desktop/consultants _ Our Colaboration.html",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/victortua.github.io/img/gear5.svg",
+		"/C/Users/vic/Desktop/planets.html",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/victortua.github.io/img/triangulo.svg",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/victortua.github.io/img/pentagono.svg",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/otros/tests y pruebas/gears/gears test.html",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/victortua.github.io/css/style.css",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/otros/tests y pruebas/sphere.html",
+		"/C/Users/vic/Desktop/sphera/css/experiment.css",
+		"/C/Users/vic/Desktop/sphera/index.html",
+		"/C/Users/vic/Desktop/sphera/js/experiment.js",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/victortua.github.io/index.html",
+		"/C/Users/vic/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/victortua.github.io/js/cursorscripts.js",
+		"/C/Users/vic/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/vic/Desktop/marcadores chrome 2015-08-26.html",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/victortua.github.io/esp.html",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/otros/3D-CSS-Solar-System-master/css/styles.css",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/victortua.github.io/js/jquerycursorscripts.js",
+		"/C/OBE/Dropbox/RECURSOS WEB/HTML + CSS + jQuery/div medio absoluto medio fijo/demo.htm",
+		"/C/Users/000/Desktop/asd.html",
+		"/C/juegos/The Stanley Parable/Skidrow.ini",
+		"/C/Users/000/Desktop/typed.js-master/bower.json",
+		"/C/Users/000/Desktop/typed.js-master/js/typed.js",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/victortua.github.io/js/typed.min.js",
+		"/C/Users/000/Desktop/typed.js-master/dist/typed.min.js",
+		"/C/Users/000/Documents/juegos/Kingdom Rush.lnk",
+		"/C/Users/000/Desktop/isotope-master/sandbox/jquery.html",
+		"/C/Users/000/Desktop/Swiper-master/demos/23-thumbs-gallery-loop.html",
+		"/C/Users/000/Desktop/Swiper-master/demos/23-thumbs-gallery.html",
+		"/C/Users/000/Desktop/stylesheet (2).css",
+		"/C/Users/000/Desktop/stylesheet.css",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/victortua.github.io/js/jquery.mixitup.min.js",
+		"/C/Users/000/Desktop/roboto/Apache License.txt",
+		"/C/Users/000/Desktop/div medio absoluto medio fijo/demo.htm",
+		"/C/Users/000/Desktop/Nueva carpeta/CSScience - CSS3 Responsive Slider _ Carousel Using Radio Buttons.html",
+		"/C/Users/000/Desktop/Nueva carpeta/CSScience - CSS3 Responsive Slider _ Carousel Using Radio Buttons_files/main.css",
+		"/C/Users/000/Desktop/Chart.js-master/docs/00-Getting-Started.md",
+		"/C/Users/000/Desktop/Using CSS3 Filters in a Gallery.html",
+		"/C/Users/000/Desktop/portfolio.lnk",
+		"/C/Users/000/Desktop/CSScience - CSS3 Responsive Slider _ Carousel Using Radio Buttons.html",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/swipa/js/swiper.jquery.js",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/swipa/css/swiper.min.css",
+		"/C/Users/000/Desktop/Swiper-master/demos/30-lazy-load-images.html",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/victortua.github.io/eng.html",
+		"/C/Users/000/Desktop/index.html",
+		"/C/Users/000/Desktop/style.css",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/victortua.github.io/esp2.html",
+		"/C/Users/000/Desktop/dkñj.html",
+		"/C/Users/000/Pictures/dkñj.html",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/victortua.github.io/fonts/stylesheet.css",
+		"/C/Users/000/Desktop/swipa/15-infinite-loop.html",
+		"/C/Users/000/Desktop/Swiper-master/dist/js/swiper.jquery.min.js",
+		"/C/Users/000/Desktop/Swiper-master/dist/css/swiper.css",
+		"/C/Users/000/Desktop/Swiper-master/demos/15-infinite-loop.html",
+		"/C/Users/000/Desktop/Swiper-master/dist/js/swiper.js",
+		"/C/Users/000/Desktop/Swiper-master/dist/js/swiper.jquery.js",
+		"/C/Users/000/Desktop/Swiper-master/demos/02-responsive.html",
+		"/C/Users/000/Desktop/Swiper-master/demos/20-mousewheel-control.html",
+		"/C/Users/000/Desktop/ninja-slider/demo1.html",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/victortua.github.io/css/ninja-slider.css",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/victortua.github.io/js/ninja-slider.min.js",
+		"/C/OBE/Dropbox/projectes/web/portfolio de github/victortua.github.io/js/ninja-slider.js"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"#landpage",
+			"thick",
+			"comm",
+			"./fonts",
+			"mousedetect",
+			"thin",
+			"#isotope > a",
+			"#filters",
+			"black",
+			"#",
+			"#020304",
+			"#",
+			"id=\"texte\"",
+			"#texte",
+			"fill=\"#",
+			"#020304",
+			"yo",
+			"label",
+			"background",
+			"transform",
+			"projectes03.jpg",
+			"projectest03.jpg",
+			"projectest03.jpeg",
+			"#grid > div",
+			"#grid > .isotope",
+			"transform",
+			"trans",
+			"projects",
+			"height",
+			"shrink",
+			".shrink",
+			"tall thick",
+			"isotope-item--height2",
+			"isotope-item--width2",
+			" isotope-item i",
+			" isotope-item\"",
+			"illustration i",
+			"productisotope",
+			"grid-item",
+			".grid",
+			"class=\"grid",
+			".grid",
+			"axis",
+			"sun",
+			"axis",
+			".closer",
+			"#closer",
+			"closer",
+			"gears",
+			"triangulo.svg",
+			"pentagono.svg",
+			"cuadrado.svg",
+			"./img",
+			"frame",
+			"framex",
+			"translatez",
+			"z-ind",
+			"shine",
+			"cubic",
+			"diamo",
+			"diamod",
+			"crown",
+			"gears",
+			"greyscale",
+			"rota",
+			"planetz",
+			"planeta",
+			"planetb",
+			"planuca",
+			"planetc",
+			"planetb",
+			"%;\n",
+			"transition",
+			"trans",
+			"child",
+			"bw",
+			"axis",
+			"squaretwo",
+			"diam",
+			"diamon",
+			"squareone",
+			"orbitthree",
+			"orbittwo",
+			"orbitone",
+			"square",
+			"axisone",
+			"rotate",
+			"invert",
+			"rotate",
+			"../fonts",
+			"font",
+			"cursor",
+			"-webfont",
+			"url('",
+			"-webfont",
+			"/*-----------------------------------------------------",
+			"-----------------------------------------------------*/",
+			"input",
+			"imput",
+			"button",
+			".controls",
+			".grid",
+			".clearHeader",
+			".header",
+			"#header",
+			"#container",
+			".container",
+			"#desk",
+			".desk",
+			"#des",
+			"z-index",
+			"font",
+			"trial",
+			"ns-img",
+			"ns-i",
+			"thumb",
+			"fs-icon",
+			"#projects",
+			"#projects a",
+			"bounce",
+			"alt=\"imagen testgrey\"",
+			"alt=\"taula de llum\"",
+			"testgrey.jpg",
+			"taulallum.jpg",
+			"bla",
+			"transition",
+			"z-in",
+			"z-index"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"../fonts",
+			"detection area",
+			"a.ima",
+			"#3B82FF",
+			"id=\"info\"",
+			"#info",
+			"#3B82FF",
+			"show",
+			"projectest03.jpg",
+			"projectes03.jpg",
+			"projectest03.jpg",
+			"#grid > .isotope",
+			"#grid > div",
+			"scroll",
+			".scroll",
+			"thick tall",
+			"tall",
+			"thick",
+			" i",
+			"\"",
+			"illust i",
+			"product isotope",
+			"isotope-item",
+			"class=\"isotope",
+			"#isotope",
+			"#closer",
+			".closer",
+			"planettriangle.svg",
+			"planetpentagon.svg",
+			"planetsquare.svg",
+			"./img/index",
+			"planeta",
+			"planetb",
+			"planetz",
+			"planetc",
+			"planetb",
+			"planuca",
+			"greyscale",
+			"gearone",
+			"diamond",
+			"planetthree",
+			"planettwo",
+			"planetone",
+			"axis",
+			"./fonts",
+			"",
+			"url('../fonts/",
+			"",
+			"/*----------------------------",
+			"-----------------------------*/",
+			"button",
+			"input",
+			"imput",
+			"#filters",
+			"#grid",
+			".header",
+			"#header",
+			".grid",
+			"#projects div a",
+			"alt=\"imagen proyecto\"",
+			"alt=\"imagen testgrey\"",
+			"alt=\"testgrey\"",
+			"projectestgrey.jpg",
+			"testgrey.jpg",
+			"ble",
+			"english",
+			"català",
+			"#filters",
+			"#container",
+			"#filters",
+			"#controls",
+			"a",
+			"#axis1"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "checklist.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3546,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3111,
+								3111
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2844.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "checklist.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3546,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1748,
+								1748
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 882.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.stino_build_panel":
+	{
+		"height": 0.0
+	},
+	"output.stino_panel":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "dev.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\OBE\\Dropbox\\projectes\\web\\sos3\\sos3.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 222.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
