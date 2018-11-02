@@ -146,6 +146,24 @@ body > ul > li.done > div:nth-child(1) {
 
 </style>
 
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+
+
+$('li.done').each(function(i, el) {
+    $(el).insertBefore($(el).prev());
+});
+
+</script>
+
+
+
+
 </head>
 
 <body>
@@ -163,31 +181,35 @@ body > ul > li.done > div:nth-child(1) {
 		</div>
 	</li>
 
-	<li class="">
+	<li class="done">
 		<div></div>
 		<div>
 			<h2>informació de entitats colaboradores</h2>
 			<h4>data límit recomanada: 15/11/2018</h4>
 			<ul>
-				<li class="">ajutssi</li>
-				<li class="">amics de hetauda</li>
-				<li class="">gràcia solidària</li>
-				<li class="">?</li>
+				<li class="done">ajutSi</li>
+				<li class="done">Família d'Hetauda</li>
+				<li class="done">gràcia solidària</li>
+				<li class="done">4Africa</li>
 			<ul>
 		</div>
 	</li>
 
-	<li class="">
+	<li class="done">
 		<div></div>
 		<div>
 			<h2>informació de projectes</h2>
 			<h4>data límit recomanada: 15/11/2018</h4>
 			<ul>
-				<li class="">nepal</li>
-				<li class="">kenia</li>
-				<li class="">india</li>
-				<li class="">autobús</li>
-				<li class="">?</li>
+				<li class="done">2009, nepal</li>
+				<li class="done">2013, kenia</li>
+				<li class="done">2018, india</li>
+				<li class="done">cooperacions puntuals</li>
+				<li class="done">10/2014, Tangini</li>
+				<li class="done">5/2015, Gorkha</li>
+				<li class="done">11/2016, Hetauda</li>
+				<li class="done">11/2017, Hetauda</li>
+				<li class="done">3/2018 Gangupuram</li>
 			<ul>
 		</div>
 	</li>
@@ -198,10 +220,10 @@ body > ul > li.done > div:nth-child(1) {
 			<h2>logotips de entitats colaboradores</h2>
 			<h4>data límit recomanada: 20/11/2018</h4>
 			<ul>
-				<li class="">ajutssi</li>
-				<li class="">amics de hetauda</li>
+				<li class="">ajutSi</li>
+				<li class="done">Família d'Hetauda</li>
 				<li class="">gràcia solidària</li>
-				<li class="">?</li>
+				<li class="">4Africa</li>
 			<ul>
 		</div>
 	</li>
@@ -222,11 +244,15 @@ body > ul > li.done > div:nth-child(1) {
 			<h2>imatges i videos de projectes</h2>
 			<h4>data límit recomanada: 1/12/2018</h4>
 			<ul>
-				<li class="">nepal</li>
-				<li class="">kenia</li>
-				<li class="">india</li>
-				<li class="">autobús</li>
-				<li class="">?</li>
+				<li class="">2009, nepal</li>
+				<li class="">2013, kenia</li>
+				<li class="">2018, india</li>
+				<li class="">cooperacions puntuals</li>
+				<li class="">10/2014, Tangini</li>
+				<li class="">5/2015, Gorkha</li>
+				<li class="">11/2016, Hetauda</li>
+				<li class="">11/2017, Hetauda</li>
+				<li class="">3/2018 Gangupuram</li>
 			<ul>
 		</div>
 	</li>
@@ -307,7 +333,7 @@ body > ul > li.done > div:nth-child(1) {
 		</div>
 	</li>
 
-	<li class="">
+	<li class="done">
 		<div></div>
 		<div>
 			<h2>trobar arxius originals del logotip antic</h2>
