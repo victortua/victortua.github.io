@@ -1,0 +1,466 @@
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/* 1. General */
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+
+
+
+
+/*----------------------------
+1.5. Propiedades generales
+-----------------------------*/
+
+html, body {
+	position: absolute;
+	width:100%;
+	height:100%;
+	top: 0;
+	left: 0;
+	}
+
+body * { box-sizing: border-box; }
+a { text-decoration: none; }
+
+/* fuentes */
+
+body, button { font-family: 'robotothin'; }
+a.ima > ul > li { font-family: 'robotolight'; }
+
+/* colores */
+
+html, body, a { color: #eee; }
+body { background-color: #000; }
+/*#header { background-color: #000; background-color: rgba(0,0,0,.4); background: linear-gradient(to bottom, rgba(0,0,0,.7) 50%, rgba(0,0,0,0) 100%); }*/
+        #header { background-color: #000; background-color: rgba(0,0,0,.8); }
+#projects > div,
+          #info,
+       #filters { background-color: #000; background-color: rgba(0,0,0,.95); }
+
+::-moz-selection {background-color: #c3bf79; /*color:#000;*/}
+::selection {background-color: #c3bf79; /*color:#000;*/}
+
+
+#projects .closer:before,
+	#info .closer:before,
+#projects .closer:after,
+	#info .closer:after {
+	background-color: #eee;
+	}
+
+
+
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/* 2. bloque principal (móbil) */
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+
+/*----------------------------
+2.2. header
+-----------------------------*/
+
+
+#header {
+	z-index: 10;
+	text-align: center;
+	padding: 0 1.5em;
+	}
+
+
+h1 {
+	font-size: 3em;
+	margin-top: 1.5em;
+	margin-bottom: .4em;
+	}
+
+#controls {
+	z-index: 20;
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	}
+
+#controls > button {
+	width: 2em;
+	height: 2em;
+	}
+
+
+
+
+
+
+
+/* filtros */
+
+#filters {
+	z-index: 20;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 120%;
+	transition: .2s ease-in-out;
+
+	/*left: 0;
+	top: 90%;*/
+	}
+#filters.in {
+	left: 0;
+	}
+
+
+#filters > * {
+	display: block;
+	}
+
+#filters button {
+	font-size: 1.7em;
+	width: calc(100% - 1em);
+	margin: .5em;
+	padding:.5em;
+
+	background-color: black;
+	border: solid 1px #fff;
+	color: #fff;
+	}
+
+
+#filters button.hide {
+	display: none;
+	}
+
+
+
+
+/* subtitulos */
+
+#labels {
+	margin-top: 2em;
+	text-align: center;
+	}
+#labels label:before {
+	content: "";
+	width: 4em;
+	display: block;
+	margin: 1em auto;
+	border-top: 1px solid #fff;
+
+	}
+#labels label {
+	display: none;
+
+	font-size: 1.9em;
+	}
+
+
+#labels label.show {
+	display: block;
+	}
+
+
+
+/*----------------------------
+2.3. Rejilla
+-----------------------------*/
+
+/*contenedor de la rejilla*/
+
+#grid {
+	width: 100%;
+	margin-top: 3em;
+	}
+
+/*rejilla (sección isotope)*/
+
+#isotope {
+	width: calc(100% - 1.5em);
+	max-width: 80em;
+	left: 50%;
+	transform: translatex(-50%);
+	}
+
+/*cada una de los proyectos dentro de la rejilla isotope*/
+
+a.ima {
+	margin-bottom: .5em;
+	width: 100%;
+	height: 6em;
+	overflow: hidden;
+	}
+a.ima.thick, a.ima.tall { height: 12em; }
+a.ima.thick.tall { height: 24em; }
+
+a.ima > * {	position: absolute;	}
+
+
+/*contenedor del texto*/
+
+a.ima > ul {
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	padding: .5em;
+	}
+
+/*título proyecto*/
+
+a.ima > ul > li {
+	text-shadow: 0 0 10px black;
+	font-size: 1.5em;
+	}
+a.ima.thick > ul > li,
+ a.ima.tall > ul > li {
+	font-size: 2em;
+	}
+a.ima.thick.tall > ul > li {
+	font-size: 2.1em;
+	}
+
+
+/*contenedor de lista de tags*/
+
+a.ima > ul > ul {
+	margin-top: .5em;
+	}
+
+/* tags */
+a.ima > ul > ul > li {
+	font-size: .9em;
+	}
+
+/*imagen de fondo*/
+
+a.ima > img {
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	transform: translate(-50%, -50%);
+	}
+
+/* dibujo marcando el final de la rejilla */
+
+#endgrid {
+	position: relative;
+	width: 8em;
+	height: 3em;
+	left: calc(50% - 4em);
+	margin-top: 1em;
+	margin-bottom: 6em;
+	}
+
+
+/*----------------------------
+2.4. proyectos
+-----------------------------*/
+
+
+#projects {
+	z-index: 20;
+	position: fixed;
+	width: 100%;
+	height: 0;
+	top: 0;
+	left: 0;
+	}
+#projects > div,
+#info {
+	z-index: 20;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+
+
+	top:150%;
+	opacity: 0;
+
+	transition: all cubic-bezier(.45,.09,.5,.49) 1.5s;
+	}
+
+#projects > div:target,
+          #info:target {
+	top:0%;
+	opacity: 1;
+
+	transition: all cubic-bezier(0,1,.26,1) 1.5s;
+	}
+
+
+/* boton cerrar */
+
+#projects .closer,
+	#info .closer {
+	z-index: 10;
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	width: 2em;
+	height: 2em;
+
+	border-radius: 50%;
+	border: 2px solid #fff;
+
+	transition: transform cubic-bezier(.48,0,.3,.85) 1s;
+	}
+#projects .closer:before,
+	#info .closer:before,
+#projects .closer:after,
+	#info .closer:after {
+	content: '';
+	position: absolute;
+	
+	top: 50%;
+	left: 50%;
+	width: 1.2em;
+	height: 2px;
+	margin-top: -1px;
+	margin-left: -.6em;
+	}
+#projects .closer:before,
+	#info .closer:before {
+	transform: rotate(45deg);
+	}
+#projects .closer:after,
+	#info .closer:after {
+	transform: rotate(-45deg);
+	}
+
+#projects .closer:hover,
+	#info .closer:hover {
+	transform: rotate(360deg);
+	}
+
+
+/* video */
+
+#info video {
+	z-index: -10;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	}
+
+/* videos youtube */
+
+/*.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px; height: 0; overflow: hidden;
+	}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/* 3. Media queries desde 580px (tableta) */
+@media all and (min-width: 600px) {
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+
+/*----------------------------
+3.1. Header
+-----------------------------*/
+
+
+/*----------------------------
+3.2. Rejilla
+-----------------------------*/
+
+
+/*sección isotope*/
+
+#isotope {
+	margin-left: .25em;
+	}
+a.ima {
+	margin-right: .5em;
+	width: calc(33.3% - .5em);
+	height: 15em;
+	}
+a.ima.thick { height: 15em; }
+a.ima.thick, a.ima.thick.tall { width: calc(66.6% - .5em); }
+a.ima.tall, a.ima.thick.tall  { height: 30.5em; }
+
+
+
+
+/*----------------------------
+3.3. Proyectos
+-----------------------------*/
+
+
+/*-------------------------------------------*/
+/*final media queries*/ }
+/*-------------------------------------------*/

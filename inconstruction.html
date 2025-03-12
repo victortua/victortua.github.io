@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="Victor Tuà">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#3b82ffº">
+
+<title>Victor Tuà portfolio</title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png?v=1">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png?v=1">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png?v=1">
+<link rel="manifest" href="./favicon/manifest.json?v=1">
+<link rel="mask-icon" href="./favicon/safari-pinned-tab.svg?v=1" color="#5bbad5">
+<link rel="shortcut icon" href="./favicon/favicon.ico?v=1">
+
+
+<style media="screen">
+
+/*----------------------------
+1.1. fuente Poly
+-----------------------------*/
+
+
+@font-face {
+	font-family: 'polyitalic';
+	src: url('./fonts/poly-italic.eot');
+	src: url('./fonts/poly-italic.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/poly-italic.woff2') format('woff2'),
+	url('./fonts/poly-italic.woff') format('woff'),
+	url('./fonts/poly-italic.ttf') format('truetype'),
+	url('./fonts/poly-italic.svg#polyitalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'polyregular';
+	src: url('./fonts/poly-regular.eot');
+	src: url('./fonts/poly-regular.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/poly-regular.woff2') format('woff2'),
+	url('./fonts/poly-regular.woff') format('woff'),
+	url('./fonts/poly-regular.ttf') format('truetype'),
+	url('./fonts/poly-regular.svg#polyregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+
+
+
+
+
+
+
+
+
+@font-face {
+	font-family: 'robotothin';
+	src: url('./fonts/roboto-thin.eot');
+	src: url('./fonts/roboto-thin.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/roboto-thin.woff2') format('woff2'),
+	url('./fonts/roboto-thin.woff') format('woff'),
+	url('./fonts/roboto-thin.ttf') format('truetype'),
+	url('./fonts/roboto-thin.svg#robotothin') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+/*Eric Meyer's Reset CSS v2.0*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}/*HTML5 display-role reset for older browsers*/article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul,li{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+/*end of reset*/
+
+* { box-sizing: border-box;	}
+
+
+
+
+
+body, a {color: #eee;}
+a {text-decoration: none;}
+
+
+body, a {font-family: 'robotothin';}
+
+
+body{
+	width: 100%;
+	height: 100%;
+	}
+
+#bg {
+	position: fixed;
+	width: 120%;
+	height: 120%;
+	top: 0;
+	left: 0;
+	
+	background-color: #3b82ff;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.82'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	box-shadow: inset 0 0 300px rgba(0,0,0,.5);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#info {
+	z-index: 999;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width:calc(100% - 2em);
+	max-width: 60em;
+	margin-top: 1em;
+	margin-bottom: 10em;
+	-ms-transform: translate(-50%,0);
+	-webkit-transform: translate(-50%,0);
+	transform: translate(-50%,0);
+	padding: 2em;
+	background-color: rgba(59,130,255,.9);
+	border: 1px solid #ddd;
+	text-align: center;
+	}
+#info > :nth-child(1) {
+	font-size: 4em;
+	}
+#info > :nth-child(2) {
+	font-size: 1.5em;
+	margin: .9em 0;
+	padding: 1em 0;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	}
+#info > :nth-child(3) {
+	font-size: .9em;
+	margin-bottom: 1em;
+	}
+#info > :nth-child(4) {
+	text-align: center;
+	}
+#info > :nth-child(4) > img {
+	display: inline-block;
+	width: 80%;
+	max-width: 15em;
+	vertical-align: middle;
+	margin-bottom: 1em;
+	}
+
+
+#gears {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 11em;
+	margin-left: 2em;	
+	font-size: 2.5em;
+	}
+#gears > div {
+	position: absolute;
+	opacity: 0.9
+	}
+#gears > div:nth-child(1) {
+	z-index: 10;
+	width: 9.55em;
+	margin-left: -8.1em;
+	}
+#gears > div:nth-child(2) {
+	z-index: 9;
+	width: 6.28em;
+	margin-top: 3.31em;
+	}
+#gears > div:nth-child(3) {
+	z-index: 8;
+	width: 8.8em;
+	margin-top: 5.6em;
+	margin-left: -6.35em;
+	}
+#gears > div > img {width: 100%;}
+#gears > div:nth-child(1) > img  { animation: rotacioninversa  9.523809524s linear infinite;        }
+#gears > div:nth-child(2) > img  { animation: rotacion                   5s linear infinite;        }
+#gears > div:nth-child(3) > img  { animation: tictacone                 10s linear infinite 0.465s; }
+
+
+@keyframes tictacone {
+	   0% { transform: rotate(   0deg); }
+	 7.5% { transform: rotate( -60deg); }
+	  50% { transform: rotate( -60deg); }
+	57.5% { transform: rotate(-120deg); }
+	 100% { transform: rotate(-120deg); }
+	}
+@keyframes rotacion {
+	0%   { transform: rotate(  0deg); }
+	100% { transform: rotate(360deg); }
+	}
+@keyframes rotacioninversa {
+	0%   { transform: rotate(   0deg); }
+	100% { transform: rotate(-360deg); }
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/* 3. Media queries desde 480px (tableta) */
+@media all and (min-width: 480px) {
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/*-------------------------------------------*/
+/*final media queries*/ }
+/*-------------------------------------------*/
+
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/* parte exclusiva para móbiles y tabletas (versiones táctiles)*/
+@media all and (max-width: 640px) {
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/*-------------------------------------------*/
+/*final media queries*/ }
+/*-------------------------------------------*/
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/* 4. Media queries desde 640px (escritorio) */
+@media all and (min-width: 640px) {
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+/*-------------------------------------------*/
+/*final media queries*/ }
+/*-------------------------------------------*/
+
+
+
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<div id="bg"></div>
+
+<div id="info">
+	<div>En construcción</div>
+	<div>la página victortua.com está en construcción. Estará disponible a finales de verano.</div>
+	<div>Aquest projecte es pot fer gràcies a una subvenció dins dels programes de garantia  juvenil, ORDRE EMO/298/2015, de 16 de setembre i ORDRE EMO/361/2015 de  10 de Desembre gràcies a:</div>
+	<div>
+		<img src="./img/index/logogeneralitat.svg">
+		<img src="./img/indexprev/logoministerioblue.svg">
+		<img src="./img/index/logogarantiajuvenil.svg">
+	</div>
+</div>
+
+<div id="gears">
+	<div><img src="./img/indexprev/gear2blue.svg"></div>
+	<div><img src="./img/indexprev/gear3blue.svg"></div>
+	<div><img src="./img/indexprev/gear4blue.svg"></div>
+</div>
+
+</body>
+
+</html>
